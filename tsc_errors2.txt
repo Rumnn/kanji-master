@@ -1,0 +1,6 @@
+﻿src/App.tsx(1,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/components/AutocompleteInput.tsx(26,3): error TS6133: 'currentKanji' is declared but its value is never read.
+src/components/LevelSelectScreen.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ProgressBar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/QuizGame.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/ResultModal.tsx(1,1): error TS6133: 'React' is declared but its value is never read.

@@ -1,0 +1,428 @@
+{
+  "N5": [
+    {
+      "id": "n5_001",
+      "kanji": "食",
+      "onyomi": "ショク",
+      "kunyomi": "た.べる",
+      "meaning": "to eat",
+      "meaningVi": "ăn",
+      "examples": [
+        {
+          "kana": "食べる",
+          "meaning": "to eat",
+          "meaningVi": "ăn",
+          "romaji": "taberu"
+        },
+        {
+          "kana": "朝食",
+          "meaning": "breakfast",
+          "meaningVi": "bữa sáng",
+          "romaji": "choushoku"
+        },
+        {
+          "kana": "夕食",
+          "meaning": "dinner",
+          "meaningVi": "bữa tối",
+          "romaji": "yuushoku"
+        }
+      ]
+    },
+    {
+      "id": "n5_002",
+      "kanji": "飲",
+      "onyomi": "イン",
+      "kunyomi": "の.む",
+      "meaning": "to drink",
+      "meaningVi": "uống",
+      "examples": [
+        {
+          "kana": "飲む",
+          "meaning": "to drink",
+          "meaningVi": "uống",
+          "romaji": "nomu"
+        },
+        {
+          "kana": "飲み物",
+          "meaning": "beverage",
+          "meaningVi": "đồ uống",
+          "romaji": "nomimono"
+        },
+        {
+          "kana": "水を飲む",
+          "meaning": "to drink water",
+          "meaningVi": "uống nước",
+          "romaji": "mizuwonomu"
+        }
+      ]
+    },
+    {
+      "id": "n5_003",
+      "kanji": "気",
+      "onyomi": "キ",
+      "kunyomi": "け",
+      "meaning": "spirit, mind, air",
+      "meaningVi": "tinh thần, tâm trí, không khí",
+      "examples": [
+        {
+          "kana": "気持ち",
+          "meaning": "feeling, mood",
+          "meaningVi": "cảm giác, tâm trạng",
+          "romaji": "kimochi"
+        },
+        {
+          "kana": "天気",
+          "meaning": "weather",
+          "meaningVi": "thời tiết",
+          "romaji": "tenki"
+        },
+        {
+          "kana": "勇気",
+          "meaning": "courage",
+          "meaningVi": "can đảm",
+          "romaji": "yuuki"
+        }
+      ]
+    },
+    {
+      "id": "n5_004",
+      "kanji": "時",
+      "onyomi": "ジ",
+      "kunyomi": "とき",
+      "meaning": "time, hour",
+      "meaningVi": "thời gian, giờ",
+      "examples": [
+        {
+          "kana": "時间",
+          "meaning": "time",
+          "meaningVi": "thời gian",
+          "romaji": "toki间"
+        },
+        {
+          "kana": "時々",
+          "meaning": "sometimes",
+          "meaningVi": "thỉnh thoảng",
+          "romaji": "tokidoki"
+        },
+        {
+          "kana": "何時",
+          "meaning": "what time",
+          "meaningVi": "mấy giờ",
+          "romaji": "itsu"
+        }
+      ]
+    },
+    {
+      "id": "n5_005",
+      "kanji": "学",
+      "onyomi": "ガク",
+      "kunyomi": "ま.なぶ",
+      "meaning": "to learn, study",
+      "meaningVi": "học tập",
+      "examples": [
+        {
+          "kana": "学ぶ",
+          "meaning": "to learn",
+          "meaningVi": "học tập",
+          "romaji": "manabu"
+        },
+        {
+          "kana": "学校",
+          "meaning": "school",
+          "meaningVi": "trường học",
+          "romaji": "gakkou"
+        },
+        {
+          "kana": "大学",
+          "meaning": "university",
+          "meaningVi": "đại học",
+          "romaji": "daigaku"
+        }
+      ]
+    }
+  ],
+  "N4": [
+    {
+      "id": "n4_001",
+      "kanji": "働",
+      "onyomi": "ドウ",
+      "kunyomi": "はたら.く",
+      "meaning": "to work",
+      "meaningVi": "làm việc",
+      "examples": [
+        {
+          "kana": "働く",
+          "meaning": "to work",
+          "meaningVi": "làm việc",
+          "romaji": "hataraku"
+        },
+        {
+          "kana": "労働",
+          "meaning": "labor",
+          "meaningVi": "lao động",
+          "romaji": "roudou"
+        },
+        {
+          "kana": "働き手",
+          "meaning": "worker",
+          "meaningVi": "người lao động",
+          "romaji": "hatarakite"
+        }
+      ]
+    },
+    {
+      "id": "n4_002",
+      "kanji": "始",
+      "onyomi": "シ",
+      "kunyomi": "はじ.める",
+      "meaning": "to begin, start",
+      "meaningVi": "bắt đầu",
+      "examples": [
+        {
+          "kana": "始まる",
+          "meaning": "to begin",
+          "meaningVi": "bắt đầu",
+          "romaji": "hajimaru"
+        },
+        {
+          "kana": "始める",
+          "meaning": "to start",
+          "meaningVi": "khởi động",
+          "romaji": "hajimeru"
+        },
+        {
+          "kana": "初め",
+          "meaning": "beginning",
+          "meaningVi": "đầu tiên",
+          "romaji": "hajime"
+        }
+      ]
+    },
+    {
+      "id": "n4_003",
+      "kanji": "終",
+      "onyomi": "シュウ",
+      "kunyomi": "お.わる",
+      "meaning": "to end, finish",
+      "meaningVi": "kết thúc",
+      "examples": [
+        {
+          "kana": "終わる",
+          "meaning": "to finish",
+          "meaningVi": "kết thúc",
+          "romaji": "owaru"
+        },
+        {
+          "kana": "終了",
+          "meaning": "end, conclusion",
+          "meaningVi": "kết thúc",
+          "romaji": "shuuryou"
+        },
+        {
+          "kana": "最後",
+          "meaning": "last",
+          "meaningVi": "cuối cùng",
+          "romaji": "saigo"
+        }
+      ]
+    },
+    {
+      "id": "n4_004",
+      "kanji": "見",
+      "onyomi": "ケン",
+      "kunyomi": "み.る",
+      "meaning": "to see, look",
+      "meaningVi": "nhìn, xem",
+      "examples": [
+        {
+          "kana": "見る",
+          "meaning": "to see",
+          "meaningVi": "nhìn",
+          "romaji": "miru"
+        },
+        {
+          "kana": "見方",
+          "meaning": "way of looking",
+          "meaningVi": "cách nhìn",
+          "romaji": "mikata"
+        },
+        {
+          "kana": "見学",
+          "meaning": "sightseeing, inspection",
+          "meaningVi": "tham quan",
+          "romaji": "kengaku"
+        }
+      ]
+    },
+    {
+      "id": "n4_005",
+      "kanji": "教",
+      "onyomi": "キョウ",
+      "kunyomi": "おし.える",
+      "meaning": "to teach",
+      "meaningVi": "dạy",
+      "examples": [
+        {
+          "kana": "教える",
+          "meaning": "to teach",
+          "meaningVi": "dạy",
+          "romaji": "oshieru"
+        },
+        {
+          "kana": "教室",
+          "meaning": "classroom",
+          "meaningVi": "phòng học",
+          "romaji": "kyoushitsu"
+        },
+        {
+          "kana": "教育",
+          "meaning": "education",
+          "meaningVi": "giáo dục",
+          "romaji": "kyouiku"
+        }
+      ]
+    }
+  ],
+  "N3": [
+    {
+      "id": "n3_001",
+      "kanji": "突",
+      "onyomi": "トツ",
+      "kunyomi": "つ.く",
+      "meaning": "to thrust, protrude, suddenly",
+      "meaningVi": "đâm, nổi lên, đột ngột",
+      "examples": [
+        {
+          "kana": "突く",
+          "meaning": "to thrust",
+          "meaningVi": "đâm",
+          "romaji": "tsuku"
+        },
+        {
+          "kana": "突然",
+          "meaning": "suddenly",
+          "meaningVi": "đột ngột",
+          "romaji": "totsuzen"
+        },
+        {
+          "kana": "突破",
+          "meaning": "breakthrough",
+          "meaningVi": "đột phá",
+          "romaji": "toppa"
+        }
+      ]
+    },
+    {
+      "id": "n3_002",
+      "kanji": "推",
+      "onyomi": "スイ",
+      "kunyomi": "お.す",
+      "meaning": "to push, recommend, guess",
+      "meaningVi": "đẩy, giới thiệu, đoán",
+      "examples": [
+        {
+          "kana": "推す",
+          "meaning": "to push, recommend",
+          "meaningVi": "đẩy, giới thiệu",
+          "romaji": "osu"
+        },
+        {
+          "kana": "推測",
+          "meaning": "conjecture",
+          "meaningVi": "suy đoán",
+          "romaji": "suisoku"
+        },
+        {
+          "kana": "推進",
+          "meaning": "to promote",
+          "meaningVi": "thúc đẩy",
+          "romaji": "suishin"
+        }
+      ]
+    },
+    {
+      "id": "n3_003",
+      "kanji": "優",
+      "onyomi": "ユウ",
+      "kunyomi": "やさ.しい",
+      "meaning": "excellent, superior, kind",
+      "meaningVi": "xuất sắc, ưu việt, tử tế",
+      "examples": [
+        {
+          "kana": "優秀",
+          "meaning": "excellent",
+          "meaningVi": "xuất sắc",
+          "romaji": "yuushuu"
+        },
+        {
+          "kana": "優しい",
+          "meaning": "kind, gentle",
+          "meaningVi": "tử tế, dịu dàng",
+          "romaji": "yasashii"
+        },
+        {
+          "kana": "優位",
+          "meaning": "superiority",
+          "meaningVi": "ưu thế",
+          "romaji": "yuui"
+        }
+      ]
+    },
+    {
+      "id": "n3_004",
+      "kanji": "興",
+      "onyomi": "コウ",
+      "kunyomi": "おこ.る",
+      "meaning": "to interest, arise, prosper",
+      "meaningVi": "hứng thú, phát sinh, thịnh vượng",
+      "examples": [
+        {
+          "kana": "興味",
+          "meaning": "interest",
+          "meaningVi": "hứng thú",
+          "romaji": "kyoumi"
+        },
+        {
+          "kana": "興奮",
+          "meaning": "excitement",
+          "meaningVi": "hưng phấn",
+          "romaji": "koufun"
+        },
+        {
+          "kana": "復興",
+          "meaning": "restoration",
+          "meaningVi": "phục hưng",
+          "romaji": "fukkou"
+        }
+      ]
+    },
+    {
+      "id": "n3_005",
+      "kanji": "考",
+      "onyomi": "コウ",
+      "kunyomi": "かんが.える",
+      "meaning": "to think, consider",
+      "meaningVi": "suy nghĩ, xem xét",
+      "examples": [
+        {
+          "kana": "考える",
+          "meaning": "to think",
+          "meaningVi": "suy nghĩ",
+          "romaji": "kangaeru"
+        },
+        {
+          "kana": "考え方",
+          "meaning": "way of thinking",
+          "meaningVi": "cách suy nghĩ",
+          "romaji": "kangaekata"
+        },
+        {
+          "kana": "考古学",
+          "meaning": "archaeology",
+          "meaningVi": "khảo cổ học",
+          "romaji": "koukogaku"
+        }
+      ]
+    }
+  ]
+}
