@@ -1,14 +1,52 @@
 # Kanji Master Quiz - Cẩm nang Kiến trúc & Triển khai
 
+**Phiên bản**: v2.0.0 (Multi-page với Authentication)  
+**Ngày cập nhật**: 22 Tháng 3, 2026
+
 ## 📋 Tổng quan Dự án
 
-Tài liệu này cung cấp hướng dẫn chi tiết về cấu trúc của ứng dụng **Kanji Master Quiz**, giải thích cách từng thành phần hoạt động phối hợp để tạo ra trải nghiệm học tiếng Nhật tương tác.
+Tài liệu này cung cấp hướng dẫn chi tiết về cấu trúc của ứng dụng **Kanji Master Quiz v2.0**, một ứng dụng web nhiều trang (multi-page) với hệ thống xác thực, quản lý người dùng, và bảng điều khiển quản trị viên.
 
-## 🏗️ Kiến trúc Hệ thống
+## 🏗️ Kiến trúc Hệ thống Mới (v2.0)
 
-### Luồng Hoạt động Tổng quan
+### Sơ đồ Kiến trúc Tổng Thể
 ```
-Người dùng Bắt đầu
+┌─────────────────────────────────────────────────────┐
+│                    React App                         │
+│              (with React Router v7)                  │
+└──────────────────┬──────────────────────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+   ┌────▼─────┐          ┌────▼──────────┐
+   │ AuthFlow │          │  PublicFlow   │
+   └────┬─────┘          └────┬──────────┘
+        │                     │
+    [Login]               [Home Page]
+    ↓  ↓  ↓
+[Register] → [AuthContext with JWT]
+    ↓
+[Protected Routes]
+    ├── [Profile]
+    ├── [QuizPlay]
+    └── [AdminDashboard] ← Role-based access
+```
+
+### Luồng Hoạt động Người Dùng (User Flow)
+
+#### Người dùng Mới (New User)
+```
+[HomePage] → [Register] → [AuthContext saves token] → [QuizPlay]
+```
+
+#### Người dùng Hiện tại (Existing User)
+```
+[HomePage] → [Login] → [AuthContext restores user] → [HomePage/QuizPlay]
+```
+
+#### Luồng Quiz Chi Tiết
+```
+[QuizPlay]
     ↓
 [LevelSelectScreen] - Chọn N5, N4, hoặc N3
     ↓
@@ -19,10 +57,151 @@ Người dùng Bắt đầu
     ↓
 [Màn hình Điểm Số] - Hiển thị kết quả tổng và thống kê
     ↓
-Trở về Màn hình Chọn Cấp độ
+[Lưu vào Database qua API]
 ```
 
-## 🔄 Chi tiết Thành phần
+## � Hệ thống Xác thực (Authentication)
+
+### AuthContext (`src/context/AuthContext.tsx`)
+
+**Mục đích**: Quản lý trạng thái người dùng toàn bộ ứng dụng
+
+**Dữ liệu người dùng (User Data)**:
+```typescript
+interface User {
+  _id: string                    // ID từ MongoDB
+  fullName: string               // Tên đầy đủ
+  email: string                  // Email
+  role: string                   // "user" hoặc "admin"
+  token: string                  // JWT token
+}
+```
+
+**Các phương thức chính**:
+- `login(userData)` - Lưu người dùng khi đăng nhập
+- `logout()` - Xoá người dùng, xoá localStorage
+- `isLoading` - Trạng thái đang tải dữ liệu
+
+**Cách sử dụng**:
+```typescript
+const { user, login, logout, isLoading } = useContext(AuthContext)
+
+// Kiểm tra nếu người dùng đã đăng nhập
+if (user?.role === 'admin') {
+  // Hiển thị Admin Panel
+}
+```
+
+---
+
+## 📄 Các Page Mới (Pages)
+
+### 1. Home.tsx (`src/pages/Home.tsx`)
+**Mục đích**: Trang chủ ứng dụng
+
+**Nội dung**:
+- Giới thiệu về ứng dụng
+- Nút "Register" / "Login" (nếu chưa đăng nhập)
+- Nút "Play Quiz" (nếu đã đăng nhập)
+- Hiển thị thống kê người dùng
+
+**Điều kiện**:
+```typescript
+if (!user) {
+  // Hiển thị nút Login/Register
+} else {
+  // Hiển thị nút Play Quiz
+}
+```
+
+### 2. Login.tsx (`src/pages/Login.tsx`)
+**Mục đích**: Trang đăng nhập
+
+**Fields**:
+- Email
+- Password
+
+**Luồng xử lý**:
+1. Người dùng nhập email + password
+2. Gửi request lên backend via Axios
+3. Lấy JWT token từ API response
+4. Lưu vào AuthContext
+5. Chuyển hướng đến HomePage hoặc Quiz
+
+### 3. Register.tsx (`src/pages/Register.tsx`)
+**Mục đích**: Trang đăng ký tài khoản
+
+**Fields**:
+- Full Name
+- Email
+- Password
+- Password Confirmation
+
+**Validation**:
+- Email phải hợp lệ (regex)
+- Password >= 6 ký tự
+- Mật khẩu phải khớp nhau
+- Email không được trùng
+
+### 4. Profile.tsx (`src/pages/Profile.tsx`)
+**Mục đích**: Hồ sơ người dùng cá nhân
+
+**Thông tin hiển thị**:
+- Tên người dùng
+- Email
+- Ngày tham gia
+- Điểm cao nhất
+- Số lần chơi
+- Tỉ lệ thành công
+- Lịch sử quiz (danh sách bài kiểm tra đã làm)
+
+**Chức năng**:
+- [ ] Thay đổi thông tin cá nhân
+- [ ] Xuất điểm sang Excel
+- [ ] Xem chi tiết từng lần chơi
+
+### 5. QuizPlay.tsx (`src/pages/QuizPlay.tsx`)
+**Mục đích**: Trang chơi quiz (tích hợp components cũ)
+
+**Cấu trúc**:
+```
+[Navigation Navbar]
+    ↓
+[QuizGame] - Sử dụng các component cũ:
+    ├── LevelSelectScreen
+    ├── QuizGame
+    ├── AutocompleteInput
+    ├── ResultModal
+    └── ProgressBar
+    ↓
+[Lưu kết quả qua API]
+```
+
+**Khác biệt từ v1**:
+- Yêu cầu đăng nhập trước khi chơi
+- Lưu kết quả vào database của người dùng
+- Theo dõi thống kê cá nhân
+
+### 6. AdminDashboard.tsx (`src/pages/AdminDashboard.tsx`)
+**Mục đích**: Bảng điều khiển cho quản trị viên
+
+**Tính năng**:
+- Import Kanji từ file Excel/CSV
+- Xem thống kê người dùng
+- Xem danh sách người dùng
+- Xem thống kê quiz (Tổng lần chơi, tỉ lệ hoàn thành)
+- Quản lý vai trò người dùng (Promote/Demote)
+
+**Bảo vệ vai trò**:
+```typescript
+if (user?.role !== 'admin') {
+  return <Navigate to="/" />  // Chuyển hướng nếu không phải admin
+}
+```
+
+---
+
+## �🔄 Chi tiết Thành phần
 
 ### 1. LevelSelectScreen (`src/components/LevelSelectScreen.tsx`)
 **Mục đích**: Giao diện UI ban đầu để người dùng chọn cấp độ JLPT

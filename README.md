@@ -1,21 +1,31 @@
 # Kanji Master Quiz - JLPT N5-N3
 
+**Phiên bản**: v2.0.0 (Multi-Page + Authentication)
+
 Một ứng dụng web tương tác hiện đại giúp bạn học chữ Hán (Kanji - 漢字) tiếng Nhật thông qua các bài kiểm tra trắc nghiệm thông minh. Chinh phục các cấp độ JLPT từ N5 đến N3 bằng cách gõ Romaji, hệ thống sẽ tự động gõ sang Hiragana/Katakana theo thời gian thực cùng với tính năng gợi ý từ (autocomplete).
+
+**Mới lạ**: Hệ thống quản lý tài khoản, lưu tiến độ, và admin panel để quản lý dữ liệu Kanji. 🆕
 
 ## 🎌 Tính năng Đặc bật
 
-### Lối chơi Cốt lõi
+### Lối chơi Cốt lõi (v1.0 - Bảo lưu)
 - **Chọn Cấp độ JLPT**: Chọn giữa N5 (Sơ cấp), N4 (Trung cấp), hoặc N3 (Nâng cao)
 - **Chuyển đổi Romaji Thời gian thực**: Gõ tiếng Nhật bằng ký tự Latinh (Romaji) → chuyển đổi ngay lập tức sang Hiragana/Katakana
 - **Tự động Hoàn thành Thông minh**: Trình diễn các gợi ý Kanji khớp với nội dung bạn đang gõ
-- **Học tập Chi tiết**: Sau khi chọn đáp án, hệ thống sẽ hiển thị toàn bộ thông tin chi tiết về Kanji, bao gồm:
-  - Onyomi (音読み) - Âm Hán-Nhật
-  - Kunyomi (訓読み) - Âm thuần Nhật  
-  - Ý nghĩa (Tiếng Anh & Tiếng Việt)
-  - Các từ vựng ví dụ ghép bằng kanji kèm theo bản dịch
+- **Học tập Chi tiết**: Sau khi chọn đáp án, hệ thống sẽ hiển thị toàn bộ thông tin chi tiết về Kanji
 - **Theo dõi Tiến độ**: Thanh tiến độ trực quan và tính điểm theo thời gian thực
-- **Giao diện Gọn Gàng**: Thiết kế theo chủ nghĩa tối giản mang âm hưởng thẩm mỹ Nhật Bản với tông màu Hồng Anh Đào (Sakura) và Xanh Ngọc (Jade)
-- **Tương thích Di động**: Điền chỉnh hoàn hảo trên mọi thiết bị: máy tính, máy tính bảng và điện thoại
+- **Giao diện Gọn Gàng**: Thiết kế theo chủ nghĩa tối giản mang âm hưởng thẩm mỹ Nhật Bản
+- **Tương thích Di động**: Điền chỉnh hoàn hảo trên mọi thiết bị
+
+### ✨ Tính năng Mới v2.0 (Full-Stack)
+- **Hệ thống Tài khoản**: Đăng ký & Đăng nhập với JWT authentication
+- **Lưu Tiến độ**: Điểm số được lưu vào database (không mất khi reload page)
+- **Hồ sơ Người dùng**: Xem lịch sử quiz, thống kê hiệu suất (tỉ lệ thành công, tổng điểm)
+- **Multi-Page Navigation**: React Router v7 cho navigating mượt mà giữa các page
+- **Admin Dashboard**: Import Kanji từ Excel/CSV, quản lý dữ liệu
+- **Role-based Access Control**: Phân quyền User vs Admin
+- **Advanced NLP**: Kuromoji + Wanakana cho xử lý tiếng Nhật chuyên sâu
+- **Data Import/Export**: PapaParse + XLSX support
 
 ## 🚀 Khởi động Nhanh
 
@@ -43,28 +53,63 @@ Mở http://localhost:5173 trên trình duyệt của bạn
 npm run build
 ```
 
-## 📁 Cấu trúc Dự án
+## 📁 Cấu trúc Dự án (v2.0)
 
 ```
 kanji-master/
 ├── src/
-│   ├── components/
-│   │   ├── LevelSelectScreen.tsx    # Giao diện chọn cấp độ
-│   │   ├── QuizGame.tsx             # Cốt lõi logic và điều phối quiz
-│   │   ├── AutocompleteInput.tsx    # Ô nhập Romaji có gợi ý
-│   │   ├── ResultModal.tsx          # Modal hiển thị kết quả và thông tin
-│   │   └── ProgressBar.tsx          # Thanh hiển thị tiến độ
+│   ├── pages/                      [✨ MỚI - Multi-page]
+│   │   ├── Home.tsx                # Trang chủ
+│   │   ├── Login.tsx               # Đăng nhập
+│   │   ├── Register.tsx            # Đăng ký
+│   │   ├── Profile.tsx             # Hồ sơ & thống kê người dùng
+│   │   ├── QuizPlay.tsx            # Trang chơi quiz
+│   │   └── AdminDashboard.tsx      # Admin panel
+│   │
+│   ├── context/                    [✨ MỚI - State Management]
+│   │   └── AuthContext.tsx         # JWT authentication & user state
+│   │
+│   ├── components/                 [Lõi - Quiz Logic]
+│   │   ├── LevelSelectScreen.tsx   # Giao diện chọn cấp độ
+│   │   ├── QuizGame.tsx            # Cốt lõi logic và điều phối quiz
+│   │   ├── AutocompleteInput.tsx   # Ô nhập Romaji có gợi ý
+│   │   ├── ResultModal.tsx         # Modal hiển thị kết quả
+│   │   ├── ProgressBar.tsx         # Thanh tiến độ
+│   │   └── Navigation.tsx          # Navigation bar (CẬP NHẬT)
+│   │
 │   ├── data/
-│   │   └── kanjiData.json           # Dữ liệu gốc Kanji (có thể mở rộng)
-│   ├── App.tsx                      # Component ứng dụng chính
-│   ├── App.css                      # CSS của ứng dụng
-│   ├── index.css                    # Tailwind + CSS toàn cục
-│   └── main.tsx                     # Điểm khởi chạy (Entry)
-├── public/                          # Dữ liệu tĩnh
-├── tailwind.config.js               # File cũ của Tailwind (nếu còn)
-├── postcss.config.js                # PostCSS để biên dịch CSS
-├── vite.config.ts                   # Cấu hình Vite
-└── package.json                     # Thông tin gói & script
+│   │   └── kanjiData.json          # Dữ liệu gốc Kanji
+│   │
+│   ├── assets/                     [✨ MỚI - Images/Icons]
+│   │   ├── hero.png                # Hero image
+│   │   ├── react.svg               # React icon
+│   │   └── vite.svg                # Vite icon
+│   │
+│   ├── App.tsx                     # Router setup (CẬP NHẬT)
+│   ├── App.css
+│   ├── index.css                   # Tailwind + CSS toàn cục
+│   └── main.tsx                    # Entry point
+│
+├── server/                         [✨ MỚI - Backend Optional]
+│   ├── config/
+│   │   └── db.js                   # Database connection
+│   ├── routes/
+│   │   ├── auth.js                 # Authentication endpoints
+│   │   ├── quiz.js                 # Quiz endpoints
+│   │   └── admin.js                # Admin endpoints
+│   ├── models/
+│   │   ├── User.js                 # User schema
+│   │   └── Quiz.js                 # Quiz result schema
+│   └── server.js                   # Backend entry point
+│
+├── public/                         # Static assets
+├── dist/                           # Build output
+├── .env.example                    # Environment variables template
+├── tailwind.config.js              # Tailwind configuration
+├── postcss.config.js               # PostCSS with Tailwind v4
+├── vite.config.ts                  # Vite configuration
+├── tsconfig.json                   # TypeScript configuration
+└── package.json                    # Dependencies & scripts
 ```
 
 ## 📚 Cấu trúc Dữ liệu & Schema
@@ -116,29 +161,92 @@ Dữ liệu Kanji được lưu trữ trong `src/data/kanjiData.json` được t
 
 ## 🔧 Công nghệ Áp dụng
 
-- **Frontend Framework**: React 19 kết hợp TypeScript
-- **Công cụ Build**: Vite 8 (xử lý siêu tốc)
-- **Thiết kế UI (Styling)**: Tailwind CSS 4 + Màu tùy chỉnh
-- **Xử lý tiếng Nhật**: Thư viện Wanakana và Kuromoji (Chuyển đổi Romaji ↔ Kana ↔ Kanji)
+### Frontend (v1.0 - Preserved)
+- **Frontend Framework**: React 19 kết hợp TypeScript 5.9+
+- **Công cụ Build**: Vite 8 (xây dựng siêu tốc)
+- **Thiết kế UI**: Tailwind CSS 4 + Custom colors
+- **Xử lý tiếng Nhật**: Wanakana + Kuromoji
 - **Xử lý CSS**: PostCSS tích hợp Autoprefixer
+
+### Frontend (v2.0 - New)
+- **Routing**: React Router DOM v7.13 (Multi-page navigation)
+- **State Management**: React Context API + AuthContext
+- **HTTP Client**: Axios v1.13 (API communication)
+- **Data Handling**: PapaParse v5.5 (CSV parser) + XLSX v0.18 (Excel)
+- **Type Safety**: 100% TypeScript coverage
+
+### Backend (v2.0 - Optional)
+- **Runtime**: Node.js 18+
+- **Framework**: Express.js
+- **Database**: MongoDB + Mongoose
+- **Authentication**: JWT (JSON Web Tokens)
+- **Validation**: Input validation middleware
+
+### Deployment (v2.0)
+- **Frontend Hosting**: Vercel / Netlify / GitHub Pages
+- **Backend Hosting**: Railway / Render / Heroku
+- **Database Hosting**: MongoDB Atlas (Cloud)
 
 ## 🎮 Hướng dẫn Chơi
 
+### Với v1.0 (Quiz Game)
 1. **Chọn Độ khó**: Bấm vào thẻ N5, N4, hoặc N3 trên màn hình bắt đầu
-2. **Xem Kanji**: Quan sát chữ Hán và ngữ nghĩa tương ứng (Việt/Anh)
-3. **Nhập Romaji**: Gõ cách đọc bằng dạng chữ Romaji
-   - Ví dụ: gõ `taberu` cho 食べる
+2. **Xem Kanji**: Quan sát chữ Hán và ngữ nghĩa tương ứng
+3. **Nhập Romaji**: Gõ cách đọc bằng dạng chữ Romaji (ví dụ: `taberu` cho 食べる)
 4. **Xem Gợi ý**: Hệ thống đưa ra các chữ Kanji khớp trong khi gõ
 5. **Chọn Đáp án**: Bấm chọn chữ Kanji chính xác từ danh sách
-6. **Ôn tập Chi tiết**: Làm quen với Onyomi, Kunyomi, từ vựng ví dụ và ngữ nghĩa
+6. **Ôn tập Chi tiết**: Làm quen với Onyomi, Kunyomi, từ vựng ví dụ
 7. **Tiếp Tục**: Bấm "Next Kanji →" để qua chữ mới
-8. **Kết Thúc**: Xem điểm tổng kết sau khi hoàn thành tất cả
+8. **Kết Thúc**: Xem điểm tổng kết
+
+### Với v2.0 (Full Features)
+1. **Tạo Tài khoản** → Bấm Register, nhập thông tin
+2. **Đăng Nhập** → Email + Password
+3. **Chơi Quiz** (Quiz points được lưu)
+4. **Xem Profile** → Check tiến độ & thống kê
+5. **Admin** (nếu có quyền) → Import Kanji từ Excel
 
 ### Phím tắt
 - **↓ Mũi tên xuống**: Chọn gợi ý tiếp theo
 - **↑ Mũi tên lên**: Trở về gợi ý trước
 - **Enter**: Xác nhận gợi ý đang chọn
 - **Escape**: Ẩn bảng gợi ý
+
+---
+
+## 🆕 Bắt đầu với v2.0
+
+### 1. Đăng ký Tài khoản
+```
+1. Nhấn "Register" trên Home page
+2. Nhập: Tên đầy đủ, Email, Password
+3. Nhấn "Tạo tài khoản"
+4. → Auto login + redirect Home
+```
+
+### 2. Chơi Quiz
+```
+1. Nhấn "Chơi Quiz" hoặc vào /quiz
+2. Chọn cấp độ N5/N4/N3
+3. Chơi như bình thường (Quiz memory tương tự v1)
+4. Điểm được lưu tự động
+```
+
+### 3. Xem Hồ sơ
+```
+1. Nhấn "👤 Profile" hoặc tên user
+2. Xem: Thông tin cá nhân, lịch sử quiz, thống kê
+```
+
+### 4. Admin Panel (Admin only)
+```
+1. Đăng nhập với tài khoản admin
+2. Navbar hiển thị "Admin Panel"
+3. Nhấn để mở Admin Dashboard
+4. Import Kanji từ Excel/CSV
+```
+
+---
 
 ## 📈 Kế hoạch Mở rộng hàng ngàn Kanji
 
@@ -175,7 +283,28 @@ Bạn có thể chỉnh sửa màu sắc trong cấu trúc `index.css` sử dụ
 }
 ```
 
-## 🌐 Tương thích Trình duyệt
+## 📚 Tài liệu & Hướng dẫn
+
+| File | Mục đích | Dành cho |
+|------|----------|----------|
+| **[QUICK_START.md](QUICK_START.md)** | Hướng dẫn 3 bước chạy app | Người mới |
+| **[FAQ.md](FAQ.md)** | Câu hỏi thường gặp & trả lời | Mọi người |
+| **[UPDATE_LOG.md](UPDATE_LOG.md)** | Danh sách thay đổi v2.0 | Dev/Updated |
+| **[ARCHITECTURE.md](ARCHITECTURE.md)** | Kiến trúc kỹ thuật chuyên sâu | Dev/Developers |
+| **[DEPLOYMENT.md](DEPLOYMENT.md)** | Deploy lên production | DevOps/Hosting |
+| **[PROJECT_STATUS.md](PROJECT_STATUS.md)** | Status & completion v2.0 | Project Manager |
+| **[ADDING_KANJI.md](ADDING_KANJI.md)** | Hướng dẫn thêm dữ liệu | Content Admin |
+
+## 📖 Đọc tiếp Nào
+
+- **Người mới**: Đọc [QUICK_START.md](QUICK_START.md)
+- **Có câu hỏi**: Xem [FAQ.md](FAQ.md)
+- **Developer**: Đọc [ARCHITECTURE.md](ARCHITECTURE.md)
+- **Cần deploy**: Đọc [DEPLOYMENT.md](DEPLOYMENT.md)
+- **Thêm Kanji**: Đọc [ADDING_KANJI.md](ADDING_KANJI.md)
+- **Xem thay đổi**: Đọc [UPDATE_LOG.md](UPDATE_LOG.md)
+
+---
 - ✅ Chrome 90+
 - ✅ Firefox 88+
 - ✅ Safari 14+  
