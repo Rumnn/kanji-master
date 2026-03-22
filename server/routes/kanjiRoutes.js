@@ -40,6 +40,30 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @desc    Create multiple Kanji from Excel/CSV
+// @route   POST /api/kanji/batch
+// @access  Private/Admin
+router.post('/batch', protect, admin, async (req, res) => {
+  try {
+    const kanjiList = req.body.kanjis;
+
+    if (!kanjiList || !Array.isArray(kanjiList)) {
+      return res.status(400).json({ message: 'Invalid format. Expected array of kanjis.' });
+    }
+
+    // Insert many, ignore duplicates (ordered: false)
+    const result = await Kanji.insertMany(kanjiList, { ordered: false });
+    
+    res.status(201).json({ message: `Successfully imported ${result.length} Kanji characters!` });
+  } catch (error) {
+    if (error.code === 11000) {
+       const insertedCount = error.insertedDocs ? error.insertedDocs.length : 0;
+       return res.status(201).json({ message: `Import complete. Added ${insertedCount} new characters. Existing ones were skipped.` });
+    }
+    res.status(400).json({ message: error.message });
+  }
+});
+
 // @desc    Create a new Kanji
 // @route   POST /api/kanji
 // @access  Private/Admin

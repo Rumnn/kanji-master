@@ -1,6 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
+import * as XLSX from 'xlsx';
+import Papa from 'papaparse';
 
 export default function AdminDashboard() {
   const { user } = useContext(AuthContext);
@@ -16,7 +18,78 @@ export default function AdminDashboard() {
 
   const [examples, setExamples] = useState([{ kana: '', romaji: '', meaning: '', meaningVi: '' }]);
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setMessage({ type: '', text: '' });
+
+    const isCSV = file.name.toLowerCase().endsWith('.csv');
+    const reader = new FileReader();
+
+    const processData = async (data: any[]) => {
+      try {
+        const formattedData = data.map((row: any) => ({
+          kanji: row.kanji || row.Kanji,
+          level: row.level || row.Level || 'N5',
+          onyomi: row.onyomi || row.Onyomi || '',
+          kunyomi: row.kunyomi || row.Kunyomi || '',
+          meaning: row.meaning || row.Meaning || '',
+          meaningVi: row.meaningVi || row['Meaning (Vi)'] || row.MeaningVi || '',
+          examples: []
+        }));
+
+        const config = { headers: { Authorization: `Bearer ${user?.token}` } };
+        const response = await axios.post('/api/kanji/batch', { kanjis: formattedData }, config);
+        setMessage({ type: 'success', text: response.data.message });
+        if (fileInputRef.current) fileInputRef.current.value = '';
+      } catch (error: any) {
+        setMessage({ type: 'error', text: error.response?.data?.message || 'Error saving to database' });
+      } finally {
+        setUploading(false);
+      }
+    };
+
+    reader.onload = async (evt) => {
+      if (isCSV) {
+        const text = evt.target?.result as string;
+        Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            processData(results.data);
+          },
+          error: (error: any) => {
+            setMessage({ type: 'error', text: 'Error parsing CSV file' });
+            setUploading(false);
+          }
+        });
+      } else {
+        try {
+          const arrayBuffer = evt.target?.result as ArrayBuffer;
+          const wb = XLSX.read(arrayBuffer, { type: 'array' });
+          const wsname = wb.SheetNames[0];
+          const ws = wb.Sheets[wsname];
+          const data = XLSX.utils.sheet_to_json(ws);
+          processData(data);
+        } catch (error) {
+          setMessage({ type: 'error', text: 'Error parsing Excel file' });
+          setUploading(false);
+        }
+      }
+    };
+
+    if (isCSV) {
+      reader.readAsText(file, "UTF-8");
+    } else {
+      reader.readAsArrayBuffer(file);
+    }
+  };
 
   const handleExampleChange = (index: number, field: string, value: string) => {
     const newExamples = [...examples];
@@ -78,9 +151,29 @@ export default function AdminDashboard() {
       </div>
 
       <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg border border-white p-8">
-        <h2 className="text-xl font-bold text-gray-800 border-b border-gray-100 pb-4 mb-6">
-          Add New Kanji Entry
-        </h2>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-100 pb-4 mb-6 gap-4">
+          <h2 className="text-xl font-bold text-gray-800">
+            Add New Kanji Entry
+          </h2>
+          <div className="flex items-center gap-2">
+            <input 
+              type="file" 
+              accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" 
+              className="hidden" 
+              ref={fileInputRef}
+              onChange={handleFileUpload}
+            />
+            <button 
+              type="button" 
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+              className="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-xl text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors flex items-center disabled:opacity-50"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+              {uploading ? 'Processing...' : 'Upload Excel / CSV'}
+            </button>
+          </div>
+        </div>
 
         {message.text && (
           <div className={`p-4 rounded-xl mb-6 text-sm font-bold border ${message.type === 'success' ? 'bg-jade-50 text-jade-700 border-jade-200' : 'bg-rose-50 text-rose-700 border-rose-200'}`}>
