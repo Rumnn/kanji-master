@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "node server/server.js",
-    "render-build": "npm install && npm run build && cd server && npm install"
+    "render-build": "npm install --include=dev && npm run build && cd server && npm install"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.1",
