@@ -1,5 +1,3 @@
-render: https://render.com
-
 # Render Blueprint - Kanji Master
 # Deploy cả Frontend + Backend + Socket.IO trên 1 service
 
@@ -13,8 +11,8 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: mongodb+srv://rum_db_user:<Ntd158683>@cluster0.uqqhwbg.mongodb.net/?appName=Cluster0
-        sync: false  # Set manually in Render dashboard
+      - key: MONGO_URI
+        value: mongodb+srv://rum_db_user:Ntd158683@cluster0.uqqhwbg.mongodb.net/kanji_master?retryWrites=true&w=majority&appName=Cluster0
       - key: JWT_SECRET
         generateValue: true
       - key: PORT
