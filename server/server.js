@@ -45,8 +45,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(clientDistPath));
 
   // All non-API routes serve index.html (SPA fallback)
-  app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api')) {
+  app.use((req, res) => {
+    if (req.path.startsWith('/api')) {
+      res.status(404).json({ message: 'API route not found' });
+    } else {
       res.sendFile(join(clientDistPath, 'index.html'));
     }
   });
