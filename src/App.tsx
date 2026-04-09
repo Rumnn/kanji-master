@@ -1,17 +1,24 @@
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthProvider, AuthContext } from './context/AuthContext';
+import { SocketProvider } from './context/SocketContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import AdminDashboard from './pages/AdminDashboard';
 import QuizPlay from './pages/QuizPlay';
+import MultipleChoiceQuiz from './pages/MultipleChoiceQuiz';
+import BattleLobby from './pages/BattleLobby';
+import BattlePlay from './pages/BattlePlay';
+import BattleResult from './pages/BattleResult';
+import Leaderboard from './pages/Leaderboard';
 import './App.css';
 
 const Navigation = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
@@ -28,15 +35,27 @@ const Navigation = () => {
               Kanji Master
             </Link>
           </div>
-          <div className="flex items-center gap-4">
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-2">
             {user ? (
               <>
-                <Link to="/profile" className="text-gray-600 hover:text-sakura-500 font-medium transition-colors">
-                  Welcome, {user.fullName}
+                <Link to="/quiz/mcq" className="px-4 py-2 text-gray-600 hover:text-sakura-500 font-semibold transition-colors rounded-lg hover:bg-sakura-50 text-sm">
+                  📝 Trắc nghiệm
+                </Link>
+                <Link to="/battle" className="px-4 py-2 text-gray-600 hover:text-sakura-500 font-semibold transition-colors rounded-lg hover:bg-sakura-50 text-sm">
+                  ⚔️ Đấu Solo
+                </Link>
+                <Link to="/leaderboard" className="px-4 py-2 text-gray-600 hover:text-amber-500 font-semibold transition-colors rounded-lg hover:bg-amber-50 text-sm">
+                  🏆 Xếp hạng
+                </Link>
+                <div className="h-6 w-px bg-gray-200 mx-1" />
+                <Link to="/profile" className="text-gray-600 hover:text-sakura-500 font-medium transition-colors text-sm px-3 py-2 rounded-lg hover:bg-gray-50">
+                  👤 {user.fullName}
                 </Link>
                 {user.role === 'admin' && (
-                  <Link to="/admin" className="px-4 py-2 bg-jade-100 text-jade-700 rounded-lg text-sm font-bold hover:bg-jade-200 transition-colors">
-                    Admin Panel
+                  <Link to="/admin" className="px-3 py-2 bg-jade-100 text-jade-700 rounded-lg text-xs font-bold hover:bg-jade-200 transition-colors">
+                    Admin
                   </Link>
                 )}
                 <button
@@ -48,7 +67,10 @@ const Navigation = () => {
               </>
             ) : (
               <>
-                <Link to="/login" className="text-gray-600 hover:text-sakura-500 font-medium transition-colors">
+                <Link to="/leaderboard" className="px-4 py-2 text-gray-600 hover:text-amber-500 font-semibold transition-colors rounded-lg hover:bg-amber-50 text-sm">
+                  🏆 Xếp hạng
+                </Link>
+                <Link to="/login" className="text-gray-600 hover:text-sakura-500 font-medium transition-colors px-4 py-2">
                   Login
                 </Link>
                 <Link to="/register" className="px-5 py-2.5 bg-gradient-to-r from-sakura-500 to-sakura-600 text-white rounded-xl font-bold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
@@ -57,7 +79,42 @@ const Navigation = () => {
               </>
             )}
           </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="md:hidden pb-4 border-t border-gray-100 pt-3 space-y-1 animate-fade-in">
+            {user ? (
+              <>
+                <Link to="/quiz/mcq" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">📝 Trắc nghiệm</Link>
+                <Link to="/battle" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">⚔️ Đấu Solo</Link>
+                <Link to="/leaderboard" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-amber-50">🏆 Xếp hạng</Link>
+                <Link to="/profile" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-gray-50">👤 {user.fullName}</Link>
+                <button onClick={() => { handleLogout(); setMobileOpen(false); }} className="block w-full text-left px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-gray-50">🚪 Logout</button>
+              </>
+            ) : (
+              <>
+                <Link to="/leaderboard" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-amber-50">🏆 Xếp hạng</Link>
+                <Link to="/login" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-gray-50">Login</Link>
+                <Link to="/register" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-sakura-600 font-bold hover:bg-sakura-50">Sign Up</Link>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );
@@ -80,46 +137,69 @@ const PrivateRoute = ({ children, requireAdmin = false }: { children: JSX.Elemen
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-gray-100 to-gray-200 font-sans text-gray-800 antialiased selection:bg-sakura-200 selection:text-sakura-900 flex flex-col relative overflow-x-hidden">
-          {/* Decorative background elements */}
-          <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-sakura-200/20 blur-3xl mix-blend-multiply animate-blob"></div>
-            <div className="absolute top-[20%] right-[-10%] w-[35%] h-[35%] rounded-full bg-jade-200/20 blur-3xl mix-blend-multiply animate-blob animation-delay-2000"></div>
-            <div className="absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] rounded-full bg-blue-200/20 blur-3xl mix-blend-multiply animate-blob animation-delay-4000"></div>
+      <SocketProvider>
+        <Router>
+          <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-gray-100 to-gray-200 font-sans text-gray-800 antialiased selection:bg-sakura-200 selection:text-sakura-900 flex flex-col relative overflow-x-hidden">
+            {/* Decorative background elements */}
+            <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+              <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-sakura-200/20 blur-3xl mix-blend-multiply animate-blob"></div>
+              <div className="absolute top-[20%] right-[-10%] w-[35%] h-[35%] rounded-full bg-jade-200/20 blur-3xl mix-blend-multiply animate-blob animation-delay-2000"></div>
+              <div className="absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] rounded-full bg-blue-200/20 blur-3xl mix-blend-multiply animate-blob animation-delay-4000"></div>
+            </div>
+
+            <Navigation />
+
+            <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/leaderboard" element={<Leaderboard />} />
+
+                {/* Protected Routes */}
+                <Route path="/profile" element={
+                  <PrivateRoute>
+                    <Profile />
+                  </PrivateRoute>
+                } />
+                <Route path="/quiz" element={
+                  <PrivateRoute>
+                    <QuizPlay />
+                  </PrivateRoute>
+                } />
+                <Route path="/quiz/mcq" element={
+                  <PrivateRoute>
+                    <MultipleChoiceQuiz />
+                  </PrivateRoute>
+                } />
+                <Route path="/battle" element={
+                  <PrivateRoute>
+                    <BattleLobby />
+                  </PrivateRoute>
+                } />
+                <Route path="/battle/:roomCode/play" element={
+                  <PrivateRoute>
+                    <BattlePlay />
+                  </PrivateRoute>
+                } />
+                <Route path="/battle/:roomCode/result" element={
+                  <PrivateRoute>
+                    <BattleResult />
+                  </PrivateRoute>
+                } />
+
+                {/* Admin Routes */}
+                <Route path="/admin" element={
+                  <PrivateRoute requireAdmin={true}>
+                    <AdminDashboard />
+                  </PrivateRoute>
+                } />
+              </Routes>
+            </main>
           </div>
-
-          <Navigation />
-
-          <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-
-              {/* Protected Routes */}
-              <Route path="/profile" element={
-                <PrivateRoute>
-                  <Profile />
-                </PrivateRoute>
-              } />
-              <Route path="/quiz" element={
-                <PrivateRoute>
-                  <QuizPlay />
-                </PrivateRoute>
-              } />
-
-              {/* Admin Routes */}
-              <Route path="/admin" element={
-                <PrivateRoute requireAdmin={true}>
-                  <AdminDashboard />
-                </PrivateRoute>
-              } />
-            </Routes>
-          </main>
-        </div>
-      </Router>
+        </Router>
+      </SocketProvider>
     </AuthProvider>
   );
 }
