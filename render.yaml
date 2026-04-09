@@ -1,0 +1,21 @@
+render: https://render.com
+
+# Render Blueprint - Kanji Master
+# Deploy cả Frontend + Backend + Socket.IO trên 1 service
+
+services:
+  - type: web
+    name: kanji-master
+    runtime: node
+    plan: free
+    buildCommand: npm run render-build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000

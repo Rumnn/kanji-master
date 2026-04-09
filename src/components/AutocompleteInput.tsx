@@ -3,6 +3,7 @@ import * as wanakana from 'wanakana'
 
 interface Kanji {
   id: string
+  _id: string
   kanji: string
   onyomi: string
   kunyomi: string

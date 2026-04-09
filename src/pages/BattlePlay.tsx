@@ -33,12 +33,11 @@ export default function BattlePlay() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
-  const [score, setScore] = useState(0);
   const [timerKey, setTimerKey] = useState(0);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [finished, setFinished] = useState(false);
   const [waitingForOpponent, setWaitingForOpponent] = useState(false);
-  const [opponentFinished, setOpponentFinished] = useState(false);
+  const [, setOpponentFinished] = useState(false);
   const [opponentDisconnected, setOpponentDisconnected] = useState(false);
 
   // Opponent tracking

@@ -1,5 +1,7 @@
 import express from 'express';
 import { createServer } from 'http';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
@@ -17,6 +19,9 @@ dotenv.config();
 // Kết nối CSDL
 connectDB();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
 const httpServer = createServer(app);
 
@@ -27,16 +32,29 @@ const io = initSocket(httpServer);
 app.use(cors());
 app.use(express.json());
 
-// Routes cơ bản
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/kanji', kanjiRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/battle', battleRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Kanji Master API is running...');
-});
+// Serve frontend static files in production
+if (process.env.NODE_ENV === 'production') {
+  const clientDistPath = join(__dirname, '..', 'dist');
+  app.use(express.static(clientDistPath));
+
+  // All non-API routes serve index.html (SPA fallback)
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(join(clientDistPath, 'index.html'));
+    }
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.send('Kanji Master API is running...');
+  });
+}
 
 // Port
 const PORT = process.env.PORT || 5000;

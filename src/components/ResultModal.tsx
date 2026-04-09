@@ -2,6 +2,7 @@
 
 interface Kanji {
   id: string
+  _id: string
   kanji: string
   onyomi: string
   kunyomi: string

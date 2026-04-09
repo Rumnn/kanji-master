@@ -120,7 +120,7 @@ const Navigation = () => {
   );
 };
 
-const PrivateRoute = ({ children, requireAdmin = false }: { children: JSX.Element, requireAdmin?: boolean }) => {
+const PrivateRoute = ({ children, requireAdmin = false }: { children: React.ReactNode, requireAdmin?: boolean }) => {
   const { user, isLoading } = useContext(AuthContext);
 
   if (isLoading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;

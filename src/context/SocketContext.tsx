@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { AuthContext } from './AuthContext';
 
@@ -28,7 +28,8 @@ export const SocketProvider = ({ children }: { children: ReactNode }) => {
     }
 
     // Connect to socket server
-    const newSocket = io(window.location.hostname === 'localhost' ? 'http://localhost:5000' : '', {
+    const socketUrl = import.meta.env.DEV ? 'http://localhost:5000' : window.location.origin;
+    const newSocket = io(socketUrl, {
       transports: ['websocket', 'polling'],
     });
 

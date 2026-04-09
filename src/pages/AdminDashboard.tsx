@@ -64,7 +64,7 @@ export default function AdminDashboard() {
           complete: (results) => {
             processData(results.data);
           },
-          error: (error: any) => {
+          error: (_error: any) => {
             setMessage({ type: 'error', text: 'Error parsing CSV file' });
             setUploading(false);
           }
