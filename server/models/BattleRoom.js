@@ -53,7 +53,7 @@ const battleRoomSchema = new mongoose.Schema({
     kanjiId: { type: mongoose.Schema.Types.ObjectId, ref: 'Kanji' },
     kanji: String,
     questionText: String,
-    type: String, // 'reading', 'meaning', 'kanji'
+    type: { type: String }, // fixes mongoose reserved keyword issue
     correctAnswer: String,
     choices: [String]
   }],

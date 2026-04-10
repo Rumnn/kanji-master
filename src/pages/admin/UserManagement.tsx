@@ -57,10 +57,12 @@ export default function UserManagement() {
     }
   };
 
-  const filteredUsers = users.filter(u => 
-    u.fullName.toLowerCase().includes(search.toLowerCase()) || 
-    u.email.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredUsers = users.filter(u => {
+    const name = (u.fullName || '').toLowerCase();
+    const emailStr = (u.email || '').toLowerCase();
+    const query = search.toLowerCase();
+    return name.includes(query) || emailStr.includes(query);
+  });
 
   return (
     <div className="p-6 md:p-8 max-w-6xl mx-auto animate-fade-in">
@@ -97,8 +99,8 @@ export default function UserManagement() {
                 {filteredUsers.map((u) => (
                   <tr key={u._id} className="hover:bg-gray-50/50 transition-colors">
                     <td className="p-4 pl-6">
-                      <div className="font-bold text-gray-800">{u.fullName}</div>
-                      <div className="text-xs text-gray-500">{u.email}</div>
+                      <div className="font-bold text-gray-800">{u.fullName || 'Ẩn danh'}</div>
+                      <div className="text-xs text-gray-500">{u.email || 'Không email'}</div>
                     </td>
                     <td className="p-4 text-sm text-gray-600">
                       {new Date(u.createdAt).toLocaleDateString()}
