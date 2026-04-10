@@ -247,7 +247,7 @@ export default function BattleLobby() {
       {/* Tabs */}
       <div className="flex mb-8 bg-gray-100 rounded-2xl p-1.5">
         <button
-          onClick={() => { setTab('create'); setError(''); }}
+          onClick={() => setTab('create')}
           className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${
             tab === 'create' ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500 hover:text-gray-700'
           }`}
@@ -255,7 +255,7 @@ export default function BattleLobby() {
           🏠 Tạo phòng
         </button>
         <button
-          onClick={() => { setTab('join'); setError(''); }}
+          onClick={() => setTab('join')}
           className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${
             tab === 'join' ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500 hover:text-gray-700'
           }`}

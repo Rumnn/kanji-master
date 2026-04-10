@@ -147,6 +147,33 @@ router.post('/create', protect, async (req, res) => {
   }
 });
 
+// @desc    Generate MCQ questions (solo, no battle)
+// @route   GET /api/battle/quiz/generate?level=N5&count=10&type=mixed
+// @access  Private
+// IMPORTANT: This must be declared BEFORE /:roomCode to avoid being shadowed
+router.get('/quiz/generate', protect, async (req, res) => {
+  try {
+    const level = req.query.level || 'N5';
+    const count = parseInt(req.query.count) || 10;
+    const type = req.query.type || 'mixed';
+
+    const kanjiPool = await Kanji.aggregate([
+      { $match: { level } },
+      { $sample: { size: Math.max(count, 20) * 2 } }
+    ]);
+
+    if (kanjiPool.length < 4) {
+      return res.status(400).json({ message: 'Not enough Kanji in database for this level.' });
+    }
+
+    const questions = generateQuestions(kanjiPool, count, type);
+
+    res.json({ questions, level, type });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 // @desc    Get room info
 // @route   GET /api/battle/:roomCode
 // @access  Private
@@ -186,32 +213,6 @@ router.get('/:roomCode', protect, async (req, res) => {
       hostAnswers: room.status === 'finished' ? room.hostAnswers : [],
       guestAnswers: room.status === 'finished' ? room.guestAnswers : [],
     });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-// @desc    Generate MCQ questions (solo, no battle)
-// @route   GET /api/battle/quiz/generate?level=N5&count=10&type=mixed
-// @access  Private
-router.get('/quiz/generate', protect, async (req, res) => {
-  try {
-    const level = req.query.level || 'N5';
-    const count = parseInt(req.query.count) || 10;
-    const type = req.query.type || 'mixed';
-
-    const kanjiPool = await Kanji.aggregate([
-      { $match: { level } },
-      { $sample: { size: Math.max(count, 20) * 2 } }
-    ]);
-
-    if (kanjiPool.length < 4) {
-      return res.status(400).json({ message: 'Not enough Kanji in database for this level.' });
-    }
-
-    const questions = generateQuestions(kanjiPool, count, type);
-
-    res.json({ questions, level, type });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

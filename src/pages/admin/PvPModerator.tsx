@@ -10,7 +10,8 @@ export default function PvPModerator() {
 
   const fetchLiveMatches = async () => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const { data } = await axios.get('/api/admin/matches/live', {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -39,7 +40,8 @@ export default function PvPModerator() {
     }
 
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const { data } = await axios.post('/api/admin/reset-leaderboard', {}, {
         headers: { Authorization: `Bearer ${token}` }
       });

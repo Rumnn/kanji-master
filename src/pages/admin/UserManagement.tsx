@@ -11,7 +11,8 @@ export default function UserManagement() {
 
   const fetchUsers = async () => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const config = { headers: { Authorization: `Bearer ${token}` } };
       const res = await axios.get('/api/admin/users', config);
       setUsers(res.data);
@@ -28,7 +29,8 @@ export default function UserManagement() {
 
   const handleToggleBan = async (userId: string, isCurrentlyBanned: boolean) => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const config = { headers: { Authorization: `Bearer ${token}` } };
       const reason = isCurrentlyBanned ? '' : window.prompt('Nhập lý do khóa tài khoản:', 'Vi phạm luật');
       
@@ -47,7 +49,8 @@ export default function UserManagement() {
 
   const handleChangeRole = async (userId: string, newRole: string) => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
       await axios.put(`/api/admin/users/${userId}/role`, { role: newRole }, config);

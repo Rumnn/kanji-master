@@ -8,7 +8,8 @@ export default function Feedbacks() {
 
   const fetchFeedbacks = async () => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       const { data } = await axios.get('/api/admin/feedbacks', {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -26,7 +27,8 @@ export default function Feedbacks() {
 
   const updateStatus = async (id: string, status: string) => {
     try {
-      const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+      const stored = localStorage.getItem('userInfo');
+      const token = stored ? JSON.parse(stored).token : null;
       await axios.put(`/api/admin/feedbacks/${id}/status`, { status }, {
         headers: { Authorization: `Bearer ${token}` }
       });

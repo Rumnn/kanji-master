@@ -10,8 +10,8 @@ export default function Overview() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-        if (!token) return;
+        const stored = localStorage.getItem('userInfo');
+        const token = stored ? JSON.parse(stored).token : null;
         
         const config = { headers: { Authorization: `Bearer ${token}` } };
         const res = await axios.get('/api/admin/analytics', config);
