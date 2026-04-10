@@ -4,9 +4,8 @@ const battleRoomSchema = new mongoose.Schema({
   roomCode: {
     type: String,
     required: true,
-    unique: true,
     uppercase: true,
-    length: 6
+    maxlength: 6
   },
   hostUser: {
     type: mongoose.Schema.Types.ObjectId,

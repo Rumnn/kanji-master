@@ -6,7 +6,9 @@ export default function initSocket(httpServer) {
     cors: {
       origin: '*',
       methods: ['GET', 'POST']
-    }
+    },
+    // Ensure WebSocket works on Render
+    transports: ['websocket', 'polling'],
   });
 
   // Track connected players by room
@@ -19,13 +21,35 @@ export default function initSocket(httpServer) {
     // Join a battle room
     socket.on('room:join', async ({ roomCode, userId, userName }) => {
       try {
-        const room = await BattleRoom.findOne({ roomCode: roomCode.toUpperCase() });
+        if (!roomCode) {
+          socket.emit('room:error', { message: 'Mã phòng không hợp lệ.' });
+          return;
+        }
+
+        const code = roomCode.toUpperCase();
+        console.log(`[Socket] room:join attempt - code: ${code}, user: ${userName} (${userId})`);
+
+        // Find the most recent non-finished room with this code, or any room with this code
+        let room = await BattleRoom.findOne({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 });
+        
         if (!room) {
+          // Fallback: try finding any room with this code (it might have just been created)
+          room = await BattleRoom.findOne({ roomCode: code }).sort({ createdAt: -1 });
+        }
+
+        if (!room) {
+          console.log(`[Socket] Room ${code} not found in database`);
           socket.emit('room:error', { message: 'Phòng không tồn tại.' });
           return;
         }
 
+        if (room.status === 'finished') {
+          socket.emit('room:error', { message: 'Trận đấu đã kết thúc.' });
+          return;
+        }
+
         const isHost = room.hostUser.toString() === userId;
+        console.log(`[Socket] Room ${code} found. Status: ${room.status}, isHost: ${isHost}`);
 
         if (!isHost && room.status !== 'waiting') {
           socket.emit('room:error', { message: 'Trận đấu đã bắt đầu hoặc kết thúc.' });
@@ -43,13 +67,13 @@ export default function initSocket(httpServer) {
           await room.save();
         }
 
-        socket.join(roomCode);
+        socket.join(code);
 
         // Track players
-        if (!roomPlayers.has(roomCode)) {
-          roomPlayers.set(roomCode, {});
+        if (!roomPlayers.has(code)) {
+          roomPlayers.set(code, {});
         }
-        const players = roomPlayers.get(roomCode);
+        const players = roomPlayers.get(code);
         if (isHost) {
           players.host = socket.id;
         } else {
@@ -58,32 +82,36 @@ export default function initSocket(httpServer) {
 
         socket.emit('room:joined', {
           role: isHost ? 'host' : 'guest',
-          roomCode,
+          roomCode: code,
           hostName: room.hostName,
-          guestName: room.guestName || userName,
+          guestName: room.guestName || '',
           status: room.status
         });
 
         // Notify room that guest joined
         if (!isHost) {
-          io.to(roomCode).emit('room:updated', {
+          io.to(code).emit('room:updated', {
             hostName: room.hostName,
             guestName: room.guestName || userName,
             status: room.status
           });
         }
 
-        console.log(`[Socket] ${userName} joined room ${roomCode} as ${isHost ? 'host' : 'guest'}`);
+        console.log(`[Socket] ${userName} joined room ${code} as ${isHost ? 'host' : 'guest'}`);
       } catch (err) {
-        socket.emit('room:error', { message: err.message });
+        console.error('[Socket] room:join error:', err);
+        socket.emit('room:error', { message: 'Lỗi server: ' + err.message });
       }
     });
 
     // Host starts the game
     socket.on('game:start', async ({ roomCode }) => {
       try {
-        const room = await BattleRoom.findOne({ roomCode });
-        if (!room || room.status !== 'waiting') return;
+        const room = await BattleRoom.findOne({ roomCode, status: 'waiting' });
+        if (!room) {
+          socket.emit('room:error', { message: 'Phòng không sẵn sàng.' });
+          return;
+        }
 
         if (!room.guestUser) {
           socket.emit('room:error', { message: 'Chờ đối thủ tham gia trước.' });
@@ -112,6 +140,7 @@ export default function initSocket(httpServer) {
 
         console.log(`[Socket] Game started in room ${roomCode}`);
       } catch (err) {
+        console.error('[Socket] game:start error:', err);
         socket.emit('room:error', { message: err.message });
       }
     });
@@ -214,7 +243,7 @@ export default function initSocket(httpServer) {
         if (disconnectedRole) {
           io.to(roomCode).emit('game:playerDisconnected', { role: disconnectedRole });
 
-          // Auto-finish after timeout (handled by client)
+          // Auto-finish after timeout
           setTimeout(async () => {
             try {
               const room = await BattleRoom.findOne({ roomCode });
@@ -253,3 +282,4 @@ export default function initSocket(httpServer) {
 
   return io;
 }
+

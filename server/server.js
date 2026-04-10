@@ -5,6 +5,7 @@ import { dirname, join } from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 import initSocket from './socket.js';
 
@@ -19,7 +20,20 @@ import adminRoutes from './routes/adminRoutes.js';
 dotenv.config();
 
 // Kết nối CSDL
-connectDB();
+connectDB().then(async () => {
+  // Drop old unique index on roomCode if it exists (we removed unique constraint)
+  try {
+    const collection = mongoose.connection.collection('battlerooms');
+    const indexes = await collection.indexes();
+    const hasUniqueRoomCode = indexes.some(idx => idx.key?.roomCode && idx.unique);
+    if (hasUniqueRoomCode) {
+      await collection.dropIndex('roomCode_1');
+      console.log('[DB] Dropped old unique index on roomCode');
+    }
+  } catch (e) {
+    // Index might not exist, that's fine
+  }
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
