@@ -1,8 +1,49 @@
 import express from 'express';
 import Kanji from '../models/Kanji.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const router = express.Router();
+
+// @desc    Seed database with base Kanji data manually from URL
+// @route   GET /api/kanji/seed-database
+// @access  Public (Temporary)
+router.get('/seed-database', async (req, res) => {
+  try {
+    const dataPath = join(__dirname, '../../src/data/kanjiData.json');
+    const kanjiData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+
+    const mergedKanjis = [];
+    Object.keys(kanjiData).forEach((levelKey) => {
+      kanjiData[levelKey].forEach((k) => {
+        mergedKanjis.push({
+          kanji: k.kanji,
+          level: levelKey,
+          onyomi: k.onyomi,
+          kunyomi: k.kunyomi,
+          meaning: k.meaning,
+          meaningVi: k.meaningVi,
+          examples: k.examples
+        });
+      });
+    });
+
+    const count = await Kanji.countDocuments();
+    if (count === 0) {
+      await Kanji.insertMany(mergedKanjis);
+      return res.json({ message: `Success! Seeded ${mergedKanjis.length} kanjis into the database.` });
+    } else {
+      return res.json({ message: `Database already has ${count} kanjis. No action taken.` });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 // @desc    Get random Kanji by level
 // @route   GET /api/kanji/random?level=N5&limit=10
