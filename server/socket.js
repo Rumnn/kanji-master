@@ -29,10 +29,16 @@ export default function initSocket(httpServer) {
         const code = roomCode.toUpperCase();
         console.log(`[Socket] room:join attempt - code: ${code}, user: ${userName} (${userId})`);
 
-        let room = await BattleRoom.findOne({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 });
-        if (!room) room = await BattleRoom.findOne({ roomCode: code }).sort({ createdAt: -1 });
+        let rooms = await BattleRoom.find({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 }).limit(1);
+        let room = rooms[0];
+        
+        if (!room) {
+          rooms = await BattleRoom.find({ roomCode: code }).sort({ createdAt: -1 }).limit(1);
+          room = rooms[0];
+        }
 
         if (!room) {
+          console.log(`[Socket] ERROR: Room ${code} not found in database. Query returned empty.`);
           socket.emit('room:error', { message: 'Phòng không tồn tại.' });
           return;
         }

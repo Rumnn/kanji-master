@@ -122,6 +122,8 @@ router.post('/create', protect, async (req, res) => {
       status: 'waiting',
       guestReady: false
     });
+    
+    console.log(`[API] Created BattleRoom in DB: ${room.roomCode} (_id: ${room._id})`);
 
     res.status(201).json({
       roomCode: room.roomCode,
