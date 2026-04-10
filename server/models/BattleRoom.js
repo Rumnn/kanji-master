@@ -25,6 +25,10 @@ const battleRoomSchema = new mongoose.Schema({
     type: String,
     default: null
   },
+  guestReady: {
+    type: Boolean,
+    default: false
+  },
   level: {
     type: String,
     enum: ['N5', 'N4', 'N3', 'N2', 'N1'],

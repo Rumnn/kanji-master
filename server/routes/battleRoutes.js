@@ -98,19 +98,9 @@ function generateQuestions(kanjiPool, count, questionType) {
 // @access  Private
 router.post('/create', protect, async (req, res) => {
   try {
-    const { level, questionCount, questionType, timePerQuestion } = req.body;
-
-    // Get kanji pool for generating questions
-    const kanjiPool = await Kanji.aggregate([
-      { $match: { level: level || 'N5' } },
-      { $sample: { size: Math.max(parseInt(questionCount) || 10, 20) * 2 } }
-    ]);
-
-    if (kanjiPool.length < 4) {
-      return res.status(400).json({ message: 'Not enough Kanji in database for this level.' });
-    }
-
-    const questions = generateQuestions(kanjiPool, parseInt(questionCount) || 10, questionType || 'mixed');
+    // We just create an empty room with default values here.
+    // The exact settings (level, questionCount, etc.) will be negotiated inside the lobby socket logic
+    // before generating questions on game:start.
 
     // Generate unique room code
     let roomCode;
@@ -124,12 +114,13 @@ router.post('/create', protect, async (req, res) => {
       roomCode,
       hostUser: req.user._id,
       hostName: req.user.fullName,
-      level: level || 'N5',
-      questionCount: questions.length,
-      questionType: questionType || 'mixed',
-      timePerQuestion: timePerQuestion || 10,
-      questions,
-      status: 'waiting'
+      level: 'N5',
+      questionCount: 10,
+      questionType: 'mixed',
+      timePerQuestion: 10,
+      questions: [],
+      status: 'waiting',
+      guestReady: false
     });
 
     res.status(201).json({

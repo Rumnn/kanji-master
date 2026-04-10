@@ -1,5 +1,7 @@
 import { Server } from 'socket.io';
 import BattleRoom from './models/BattleRoom.js';
+import Kanji from './models/Kanji.js';
+import { generateQuestions } from './routes/battleRoutes.js';
 
 export default function initSocket(httpServer) {
   const io = new Server(httpServer, {
@@ -7,18 +9,16 @@ export default function initSocket(httpServer) {
       origin: '*',
       methods: ['GET', 'POST']
     },
-    // Ensure WebSocket works on Render
     transports: ['websocket', 'polling'],
   });
 
-  // Track connected players by room
-  const roomPlayers = new Map(); // roomCode -> { host: socketId, guest: socketId }
-  const playerFinished = new Map(); // roomCode -> { host: bool, guest: bool }
+  const roomPlayers = new Map();
+  const playerFinished = new Map();
 
   io.on('connection', (socket) => {
     console.log(`[Socket] Connected: ${socket.id}`);
 
-    // Join a battle room
+    // Join room
     socket.on('room:join', async ({ roomCode, userId, userName }) => {
       try {
         if (!roomCode) {
@@ -29,16 +29,10 @@ export default function initSocket(httpServer) {
         const code = roomCode.toUpperCase();
         console.log(`[Socket] room:join attempt - code: ${code}, user: ${userName} (${userId})`);
 
-        // Find the most recent non-finished room with this code, or any room with this code
         let room = await BattleRoom.findOne({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 });
-        
-        if (!room) {
-          // Fallback: try finding any room with this code (it might have just been created)
-          room = await BattleRoom.findOne({ roomCode: code }).sort({ createdAt: -1 });
-        }
+        if (!room) room = await BattleRoom.findOne({ roomCode: code }).sort({ createdAt: -1 });
 
         if (!room) {
-          console.log(`[Socket] Room ${code} not found in database`);
           socket.emit('room:error', { message: 'Phòng không tồn tại.' });
           return;
         }
@@ -49,14 +43,11 @@ export default function initSocket(httpServer) {
         }
 
         const isHost = room.hostUser.toString() === userId;
-        console.log(`[Socket] Room ${code} found. Status: ${room.status}, isHost: ${isHost}`);
-
         if (!isHost && room.status !== 'waiting') {
           socket.emit('room:error', { message: 'Trận đấu đã bắt đầu hoặc kết thúc.' });
           return;
         }
 
-        // If guest joining
         if (!isHost) {
           if (room.guestUser && room.guestUser.toString() !== userId) {
             socket.emit('room:error', { message: 'Phòng đã đầy.' });
@@ -69,83 +60,147 @@ export default function initSocket(httpServer) {
 
         socket.join(code);
 
-        // Track players
-        if (!roomPlayers.has(code)) {
-          roomPlayers.set(code, {});
-        }
+        if (!roomPlayers.has(code)) roomPlayers.set(code, {});
         const players = roomPlayers.get(code);
-        if (isHost) {
-          players.host = socket.id;
-        } else {
-          players.guest = socket.id;
-        }
+        if (isHost) players.host = socket.id;
+        else players.guest = socket.id;
+
+        const currentSettings = {
+          level: room.level,
+          questionCount: room.questionCount,
+          questionType: room.questionType,
+          timePerQuestion: room.timePerQuestion
+        };
 
         socket.emit('room:joined', {
           role: isHost ? 'host' : 'guest',
           roomCode: code,
           hostName: room.hostName,
           guestName: room.guestName || '',
+          guestReady: room.guestReady,
+          settings: currentSettings,
           status: room.status
         });
 
-        // Notify room that guest joined
         if (!isHost) {
           io.to(code).emit('room:updated', {
             hostName: room.hostName,
             guestName: room.guestName || userName,
+            guestReady: room.guestReady,
+            settings: currentSettings,
             status: room.status
           });
         }
-
-        console.log(`[Socket] ${userName} joined room ${code} as ${isHost ? 'host' : 'guest'}`);
       } catch (err) {
-        console.error('[Socket] room:join error:', err);
         socket.emit('room:error', { message: 'Lỗi server: ' + err.message });
       }
     });
 
-    // Host starts the game
-    socket.on('game:start', async ({ roomCode }) => {
+    // Update settings (Host only)
+    socket.on('room:update_settings', async ({ roomCode, settings, role }) => {
       try {
+        if (role !== 'host') return;
+        const room = await BattleRoom.findOne({ roomCode, status: 'waiting' });
+        if (!room) return;
+
+        room.level = settings.level;
+        room.questionCount = settings.questionCount;
+        room.questionType = settings.questionType;
+        room.timePerQuestion = settings.timePerQuestion;
+        
+        // Auto unready guest if settings change to be fair
+        room.guestReady = false; 
+        
+        await room.save();
+
+        io.to(roomCode).emit('room:settings_updated', {
+          settings,
+          guestReady: false
+        });
+      } catch (err) {
+        console.error('[Socket] update_settings error', err);
+      }
+    });
+
+    // Toggle Ready (Guest only)
+    socket.on('room:toggle_ready', async ({ roomCode, role }) => {
+      try {
+        if (role !== 'guest') return;
+        const room = await BattleRoom.findOne({ roomCode, status: 'waiting' });
+        if (!room) return;
+
+        room.guestReady = !room.guestReady;
+        await room.save();
+
+        io.to(roomCode).emit('room:guest_ready', {
+          guestReady: room.guestReady
+        });
+      } catch (err) {
+        console.error('[Socket] toggle_ready error', err);
+      }
+    });
+
+    // Start game
+    socket.on('game:start', async ({ roomCode, role }) => {
+      try {
+        if (role !== 'host') return;
+
         const room = await BattleRoom.findOne({ roomCode, status: 'waiting' });
         if (!room) {
           socket.emit('room:error', { message: 'Phòng không sẵn sàng.' });
           return;
         }
 
-        if (!room.guestUser) {
-          socket.emit('room:error', { message: 'Chờ đối thủ tham gia trước.' });
+        if (!room.guestUser || !room.guestReady) {
+          socket.emit('room:error', { message: 'Guest chưa sẵn sàng.' });
           return;
         }
 
+        // Generate questions now based on final settings
+        const kanjiPool = await Kanji.aggregate([
+          { $match: { level: room.level } },
+          { $sample: { size: Math.max(room.questionCount, 20) * 2 } }
+        ]);
+
+        if (kanjiPool.length < 4) {
+          socket.emit('room:error', { message: 'Không đủ Kanji trong CSDL cho cấp độ này.' });
+          return;
+        }
+
+        const questions = generateQuestions(kanjiPool, room.questionCount, room.questionType);
+        room.questions = questions;
         room.status = 'playing';
         await room.save();
 
-        // Initialize finish tracking
         playerFinished.set(roomCode, { host: false, guest: false });
 
-        // Send questions to both players (without correct answers)
-        const safeQuestions = room.questions.map(q => ({
-          kanji: q.kanji,
-          questionText: q.questionText,
-          type: q.type,
-          choices: q.choices
-        }));
+        // Emit countdown
+        io.to(roomCode).emit('game:countdown', { seconds: 3 });
+        
+        // Wait 3 seconds, then start
+        setTimeout(() => {
+          const safeQuestions = room.questions.map(q => ({
+            kanji: q.kanji,
+            questionText: q.questionText,
+            type: q.type,
+            choices: q.choices
+          }));
 
-        io.to(roomCode).emit('game:started', {
-          questions: safeQuestions,
-          timePerQuestion: room.timePerQuestion,
-          questionCount: room.questionCount
-        });
+          io.to(roomCode).emit('game:started', {
+            questions: safeQuestions,
+            timePerQuestion: room.timePerQuestion,
+            questionCount: room.questionCount
+          });
+          console.log(`[Socket] Game started in room ${roomCode}`);
+        }, 3000);
 
-        console.log(`[Socket] Game started in room ${roomCode}`);
       } catch (err) {
         console.error('[Socket] game:start error:', err);
         socket.emit('room:error', { message: err.message });
       }
     });
 
-    // Player submits answer for a question
+    // Handle answer
     socket.on('game:answer', async ({ roomCode, questionIndex, answer, timeMs, role }) => {
       try {
         const room = await BattleRoom.findOne({ roomCode });
@@ -155,7 +210,6 @@ export default function initSocket(httpServer) {
         if (!question) return;
 
         const correct = answer === question.correctAnswer;
-
         const answerRecord = { questionIndex, answer, correct, timeMs };
 
         if (role === 'host') {
@@ -170,7 +224,6 @@ export default function initSocket(httpServer) {
 
         await room.save();
 
-        // Notify opponent of progress
         io.to(roomCode).emit('game:progress', {
           role,
           questionIndex,
@@ -183,7 +236,7 @@ export default function initSocket(httpServer) {
       }
     });
 
-    // Player finishes all questions
+    // Handle finish
     socket.on('game:finished', async ({ roomCode, role }) => {
       try {
         const finished = playerFinished.get(roomCode) || { host: false, guest: false };
@@ -192,7 +245,6 @@ export default function initSocket(httpServer) {
 
         io.to(roomCode).emit('game:playerFinished', { role });
 
-        // If both finished, determine winner
         if (finished.host && finished.guest) {
           const room = await BattleRoom.findOne({ roomCode });
           if (!room) return;
@@ -208,22 +260,15 @@ export default function initSocket(httpServer) {
           await room.save();
 
           io.to(roomCode).emit('game:result', {
-            winner,
-            hostScore: room.hostScore,
-            guestScore: room.guestScore,
-            hostTime: room.hostTime,
-            guestTime: room.guestTime,
-            hostName: room.hostName,
-            guestName: room.guestName,
-            hostAnswers: room.hostAnswers,
-            guestAnswers: room.guestAnswers,
+            winner, hostScore: room.hostScore, guestScore: room.guestScore,
+            hostTime: room.hostTime, guestTime: room.guestTime,
+            hostName: room.hostName, guestName: room.guestName,
+            hostAnswers: room.hostAnswers, guestAnswers: room.guestAnswers,
             questions: room.questions
           });
 
-          // Cleanup
           playerFinished.delete(roomCode);
           roomPlayers.delete(roomCode);
-          console.log(`[Socket] Game ended in room ${roomCode}. Winner: ${winner}`);
         }
       } catch (err) {
         console.error('[Socket] game:finished error', err);
@@ -233,8 +278,6 @@ export default function initSocket(httpServer) {
     // Handle disconnect
     socket.on('disconnect', () => {
       console.log(`[Socket] Disconnected: ${socket.id}`);
-
-      // Find room this socket was in
       for (const [roomCode, players] of roomPlayers.entries()) {
         let disconnectedRole = null;
         if (players.host === socket.id) disconnectedRole = 'host';
@@ -242,8 +285,7 @@ export default function initSocket(httpServer) {
 
         if (disconnectedRole) {
           io.to(roomCode).emit('game:playerDisconnected', { role: disconnectedRole });
-
-          // Auto-finish after timeout
+          
           setTimeout(async () => {
             try {
               const room = await BattleRoom.findOne({ roomCode });
@@ -254,19 +296,12 @@ export default function initSocket(httpServer) {
                 await room.save();
 
                 io.to(roomCode).emit('game:result', {
-                  winner,
-                  hostScore: room.hostScore,
-                  guestScore: room.guestScore,
-                  hostTime: room.hostTime,
-                  guestTime: room.guestTime,
-                  hostName: room.hostName,
-                  guestName: room.guestName,
-                  disconnected: disconnectedRole,
-                  hostAnswers: room.hostAnswers,
-                  guestAnswers: room.guestAnswers,
-                  questions: room.questions
+                  winner, hostScore: room.hostScore, guestScore: room.guestScore,
+                  hostTime: room.hostTime, guestTime: room.guestTime,
+                  hostName: room.hostName, guestName: room.guestName,
+                  disconnected: disconnectedRole, hostAnswers: room.hostAnswers,
+                  guestAnswers: room.guestAnswers, questions: room.questions
                 });
-
                 playerFinished.delete(roomCode);
                 roomPlayers.delete(roomCode);
               }
