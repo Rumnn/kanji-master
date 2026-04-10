@@ -25,11 +25,17 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // Role mặc định là 'user'. Nếu muốn tạo admin thì can thiệp DB trực tiếp
+    // Auto-assign admin role for the master email
+    let role = 'user';
+    if (email === 'admin@kanji.com' || email === 'admin@gmail.com') {
+      role = 'admin';
+    }
+
     const user = await User.create({
       fullName,
       email,
       password,
+      role
     });
 
     if (user) {
