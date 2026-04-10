@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
-import { Search, ShieldAlert, ShieldCheck, UserCog, Ban, LockOpen } from 'lucide-react';
+import { Search, ShieldAlert, ShieldCheck, Ban, LockOpen } from 'lucide-react';
 
 export default function UserManagement() {
   const { user: currentUser } = useContext(AuthContext);

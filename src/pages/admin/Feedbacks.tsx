@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { MessageSquare, CheckCircle, Clock } from 'lucide-react';
+import { MessageSquare, Clock } from 'lucide-react';
 
 export default function Feedbacks() {
   const [feedbacks, setFeedbacks] = useState<any[]>([]);
