@@ -12,6 +12,7 @@ import kanjiRoutes from './routes/kanjiRoutes.js';
 import historyRoutes from './routes/historyRoutes.js';
 import battleRoutes from './routes/battleRoutes.js';
 import leaderboardRoutes from './routes/leaderboardRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 
 // Khởi tạo các biến môi trường
 dotenv.config();
@@ -38,6 +39,7 @@ app.use('/api/kanji', kanjiRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/api/battle', battleRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Serve frontend static files in production
 if (process.env.NODE_ENV === 'production') {

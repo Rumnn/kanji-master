@@ -13,7 +13,16 @@ const protect = async (req, res, next) => {
       const decoded = jwt.verify(token, process.env.JWT_SECRET || 'fallback_secret_key');
 
       // Gắn user vào request object
-      req.user = await User.findById(decoded.id).select('-password');
+      const user = await User.findById(decoded.id).select('-password');
+      
+      if (user && user.isBanned) {
+        return res.status(403).json({ 
+          message: 'Tài khoản của bạn đã bị khóa.', 
+          reason: user.banReason 
+        });
+      }
+
+      req.user = user;
       next();
     } catch (error) {
       console.error(error);
@@ -34,4 +43,12 @@ const admin = (req, res, next) => {
   }
 };
 
-export { protect, admin };
+const adminAndMod = (req, res, next) => {
+  if (req.user && (req.user.role === 'admin' || req.user.role === 'moderator')) {
+    next();
+  } else {
+    res.status(403).json({ message: 'Not authorized as admin or moderator' });
+  }
+};
+
+export { protect, admin, adminAndMod };

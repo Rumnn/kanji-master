@@ -6,7 +6,12 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminLayout from './pages/admin/AdminLayout';
+import Overview from './pages/admin/Overview';
+import UserManagement from './pages/admin/UserManagement';
+import CMSKanji from './pages/admin/CMSKanji';
+import PvPModerator from './pages/admin/PvPModerator';
+import Feedbacks from './pages/admin/Feedbacks';
 import QuizPlay from './pages/QuizPlay';
 import MultipleChoiceQuiz from './pages/MultipleChoiceQuiz';
 import BattleLobby from './pages/BattleLobby';
@@ -53,9 +58,9 @@ const Navigation = () => {
                 <Link to="/profile" className="text-gray-600 hover:text-sakura-500 font-medium transition-colors text-sm px-3 py-2 rounded-lg hover:bg-gray-50">
                   👤 {user.fullName}
                 </Link>
-                {user.role === 'admin' && (
-                  <Link to="/admin" className="px-3 py-2 bg-jade-100 text-jade-700 rounded-lg text-xs font-bold hover:bg-jade-200 transition-colors">
-                    Admin
+                {(user.role === 'admin' || user.role === 'moderator') && (
+                  <Link to="/admin" className="px-3 py-2 bg-jade-100 text-jade-700 rounded-lg text-xs font-bold hover:bg-jade-200 transition-colors flex items-center gap-1">
+                    {user.role === 'admin' ? '👑 Admin' : '🛡️ Mod'}
                   </Link>
                 )}
                 <button
@@ -120,7 +125,7 @@ const Navigation = () => {
   );
 };
 
-const PrivateRoute = ({ children, requireAdmin = false }: { children: React.ReactNode, requireAdmin?: boolean }) => {
+const PrivateRoute = ({ children, requireAdmin = false, requireModOrAdmin = false }: { children: React.ReactNode, requireAdmin?: boolean, requireModOrAdmin?: boolean }) => {
   const { user, isLoading } = useContext(AuthContext);
 
   if (isLoading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
@@ -128,6 +133,10 @@ const PrivateRoute = ({ children, requireAdmin = false }: { children: React.Reac
   if (!user) return <Login />;
   
   if (requireAdmin && user.role !== 'admin') {
+    return <div className="min-h-screen flex items-center justify-center text-3xl font-bold text-rose-500">Access Denied</div>;
+  }
+
+  if (requireModOrAdmin && user.role !== 'admin' && user.role !== 'moderator') {
     return <div className="min-h-screen flex items-center justify-center text-3xl font-bold text-rose-500">Access Denied</div>;
   }
 
@@ -191,10 +200,16 @@ export default function App() {
 
                 {/* Admin Routes */}
                 <Route path="/admin" element={
-                  <PrivateRoute requireAdmin={true}>
-                    <AdminDashboard />
+                  <PrivateRoute requireModOrAdmin={true}>
+                    <AdminLayout />
                   </PrivateRoute>
-                } />
+                }>
+                  <Route index element={<Overview />} />
+                  <Route path="users" element={<UserManagement />} />
+                  <Route path="kanji" element={<CMSKanji />} />
+                  <Route path="pvp" element={<PvPModerator />} />
+                  <Route path="feedback" element={<Feedbacks />} />
+                </Route>
               </Routes>
             </main>
           </div>

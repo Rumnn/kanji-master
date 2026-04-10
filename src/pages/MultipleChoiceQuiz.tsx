@@ -125,18 +125,28 @@ export default function MultipleChoiceQuiz() {
   };
 
   const finishQuiz = async () => {
+    const statsPayload = questions.map((q, idx) => ({
+      kanji: q.kanji,
+      correct: answeredCorrectly[idx]
+    }));
+
     setPhase('result');
     if (user?.token) {
       setSavingResult(true);
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
+        // Save History
         await axios.post('/api/history', {
           quizName: `Trắc nghiệm ${level} - ${questionType} (${questions.length} câu)`,
           score,
           totalQuestions: questions.length
         }, config);
+
+        // Update Kanji Stats
+        await axios.put('/api/kanji/stats', { stats: statsPayload }, config);
+
       } catch (err) {
-        console.error('Failed to save history', err);
+        console.error('Failed to save history or stats', err);
       } finally {
         setSavingResult(false);
       }

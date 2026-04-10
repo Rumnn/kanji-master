@@ -40,6 +40,39 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @desc    Update Kanji Stats (called after quiz/battle)
+// @route   PUT /api/kanji/stats
+// @access  Private (User)
+router.put('/stats', protect, async (req, res) => {
+  try {
+    const { stats } = req.body; // array of { kanji: string, correct: boolean }
+    if (!stats || !Array.isArray(stats)) {
+      return res.status(400).json({ message: 'Invalid stats payload' });
+    }
+    
+    const bulkOps = stats.map(s => ({
+      updateOne: {
+        filter: { kanji: s.kanji },
+        update: {
+          $inc: { 
+            'stats.timesAppeared': 1,
+            'stats.timesCorrect': s.correct ? 1 : 0,
+            'stats.timesIncorrect': s.correct ? 0 : 1
+          }
+        }
+      }
+    }));
+
+    if (bulkOps.length > 0) {
+      await Kanji.bulkWrite(bulkOps);
+    }
+    
+    res.json({ message: 'Stats updated successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 // @desc    Create multiple Kanji from Excel/CSV
 // @route   POST /api/kanji/batch
 // @access  Private/Admin

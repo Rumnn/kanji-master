@@ -1,6 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
+import { Megaphone, X } from 'lucide-react';
 
 const levels = [
   {
@@ -63,6 +65,19 @@ export default function Home() {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [packSize, setPackSize] = useState<number>(10);
+  const [announcements, setAnnouncements] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchAnnouncements = async () => {
+      try {
+        const { data } = await axios.get('/api/admin/announcements');
+        setAnnouncements(data.filter((a: any) => a.isActive));
+      } catch (err) {
+        console.error('Failed to fetch announcements', err);
+      }
+    };
+    fetchAnnouncements();
+  }, []);
 
   const handleLevelSelect = (levelId: string) => {
     if (!user) {
@@ -82,6 +97,28 @@ export default function Home() {
 
   return (
     <div className="flex-1 flex flex-col items-center p-6 w-full animate-fade-in-up">
+      {/* Announcements Banner */}
+      {announcements.length > 0 && (
+        <div className="w-full max-w-5xl mb-8 space-y-3">
+          {announcements.map((ann, idx) => (
+            <div key={idx} className={`w-full p-4 rounded-2xl shadow-sm border flex items-start gap-4 relative animate-fade-in
+              ${ann.type === 'warning' ? 'bg-amber-50 border-amber-200 text-amber-800' :
+                ann.type === 'update' ? 'bg-jade-50 border-jade-200 text-jade-800' : 
+                'bg-blue-50 border-blue-200 text-blue-800'}`}
+            >
+              <Megaphone className={`shrink-0 mt-0.5 ${ann.type === 'warning' ? 'text-amber-500' : ann.type === 'update' ? 'text-jade-500' : 'text-blue-500'}`} size={20} />
+              <div className="flex-1">
+                <h4 className="font-bold mb-1">{ann.title}</h4>
+                <p className="text-sm opacity-90">{ann.content}</p>
+              </div>
+              <button onClick={() => setAnnouncements(a => a.filter((_, i) => i !== idx))} className="absolute right-4 top-4 opacity-50 hover:opacity-100 transition-opacity">
+                <X size={16} />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Hero */}
       <div className="text-center mb-12">
         <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-600 mb-4 tracking-tight">

@@ -34,7 +34,12 @@ const kanjiSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add the Vietnamese meaning']
   },
-  examples: [exampleSchema]
+  examples: [exampleSchema],
+  stats: {
+    timesAppeared: { type: Number, default: 0 },
+    timesCorrect: { type: Number, default: 0 },
+    timesIncorrect: { type: Number, default: 0 }
+  }
 }, {
   timestamps: true
 });
