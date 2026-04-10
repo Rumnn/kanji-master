@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import fs from 'fs';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
@@ -41,9 +42,9 @@ app.use('/api/battle', battleRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Serve frontend static files in production
-if (process.env.NODE_ENV === 'production') {
-  const clientDistPath = join(__dirname, '..', 'dist');
+// Serve frontend static files
+const clientDistPath = join(__dirname, '..', 'dist');
+if (process.env.NODE_ENV === 'production' || fs.existsSync(clientDistPath)) {
   app.use(express.static(clientDistPath));
 
   // All non-API routes serve index.html (SPA fallback)
