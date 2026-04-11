@@ -29,16 +29,24 @@ export default function initSocket(httpServer) {
         const code = roomCode.toUpperCase();
         console.log(`[Socket] room:join attempt - code: ${code}, user: ${userName} (${userId})`);
 
-        let rooms = await BattleRoom.find({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 }).limit(1);
-        let room = rooms[0];
-        
-        if (!room) {
-          rooms = await BattleRoom.find({ roomCode: code }).sort({ createdAt: -1 }).limit(1);
+        let room = null;
+        let attempts = 0;
+
+        // Implement retry logic for MongoDB Atlas replication lag
+        while (!room && attempts < 5) {
+          let rooms = await BattleRoom.find({ roomCode: code, status: { $ne: 'finished' } }).sort({ createdAt: -1 }).limit(1);
+          if (!rooms.length) rooms = await BattleRoom.find({ roomCode: code }).sort({ createdAt: -1 }).limit(1);
           room = rooms[0];
+          
+          if (!room) {
+            attempts++;
+            console.log(`[Socket] Room ${code} not found, waiting for DB sync... (attempt ${attempts})`);
+            await new Promise(r => setTimeout(r, 600)); // wait 600ms before retrying
+          }
         }
 
         if (!room) {
-          console.log(`[Socket] ERROR: Room ${code} not found in database. Query returned empty.`);
+          console.log(`[Socket] ERROR: Room ${code} still not found in database after retries. Query returned empty.`);
           socket.emit('room:error', { message: 'Phòng không tồn tại.' });
           return;
         }
