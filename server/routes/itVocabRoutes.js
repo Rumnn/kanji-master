@@ -29,30 +29,40 @@ router.get('/quiz/generate', async (req, res) => {
   try {
     const count = parseInt(req.query.count) || 10;
     
-    // Get count * 4 vocabs to have enough distinct choices
-    const vocabs = await ITVocabulary.aggregate([
-      { $sample: { size: count * 4 } }
-    ]);
+    // Fetch all vocabularies
+    const allVocabs = await ITVocabulary.find({});
 
-    if (vocabs.length < count * 4) {
-      // Not enough vocabs in DB
-      return res.status(400).json({ message: 'Không đủ từ vựng trong CSDL để tạo câu hỏi.' });
+    if (allVocabs.length < 4) {
+      return res.status(400).json({ message: 'Không đủ từ vựng trong CSDL để tạo câu hỏi (cần ít nhất 4 từ).' });
     }
 
+    // Shuffle all vocabs
+    const shuffledVocabs = allVocabs.sort(() => 0.5 - Math.random());
+    
+    // We can only generate up to allVocabs.length unique questions
+    const actualCount = Math.min(count, allVocabs.length);
     const questions = [];
-    for (let i = 0; i < count; i++) {
-        const currentVocab = vocabs[i * 4];
+
+    for (let i = 0; i < actualCount; i++) {
+        const correctVocab = shuffledVocabs[i];
+        
+        // Pick 3 random wrong answers that are different from the correct one
+        const wrongVocabs = shuffledVocabs
+            .filter(v => v._id.toString() !== correctVocab._id.toString())
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 3);
+            
         const choices = [
-            vocabs[i * 4].meaningVi,
-            vocabs[i * 4 + 1].meaningVi,
-            vocabs[i * 4 + 2].meaningVi,
-            vocabs[i * 4 + 3].meaningVi,
-        ].sort(() => 0.5 - Math.random()); // Shuffle
+            correctVocab.meaningVi,
+            wrongVocabs[0].meaningVi,
+            wrongVocabs[1].meaningVi,
+            wrongVocabs[2].meaningVi,
+        ].sort(() => 0.5 - Math.random()); // Shuffle choices
         
         questions.push({
-            kanji: currentVocab.word,
+            kanji: correctVocab.word,
             questionText: 'Chọn nghĩa tiếng Việt đúng cho từ này',
-            correctAnswer: currentVocab.meaningVi,
+            correctAnswer: correctVocab.meaningVi,
             choices: choices
         });
     }
