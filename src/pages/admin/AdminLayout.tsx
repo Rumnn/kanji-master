@@ -21,6 +21,7 @@ export default function AdminLayout() {
     { name: 'Overview', path: '/admin', icon: LayoutDashboard, exact: true },
     { name: 'Khách hàng', path: '/admin/users', icon: Users },
     { name: 'CMS Kanji', path: '/admin/kanji', icon: BookOpen },
+    { name: 'CMS IT Vocab', path: '/admin/it-vocab', icon: BookOpen },
     { name: 'PvP & Giải đấu', path: '/admin/pvp', icon: Swords },
     { name: 'Phản hồi', path: '/admin/feedback', icon: MessageSquare },
   ];

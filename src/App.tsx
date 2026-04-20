@@ -12,8 +12,10 @@ import UserManagement from './pages/admin/UserManagement';
 import CMSKanji from './pages/admin/CMSKanji';
 import PvPModerator from './pages/admin/PvPModerator';
 import Feedbacks from './pages/admin/Feedbacks';
+import CMSITVocab from './pages/admin/CMSITVocab';
 import QuizPlay from './pages/QuizPlay';
 import MultipleChoiceQuiz from './pages/MultipleChoiceQuiz';
+import ITVocabQuiz from './pages/ITVocabQuiz';
 import BattleLobby from './pages/BattleLobby';
 import BattlePlay from './pages/BattlePlay';
 import BattleResult from './pages/BattleResult';
@@ -46,7 +48,10 @@ const Navigation = () => {
             {user ? (
               <>
                 <Link to="/quiz/mcq" className="px-4 py-2 text-gray-600 hover:text-sakura-500 font-semibold transition-colors rounded-lg hover:bg-sakura-50 text-sm">
-                  📝 Trắc nghiệm
+                  📝 Trắc nghiệm Kanji
+                </Link>
+                <Link to="/quiz/it-vocab" className="px-4 py-2 text-gray-600 hover:text-indigo-500 font-semibold transition-colors rounded-lg hover:bg-indigo-50 text-sm">
+                  💻 IT Vocab
                 </Link>
                 <Link to="/battle" className="px-4 py-2 text-gray-600 hover:text-sakura-500 font-semibold transition-colors rounded-lg hover:bg-sakura-50 text-sm">
                   ⚔️ Đấu Solo
@@ -105,7 +110,8 @@ const Navigation = () => {
           <div className="md:hidden pb-4 border-t border-gray-100 pt-3 space-y-1 animate-fade-in">
             {user ? (
               <>
-                <Link to="/quiz/mcq" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">📝 Trắc nghiệm</Link>
+                <Link to="/quiz/mcq" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">📝 Trắc nghiệm Kanji</Link>
+                <Link to="/quiz/it-vocab" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-indigo-50">💻 IT Vocab</Link>
                 <Link to="/battle" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">⚔️ Đấu Solo</Link>
                 <Link to="/leaderboard" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-amber-50">🏆 Xếp hạng</Link>
                 <Link to="/profile" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-gray-50">👤 {user.fullName}</Link>
@@ -182,6 +188,11 @@ export default function App() {
                     <MultipleChoiceQuiz />
                   </PrivateRoute>
                 } />
+                <Route path="/quiz/it-vocab" element={
+                  <PrivateRoute>
+                    <ITVocabQuiz />
+                  </PrivateRoute>
+                } />
                 <Route path="/battle" element={
                   <PrivateRoute>
                     <BattleLobby />
@@ -207,6 +218,7 @@ export default function App() {
                   <Route index element={<Overview />} />
                   <Route path="users" element={<UserManagement />} />
                   <Route path="kanji" element={<CMSKanji />} />
+                  <Route path="it-vocab" element={<CMSITVocab />} />
                   <Route path="pvp" element={<PvPModerator />} />
                   <Route path="feedback" element={<Feedbacks />} />
                 </Route>

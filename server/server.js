@@ -15,6 +15,7 @@ import historyRoutes from './routes/historyRoutes.js';
 import battleRoutes from './routes/battleRoutes.js';
 import leaderboardRoutes from './routes/leaderboardRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import itVocabRoutes from './routes/itVocabRoutes.js';
 
 // Khởi tạo các biến môi trường
 dotenv.config();
@@ -55,6 +56,7 @@ app.use('/api/history', historyRoutes);
 app.use('/api/battle', battleRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/it-vocab', itVocabRoutes);
 
 // Serve frontend static files
 const clientDistPath = join(__dirname, '..', 'dist');
