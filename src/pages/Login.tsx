@@ -18,11 +18,18 @@ export default function Login() {
     setError('');
 
     try {
-      const { data } = await axios.post('/api/auth/login', { email, password });
+      const { data } = await axios.post('/api/auth/login', {
+        email: email.trim().toLowerCase(),
+        password
+      });
       login(data);
       navigate('/');
     } catch (err: any) {
-      setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
+      if (!err.response) {
+        setError('Cannot reach the API server. Please make sure the backend is running on port 5000.');
+      } else {
+        setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
+      }
     } finally {
       setIsLoading(false);
     }

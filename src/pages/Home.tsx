@@ -50,6 +50,16 @@ const gameModes = [
     requireAuth: true,
   },
   {
+    id: 'review',
+    title: 'Ôn tập hôm nay',
+    emoji: '🧠',
+    description: 'Ôn lại các Kanji và từ vựng đến hạn theo lịch ghi nhớ cá nhân.',
+    color: 'from-emerald-400 to-teal-500',
+    shadow: 'shadow-emerald-200',
+    path: '/review',
+    requireAuth: true,
+  },
+  {
     id: 'leaderboard',
     title: 'Bảng xếp hạng',
     emoji: '🏆',

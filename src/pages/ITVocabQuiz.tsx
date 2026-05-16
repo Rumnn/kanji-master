@@ -4,6 +4,7 @@ import axios from 'axios';
 import ChoiceButton from '../components/ChoiceButton';
 import CountdownTimer from '../components/CountdownTimer';
 import ProgressBar from '../components/ProgressBar';
+import FeedbackReporter from '../components/FeedbackReporter';
 import { AuthContext } from '../context/AuthContext';
 
 interface Question {
@@ -127,7 +128,18 @@ export default function ITVocabQuiz() {
         }, config);
 
         // Update Stats
-        await axios.put('/api/it-vocab/stats', { stats: statsPayload }, config);
+        const progressItems = questions.map((q, idx) => ({
+          itemType: 'it_vocab',
+          itemKey: q.kanji,
+          label: q.kanji,
+          category: 'IT Vocab',
+          correct: answeredCorrectly[idx]
+        }));
+
+        await Promise.all([
+          axios.put('/api/it-vocab/stats', { stats: statsPayload }, config),
+          axios.put('/api/progress/batch', { items: progressItems }, config)
+        ]);
 
       } catch (err) {
         console.error('Failed to save history or stats', err);
@@ -345,6 +357,9 @@ export default function ITVocabQuiz() {
                   </span>
                   <span className="jp-text font-bold text-gray-800 text-lg w-20">{q.kanji}</span>
                   <span className="text-xs font-bold text-gray-600 bg-white px-2 py-1 rounded-lg ml-auto border border-gray-100">{q.correctAnswer}</span>
+                  {!answeredCorrectly[i] && (
+                    <FeedbackReporter compact itemType="it_vocab" itemKey={q.kanji} />
+                  )}
                 </div>
               ))}
             </div>

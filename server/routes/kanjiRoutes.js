@@ -10,9 +10,6 @@ const __dirname = dirname(__filename);
 
 const router = express.Router();
 
-// @desc    Seed database with base Kanji data manually from URL
-// @route   GET /api/kanji/seed-database
-// @access  Public (Temporary)
 router.get('/seed-database', async (req, res) => {
   try {
     const dataPath = join(__dirname, '../../src/data/kanjiData.json');
@@ -37,25 +34,21 @@ router.get('/seed-database', async (req, res) => {
     if (count === 0) {
       await Kanji.insertMany(mergedKanjis);
       return res.json({ message: `Success! Seeded ${mergedKanjis.length} kanjis into the database.` });
-    } else {
-      return res.json({ message: `Database already has ${count} kanjis. No action taken.` });
     }
+
+    return res.json({ message: `Database already has ${count} kanjis. No action taken.` });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// @desc    Get random Kanji by level
-// @route   GET /api/kanji/random?level=N5&limit=10
-// @access  Public (or Protected depending on requirements)
 router.get('/random', async (req, res) => {
   try {
     const level = req.query.level || 'N5';
     const limit = parseInt(req.query.limit) || 10;
 
-    // Lấy random bằng aggregate rỗng của MongoDB
     const kanjis = await Kanji.aggregate([
-      { $match: { level: level } },
+      { $match: { level } },
       { $sample: { size: limit } }
     ]);
 
@@ -65,58 +58,85 @@ router.get('/random', async (req, res) => {
   }
 });
 
-// @desc    Get all Kanji (Pagination could be added)
-// @route   GET /api/kanji
-// @access  Public
 router.get('/', async (req, res) => {
   try {
-    const level = req.query.level;
-    const query = level ? { level } : {};
-    
-    // Giới hạn 500 từ mặc định để không tạch server
-    const kanjis = await Kanji.find(query).limit(500);
+    const { level, search } = req.query;
+    const page = Math.max(parseInt(req.query.page) || 1, 1);
+    const limit = Math.min(Math.max(parseInt(req.query.limit) || 500, 1), 500);
+    const usePaginationEnvelope = Boolean(req.query.page || req.query.limit || search);
+    const query = {};
+
+    if (level) {
+      query.level = level;
+    }
+
+    if (search) {
+      const pattern = new RegExp(String(search).trim(), 'i');
+      query.$or = [
+        { kanji: pattern },
+        { onyomi: pattern },
+        { kunyomi: pattern },
+        { meaning: pattern },
+        { meaningVi: pattern }
+      ];
+    }
+
+    const [kanjis, total] = await Promise.all([
+      Kanji.find(query)
+        .sort({ level: 1, kanji: 1 })
+        .skip((page - 1) * limit)
+        .limit(limit),
+      Kanji.countDocuments(query)
+    ]);
+
+    if (usePaginationEnvelope) {
+      return res.json({
+        items: kanjis,
+        total,
+        page,
+        pages: Math.ceil(total / limit),
+        limit
+      });
+    }
+
     res.json(kanjis);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// @desc    Update Kanji Stats (called after quiz/battle)
-// @route   PUT /api/kanji/stats
-// @access  Private (User)
 router.put('/stats', protect, async (req, res) => {
   try {
-    const { stats } = req.body; // array of { kanji: string, correct: boolean }
+    const { stats } = req.body;
     if (!stats || !Array.isArray(stats)) {
       return res.status(400).json({ message: 'Invalid stats payload' });
     }
-    
-    const bulkOps = stats.map(s => ({
-      updateOne: {
-        filter: { kanji: s.kanji },
-        update: {
-          $inc: { 
-            'stats.timesAppeared': 1,
-            'stats.timesCorrect': s.correct ? 1 : 0,
-            'stats.timesIncorrect': s.correct ? 0 : 1
+
+    const bulkOps = stats
+      .filter((s) => s?.kanji)
+      .map((s) => ({
+        updateOne: {
+          filter: { kanji: s.kanji },
+          update: {
+            $inc: {
+              'stats.timesAppeared': 1,
+              'stats.timesCorrect': s.correct ? 1 : 0,
+              'stats.timesIncorrect': s.correct ? 0 : 1
+            }
           }
         }
-      }
-    }));
+      }));
 
     if (bulkOps.length > 0) {
       await Kanji.bulkWrite(bulkOps);
     }
-    
+
     res.json({ message: 'Stats updated successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// @desc    Create multiple Kanji from Excel/CSV
-// @route   POST /api/kanji/batch
-// @access  Private/Admin
 router.post('/batch', protect, admin, async (req, res) => {
   try {
     const kanjiList = req.body.kanjis;
@@ -125,22 +145,18 @@ router.post('/batch', protect, admin, async (req, res) => {
       return res.status(400).json({ message: 'Invalid format. Expected array of kanjis.' });
     }
 
-    // Insert many, ignore duplicates (ordered: false)
     const result = await Kanji.insertMany(kanjiList, { ordered: false });
-    
+
     res.status(201).json({ message: `Successfully imported ${result.length} Kanji characters!` });
   } catch (error) {
     if (error.code === 11000) {
-       const insertedCount = error.insertedDocs ? error.insertedDocs.length : 0;
-       return res.status(201).json({ message: `Import complete. Added ${insertedCount} new characters. Existing ones were skipped.` });
+      const insertedCount = error.insertedDocs ? error.insertedDocs.length : 0;
+      return res.status(201).json({ message: `Import complete. Added ${insertedCount} new characters. Existing ones were skipped.` });
     }
     res.status(400).json({ message: error.message });
   }
 });
 
-// @desc    Create a new Kanji
-// @route   POST /api/kanji
-// @access  Private/Admin
 router.post('/', protect, admin, async (req, res) => {
   try {
     const { kanji, level, onyomi, kunyomi, meaning, meaningVi, examples } = req.body;
@@ -167,9 +183,39 @@ router.post('/', protect, admin, async (req, res) => {
   }
 });
 
-// @desc    Delete a Kanji
-// @route   DELETE /api/kanji/:id
-// @access  Private/Admin
+router.put('/:id', protect, admin, async (req, res) => {
+  try {
+    const allowedFields = ['kanji', 'level', 'onyomi', 'kunyomi', 'meaning', 'meaningVi', 'examples'];
+    const updates = {};
+
+    allowedFields.forEach((field) => {
+      if (req.body[field] !== undefined) {
+        updates[field] = req.body[field];
+      }
+    });
+
+    if (Object.keys(updates).length === 0) {
+      return res.status(400).json({ message: 'No valid fields provided' });
+    }
+
+    const updatedKanji = await Kanji.findByIdAndUpdate(req.params.id, updates, {
+      new: true,
+      runValidators: true
+    });
+
+    if (!updatedKanji) {
+      return res.status(404).json({ message: 'Kanji not found' });
+    }
+
+    res.json(updatedKanji);
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(400).json({ message: 'Kanji already exists in DB' });
+    }
+    res.status(400).json({ message: error.message });
+  }
+});
+
 router.delete('/:id', protect, admin, async (req, res) => {
   try {
     const kanji = await Kanji.findById(req.params.id);

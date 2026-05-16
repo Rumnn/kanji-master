@@ -25,11 +25,19 @@ export default function Register() {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.post('/api/auth/register', { fullName, email, password });
+      const { data } = await axios.post('/api/auth/register', {
+        fullName: fullName.trim(),
+        email: email.trim().toLowerCase(),
+        password
+      });
       login(data);
       navigate('/');
     } catch (err: any) {
-      setError(err.response?.data?.message || 'Registration failed.');
+      if (!err.response) {
+        setError('Cannot reach the API server. Please make sure the backend is running on port 5000.');
+      } else {
+        setError(err.response?.data?.message || 'Registration failed.');
+      }
     } finally {
       setIsLoading(false);
     }

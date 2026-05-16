@@ -4,6 +4,7 @@ import axios from 'axios';
 import ChoiceButton from '../components/ChoiceButton';
 import CountdownTimer from '../components/CountdownTimer';
 import ProgressBar from '../components/ProgressBar';
+import FeedbackReporter from '../components/FeedbackReporter';
 import { AuthContext } from '../context/AuthContext';
 
 interface Question {
@@ -143,7 +144,19 @@ export default function MultipleChoiceQuiz() {
         }, config);
 
         // Update Kanji Stats
-        await axios.put('/api/kanji/stats', { stats: statsPayload }, config);
+        const progressItems = questions.map((q, idx) => ({
+          itemType: 'kanji',
+          itemKey: q.kanji,
+          label: q.kanji,
+          level,
+          category: questionType,
+          correct: answeredCorrectly[idx]
+        }));
+
+        await Promise.all([
+          axios.put('/api/kanji/stats', { stats: statsPayload }, config),
+          axios.put('/api/progress/batch', { items: progressItems }, config)
+        ]);
 
       } catch (err) {
         console.error('Failed to save history or stats', err);
@@ -414,6 +427,9 @@ export default function MultipleChoiceQuiz() {
                   <span className="jp-text font-bold text-gray-800">{q.kanji}</span>
                   <span className="text-gray-500 flex-1 truncate">{q.questionText}</span>
                   <span className="text-xs font-bold text-gray-600 bg-white px-2 py-1 rounded-lg jp-text">{q.correctAnswer}</span>
+                  {!answeredCorrectly[i] && (
+                    <FeedbackReporter compact itemType="kanji" itemKey={q.kanji} />
+                  )}
                 </div>
               ))}
             </div>

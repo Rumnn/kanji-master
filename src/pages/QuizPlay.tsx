@@ -40,6 +40,7 @@ export default function QuizPlay() {
   const [score, setScore] = useState(0);
   const [gameEnded, setGameEnded] = useState(false);
   const [savingResult, setSavingResult] = useState(false);
+  const [answeredCorrectly, setAnsweredCorrectly] = useState<boolean[]>([]);
 
   useEffect(() => {
     const fetchKanji = async () => {
@@ -62,9 +63,11 @@ export default function QuizPlay() {
   const isCorrect = selectedKanji ? selectedKanji.id === currentKanji?.id : false;
 
   const handleSelectKanji = (kanji: Kanji) => {
+    const correct = kanji.id === currentKanji.id;
     setSelectedKanji(kanji);
     setIsAnswered(true);
-    if (kanji.id === currentKanji.id) {
+    setAnsweredCorrectly((prev) => [...prev, correct]);
+    if (correct) {
       setScore((prev) => prev + 1);
     }
   };
@@ -94,6 +97,24 @@ export default function QuizPlay() {
           score,
           totalQuestions: kanjiList.length
         }, config);
+
+        const stats = kanjiList.map((kanji, index) => ({
+          kanji: kanji.kanji,
+          correct: answeredCorrectly[index]
+        }));
+
+        const progressItems = kanjiList.map((kanji, index) => ({
+          itemType: 'kanji',
+          itemKey: kanji.kanji,
+          label: kanji.kanji,
+          level,
+          correct: answeredCorrectly[index]
+        }));
+
+        await Promise.all([
+          axios.put('/api/kanji/stats', { stats }, config),
+          axios.put('/api/progress/batch', { items: progressItems }, config)
+        ]);
       } catch (err) {
         console.error('Failed to save history', err);
       } finally {

@@ -10,9 +10,18 @@ const feedbackSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Kanji'
   },
+  itemType: {
+    type: String,
+    enum: ['kanji', 'it_vocab', 'quiz_question', 'general'],
+    default: 'general'
+  },
+  itemKey: {
+    type: String,
+    default: ''
+  },
   type: {
     type: String,
-    enum: ['kanji_error', 'general_bug', 'feature_request'],
+    enum: ['kanji_error', 'answer_error', 'meaning_suggestion', 'example_suggestion', 'general_bug', 'feature_request'],
     required: true
   },
   content: {

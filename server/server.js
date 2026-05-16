@@ -8,6 +8,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 import initSocket from './socket.js';
+import securityHeaders from './middleware/securityHeaders.js';
 
 import authRoutes from './routes/authRoutes.js';
 import kanjiRoutes from './routes/kanjiRoutes.js';
@@ -16,12 +17,20 @@ import battleRoutes from './routes/battleRoutes.js';
 import leaderboardRoutes from './routes/leaderboardRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import itVocabRoutes from './routes/itVocabRoutes.js';
+import progressRoutes from './routes/progressRoutes.js';
+import feedbackRoutes from './routes/feedbackRoutes.js';
 
 // Khởi tạo các biến môi trường
-dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load server/.env even when this file is started from the project root.
+dotenv.config({ path: join(__dirname, '.env') });
 
 // Kết nối CSDL
-connectDB().then(async () => {
+await connectDB();
+
+await (async () => {
   // Drop old unique index on roomCode if it exists (we removed unique constraint)
   try {
     const collection = mongoose.connection.collection('battlerooms');
@@ -34,10 +43,7 @@ connectDB().then(async () => {
   } catch (e) {
     // Index might not exist, that's fine
   }
-});
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+})();
 
 const app = express();
 const httpServer = createServer(app);
@@ -46,7 +52,20 @@ const httpServer = createServer(app);
 const io = initSocket(httpServer);
 
 // Middleware
-app.use(cors());
+const allowedOrigins = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+app.use(securityHeaders);
+app.use(cors({
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin) || (allowedOrigins.length === 0 && process.env.NODE_ENV !== 'production')) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
+}));
 app.use(express.json());
 
 // API Routes
@@ -57,6 +76,8 @@ app.use('/api/battle', battleRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/it-vocab', itVocabRoutes);
+app.use('/api/progress', progressRoutes);
+app.use('/api/feedback', feedbackRoutes);
 
 // Serve frontend static files
 const clientDistPath = join(__dirname, '..', 'dist');

@@ -4,14 +4,10 @@ import { protect, admin } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// @desc    Get random IT Vocabulary
-// @route   GET /api/it-vocab/random?limit=10
-// @access  Public
 router.get('/random', async (req, res) => {
   try {
     const limit = parseInt(req.query.limit) || 10;
 
-    // Retrieve random vocabulary
     const vocabs = await ITVocabulary.aggregate([
       { $sample: { size: limit } }
     ]);
@@ -22,49 +18,43 @@ router.get('/random', async (req, res) => {
   }
 });
 
-// @desc    Generate Quiz Questions
-// @route   GET /api/it-vocab/quiz/generate?count=10
-// @access  Public
 router.get('/quiz/generate', async (req, res) => {
   try {
     const count = parseInt(req.query.count) || 10;
-    
-    // Fetch all vocabularies
-    const allVocabs = await ITVocabulary.find({});
+    const type = req.query.type;
+    const query = type ? { type } : {};
+
+    const allVocabs = await ITVocabulary.find(query);
 
     if (allVocabs.length < 4) {
-      return res.status(400).json({ message: 'Không đủ từ vựng trong CSDL để tạo câu hỏi (cần ít nhất 4 từ).' });
+      return res.status(400).json({ message: 'Not enough vocabulary in database to generate questions. At least 4 words are required.' });
     }
 
-    // Shuffle all vocabs
     const shuffledVocabs = allVocabs.sort(() => 0.5 - Math.random());
-    
-    // We can only generate up to allVocabs.length unique questions
     const actualCount = Math.min(count, allVocabs.length);
     const questions = [];
 
     for (let i = 0; i < actualCount; i++) {
-        const correctVocab = shuffledVocabs[i];
-        
-        // Pick 3 random wrong answers that are different from the correct one
-        const wrongVocabs = shuffledVocabs
-            .filter(v => v._id.toString() !== correctVocab._id.toString())
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
-            
-        const choices = [
-            correctVocab.meaningVi,
-            wrongVocabs[0].meaningVi,
-            wrongVocabs[1].meaningVi,
-            wrongVocabs[2].meaningVi,
-        ].sort(() => 0.5 - Math.random()); // Shuffle choices
-        
-        questions.push({
-            kanji: correctVocab.word,
-            questionText: 'Chọn nghĩa tiếng Việt đúng cho từ này',
-            correctAnswer: correctVocab.meaningVi,
-            choices: choices
-        });
+      const correctVocab = shuffledVocabs[i];
+      const wrongVocabs = shuffledVocabs
+        .filter((v) => v._id.toString() !== correctVocab._id.toString())
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+
+      const choices = [
+        correctVocab.meaningVi,
+        wrongVocabs[0].meaningVi,
+        wrongVocabs[1].meaningVi,
+        wrongVocabs[2].meaningVi,
+      ].sort(() => 0.5 - Math.random());
+
+      questions.push({
+        kanji: correctVocab.word,
+        questionText: 'Choose the correct Vietnamese meaning for this word',
+        correctAnswer: correctVocab.meaningVi,
+        choices,
+        type: correctVocab.type
+      });
     }
 
     res.json({ questions });
@@ -73,55 +63,85 @@ router.get('/quiz/generate', async (req, res) => {
   }
 });
 
-// @desc    Get all IT Vocabulary (Pagination could be added)
-// @route   GET /api/it-vocab
-// @access  Public
 router.get('/', async (req, res) => {
   try {
-    // Limit to 1000 items to prevent server overload
-    const vocabs = await ITVocabulary.find({}).limit(1000);
+    const { search, type } = req.query;
+    const page = Math.max(parseInt(req.query.page) || 1, 1);
+    const limit = Math.min(Math.max(parseInt(req.query.limit) || 1000, 1), 1000);
+    const usePaginationEnvelope = Boolean(req.query.page || req.query.limit || search || type);
+    const query = {};
+
+    if (type) {
+      query.type = type;
+    }
+
+    if (search) {
+      const pattern = new RegExp(String(search).trim(), 'i');
+      query.$or = [
+        { word: pattern },
+        { romaji: pattern },
+        { meaning: pattern },
+        { meaningVi: pattern },
+        { type: pattern }
+      ];
+    }
+
+    const [vocabs, total] = await Promise.all([
+      ITVocabulary.find(query)
+        .sort({ type: 1, word: 1 })
+        .skip((page - 1) * limit)
+        .limit(limit),
+      ITVocabulary.countDocuments(query)
+    ]);
+
+    if (usePaginationEnvelope) {
+      return res.json({
+        items: vocabs,
+        total,
+        page,
+        pages: Math.ceil(total / limit),
+        limit
+      });
+    }
+
     res.json(vocabs);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// @desc    Update IT Vocabulary Stats (called after quiz)
-// @route   PUT /api/it-vocab/stats
-// @access  Private (User)
 router.put('/stats', protect, async (req, res) => {
   try {
-    const { stats } = req.body; // array of { word: string, correct: boolean }
+    const { stats } = req.body;
     if (!stats || !Array.isArray(stats)) {
       return res.status(400).json({ message: 'Invalid stats payload' });
     }
-    
-    const bulkOps = stats.map(s => ({
-      updateOne: {
-        filter: { word: s.word },
-        update: {
-          $inc: { 
-            'stats.timesAppeared': 1,
-            'stats.timesCorrect': s.correct ? 1 : 0,
-            'stats.timesIncorrect': s.correct ? 0 : 1
+
+    const bulkOps = stats
+      .filter((s) => s?.word)
+      .map((s) => ({
+        updateOne: {
+          filter: { word: s.word },
+          update: {
+            $inc: {
+              'stats.timesAppeared': 1,
+              'stats.timesCorrect': s.correct ? 1 : 0,
+              'stats.timesIncorrect': s.correct ? 0 : 1
+            }
           }
         }
-      }
-    }));
+      }));
 
     if (bulkOps.length > 0) {
       await ITVocabulary.bulkWrite(bulkOps);
     }
-    
+
     res.json({ message: 'Stats updated successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// @desc    Create multiple IT Vocabulary from Excel/CSV
-// @route   POST /api/it-vocab/batch
-// @access  Private/Admin
 router.post('/batch', protect, admin, async (req, res) => {
   try {
     const vocabList = req.body.vocabs;
@@ -130,22 +150,18 @@ router.post('/batch', protect, admin, async (req, res) => {
       return res.status(400).json({ message: 'Invalid format. Expected array of vocabularies.' });
     }
 
-    // Insert many, ignore duplicates (ordered: false)
     const result = await ITVocabulary.insertMany(vocabList, { ordered: false });
-    
+
     res.status(201).json({ message: `Successfully imported ${result.length} IT vocabulary words!` });
   } catch (error) {
     if (error.code === 11000) {
-       const insertedCount = error.insertedDocs ? error.insertedDocs.length : 0;
-       return res.status(201).json({ message: `Import complete. Added ${insertedCount} new words. Existing ones were skipped.` });
+      const insertedCount = error.insertedDocs ? error.insertedDocs.length : 0;
+      return res.status(201).json({ message: `Import complete. Added ${insertedCount} new words. Existing ones were skipped.` });
     }
     res.status(400).json({ message: error.message });
   }
 });
 
-// @desc    Create a new IT Vocabulary
-// @route   POST /api/it-vocab
-// @access  Private/Admin
 router.post('/', protect, admin, async (req, res) => {
   try {
     const { word, romaji, meaning, meaningVi, type } = req.body;
@@ -170,9 +186,39 @@ router.post('/', protect, admin, async (req, res) => {
   }
 });
 
-// @desc    Delete an IT Vocabulary
-// @route   DELETE /api/it-vocab/:id
-// @access  Private/Admin
+router.put('/:id', protect, admin, async (req, res) => {
+  try {
+    const allowedFields = ['word', 'romaji', 'meaning', 'meaningVi', 'type'];
+    const updates = {};
+
+    allowedFields.forEach((field) => {
+      if (req.body[field] !== undefined) {
+        updates[field] = req.body[field];
+      }
+    });
+
+    if (Object.keys(updates).length === 0) {
+      return res.status(400).json({ message: 'No valid fields provided' });
+    }
+
+    const updatedVocab = await ITVocabulary.findByIdAndUpdate(req.params.id, updates, {
+      new: true,
+      runValidators: true
+    });
+
+    if (!updatedVocab) {
+      return res.status(404).json({ message: 'Vocabulary not found' });
+    }
+
+    res.json(updatedVocab);
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(400).json({ message: 'Vocabulary already exists in DB' });
+    }
+    res.status(400).json({ message: error.message });
+  }
+});
+
 router.delete('/:id', protect, admin, async (req, res) => {
   try {
     const vocab = await ITVocabulary.findById(req.params.id);
