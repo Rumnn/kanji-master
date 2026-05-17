@@ -1,0 +1,3464 @@
+[
+  {
+    "title": "A とか B とか",
+    "short_explanation": "Được sử dụng để thể hiện nhiều ví dụ hoặc khả năng; 'chẳng hạn như', 'thích', 'ví dụ'.",
+    "long_explanation": "Điểm ngữ pháp とか được sử dụng để liệt kê nhiều ví dụ hoặc khả năng có thể xảy ra. Nó có thể được dịch là 'chẳng hạn như', 'thích' hoặc 'ví dụ' bằng tiếng Anh. とか được sử dụng giữa các mục được liệt kê và thể hiện rằng danh sách này chưa đầy đủ.",
+    "formation": "Danh từ + とか + Danh từ + とか",
+    "examples": [
+      {
+        "jp": "週末は映画とか買い物とか楽しいことをしたいです。",
+        "romaji": "Shuumatsu wa eiga toka kaimono toka tanoshii koto o shitai desu.",
+        "vn": "Tôi muốn làm những điều thú vị như xem phim và mua sắm vào cuối tuần."
+      },
+      {
+        "jp": "彼女は英語とかフランス語とかいろいろな言葉を話せます。",
+        "romaji": "Kanojo wa eigo toka furansugo toka iroirona kotoba o hanasemasu.",
+        "vn": "Cô ấy có thể nói được nhiều ngôn ngữ khác nhau, như tiếng Anh và tiếng Pháp."
+      },
+      {
+        "jp": "この店は寿司とか刺身とか日本料理を提供しています。",
+        "romaji": "Kono mise wa sushi toka sashimi toka nihon ryouri o teikyou shiteimasu.",
+        "vn": "Nhà hàng này phục vụ các món ăn Nhật Bản như sushi và sashimi."
+      },
+      {
+        "jp": "$1BOXとか$5BOXとか、異なる価格のランチBOXがあります。",
+        "romaji": "Ichi-doru BOX toka go-doru BOX toka, kotonaru kakaku no ranchi BOX ga arimasu.",
+        "vn": "Có những hộp cơm trưa với nhiều mức giá khác nhau, như hộp 1 USD và hộp 5 USD."
+      }
+    ]
+  },
+  {
+    "title": "A は B ほど～ありません (A wa B hodo ～ arimasen)",
+    "short_explanation": "Thể hiện rằng A không bằng B; 'không phải như... như', 'không... đến mức'.",
+    "long_explanation": "Ngữ pháp は B ほど～ありません được dùng để diễn đạt rằng A không bằng B hoặc không bằng B, nhấn mạnh sự khác biệt. Nó có thể được dịch là 'không phải là... như' hoặc 'không... đến mức' trong tiếng Anh.",
+    "formation": "A は B ほど Động từ/tính từ ありません",
+    "examples": [
+      {
+        "jp": "今日は昨日ほど寒くありません。",
+        "romaji": "Kyou wa kinou hodo samuku arimasen.",
+        "vn": "Hôm nay trời không lạnh như hôm qua."
+      },
+      {
+        "jp": "彼は私ほど上手に英語を話せません。",
+        "romaji": "Kare wa watashi hodo jouzu ni eigo o hanasemasen.",
+        "vn": "Anh ấy không thể nói tiếng Anh tốt như tôi có thể."
+      },
+      {
+        "jp": "このレストランはあのレストランほど高くありません。",
+        "romaji": "Kono resutoran wa ano resutoran hodo takaku arimasen.",
+        "vn": "Nhà hàng này không đắt bằng nhà hàng kia."
+      },
+      {
+        "jp": "彼女は彼ほど忙しくありません。",
+        "romaji": "Kanojo wa kare hodo isogashiku arimasen.",
+        "vn": "Cô ấy không bận rộn như anh ấy."
+      }
+    ]
+  },
+  {
+    "title": "A は B ほど～ない (A wa B hodo ~ nai)",
+    "short_explanation": "Biểu thị rằng A không bằng ~ bằng B; 'không phải như...như'",
+    "long_explanation": "Ngữ pháp A は B ほど～ない được dùng để diễn đạt rằng A không bằng ~ như B ở một khía cạnh nào đó. Nó có thể được dịch là 'không phải như... như' trong tiếng Anh. Cấu trúc này thường được sử dụng với tính từ い (không có い) và tính từ な. Đối với động từ, bạn có thể sử dụng dạng phủ định.",
+    "formation": "A は B ほど + い-Gốc tính từ (không có い) + くない, な-Tính từ + じゃない, Dạng tiềm năng phủ định của động từ",
+    "examples": [
+      {
+        "jp": "山田さんは鈴木さんほど背が高くない。",
+        "romaji": "Yamada-san wa Suzuki-san hodo se ga takakunai.",
+        "vn": "Yamada không cao bằng Suzuki."
+      },
+      {
+        "jp": "このリンゴはあのリンゴほど甘くない。",
+        "romaji": "Kono ringo wa ano ringo hodo amakunai.",
+        "vn": "Quả táo này không ngọt bằng quả táo kia."
+      },
+      {
+        "jp": "彼は私ほど勉強ができない。",
+        "romaji": "Kare wa watashi hodo benkyou ga dekinai.",
+        "vn": "Anh ấy không thể học giỏi như tôi được."
+      },
+      {
+        "jp": "このレストランはあのレストランほど静かじゃない。",
+        "romaji": "Kono resutoran wa ano resutoran hodo shizuka janai.",
+        "vn": "Nhà hàng này không yên tĩnh như nhà hàng kia."
+      }
+    ]
+  },
+  {
+    "title": "A より B のほうが〜 (A yori B no hou ga 〜)",
+    "short_explanation": "So sánh hai thứ; 'B nhiều hơn ~ hơn A'.",
+    "long_explanation": "Mẫu ngữ pháp より và のほうが được sử dụng để so sánh hai sự vật bằng tính từ hoặc động từ. Trong cấu trúc này, mục A được so sánh với mục B, gợi ý rằng mục B nhiều hơn mục A.",
+    "formation": "A + より + B + のほうが + Tính từ/Động từ",
+    "examples": [
+      {
+        "jp": "田中さんより鈴木さんのほうが背が高いです。",
+        "romaji": "Tanaka-san yori Suzuki-san no hou ga se ga takai desu.",
+        "vn": "Suzuki cao hơn Tanaka."
+      },
+      {
+        "jp": "リンゴよりバナナのほうが甘いです。",
+        "romaji": "Ringo yori banana no hou ga amai desu.",
+        "vn": "Chuối ngọt hơn táo."
+      },
+      {
+        "jp": "冬より夏のほうが暑いです。",
+        "romaji": "Fuyu yori natsu no hou ga atsui desu.",
+        "vn": "Mùa hè nóng hơn mùa đông."
+      },
+      {
+        "jp": "東京より京都のほうが歴史があると思います。",
+        "romaji": "Toukyou yori Kyouto no hou ga rekishi ga aru to omoimasu.",
+        "vn": "Tôi nghĩ Kyoto có nhiều lịch sử hơn Tokyo."
+      }
+    ]
+  },
+  {
+    "title": "い-Tính từ く する/なる (Tính từ い kusuru/naru)",
+    "short_explanation": "Diễn tả một sự thay đổi đang xảy ra hoặc làm cho điều gì đó thay đổi.",
+    "long_explanation": "Điểm ngữ pháp い-Tính từ く する/なる được dùng để biểu thị sự thay đổi đang xảy ra (naru) hoặc cố ý làm thay đổi điều gì đó (suru). Khi sử dụng cấu trúc ngữ pháp này, tính từ い được đổi thành dạng く và theo sau là する (để thực hiện thay đổi) hoặc なる (sự thay đổi xảy ra).",
+    "formation": "い-Tính từ (bỏ い) + く + する/なる",
+    "examples": [
+      {
+        "jp": "部屋を明るくします。",
+        "romaji": "Heya o akaruku shimasu.",
+        "vn": "Tôi sẽ làm cho căn phòng sáng hơn."
+      },
+      {
+        "jp": "彼の顔は赤くなりました。",
+        "romaji": "Kare no kao wa akaku narimashita.",
+        "vn": "Mặt anh đỏ bừng."
+      },
+      {
+        "jp": "この料理を辛くしてください。",
+        "romaji": "Kono ryouri o karaku shite kudasai.",
+        "vn": "Hãy làm món ăn này cay nhé."
+      },
+      {
+        "jp": "雨が降ると、道が滑りやすくなります。",
+        "romaji": "Ame ga furu to, michi ga suberiyasuku narimasu.",
+        "vn": "Khi trời mưa, đường trở nên trơn trượt."
+      }
+    ]
+  },
+  {
+    "title": "な-adjective に する/なる",
+    "short_explanation": "Dùng để biểu thị sự thay đổi hoặc quyết định; 'trở thành' hoặc 'làm' với tính từ na.",
+    "long_explanation": "Điểm ngữ pháp của tính từ に する/なる được dùng để diễn đạt sự thay đổi hoặc quyết định liên quan đến tính từ na. Dạng なる (naru) biểu thị sự thay đổi tự xảy ra, trong khi dạng する (suru) biểu thị một quyết định có chủ ý của ai đó.",
+    "formation": "な-Tính từ + に + する/なる",
+    "examples": [
+      {
+        "jp": "部屋をきれいにする。",
+        "romaji": "Heya o kirei ni suru.",
+        "vn": "Để làm cho căn phòng sạch sẽ."
+      },
+      {
+        "jp": "彼は元気になりました。",
+        "romaji": "Kare wa genki ni narimashita.",
+        "vn": "Anh ấy trở nên tràn đầy năng lượng."
+      },
+      {
+        "jp": "毎日静かにすることが大切です。",
+        "romaji": "Mainichi shizuka ni suru koto ga taisetsu desu.",
+        "vn": "Điều quan trọng là làm cho nó yên tĩnh mỗi ngày."
+      },
+      {
+        "jp": "日本語の勉強が楽しくなるように努力します。",
+        "romaji": "Nihongo no benkyou ga tanoshiku naru you ni doryoku shimasu.",
+        "vn": "Tôi sẽ cố gắng làm cho việc học tiếng Nhật trở nên thú vị."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ しか～ない (Danh từ shika~nai)",
+    "short_explanation": "Diễn tả 'chỉ', 'không có gì ngoài' hoặc 'không có gì khác'.",
+    "long_explanation": "Điểm ngữ pháp Danh từ しか～ない được dùng để nhấn mạnh số lượng nhỏ hoặc tính độc quyền của một cái gì đó. Nó có thể được dịch là 'chỉ', 'không có gì ngoài' hoặc 'không có gì khác' trong tiếng Anh. Nó được sử dụng với một động từ phủ định để truyền đạt ý nghĩa.",
+    "formation": "Danh từ + しか + Động từ phủ định",
+    "examples": [
+      {
+        "jp": "私はリンゴしか食べない。",
+        "romaji": "Watashi wa ringo shika tabenai.",
+        "vn": "Tôi chỉ ăn táo."
+      },
+      {
+        "jp": "電車で行くしかないです。",
+        "romaji": "Densha de iku shika nai desu.",
+        "vn": "Không có cách nào khác ngoài việc đi bằng tàu hỏa."
+      },
+      {
+        "jp": "彼は一冊の本しか持っていない。",
+        "romaji": "Kare wa isatsu no hon shika motte inai.",
+        "vn": "Anh ấy chỉ có một cuốn sách."
+      },
+      {
+        "jp": "この店にはビールしかない。",
+        "romaji": "Kono mise ni wa biiru shika nai.",
+        "vn": "Không có gì ngoài bia trong cửa hàng này."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ に する (Danh từ ni suru)",
+    "short_explanation": "Được sử dụng để biểu thị sự lựa chọn hoặc quyết định, 'quyết định' hoặc 'chọn'.",
+    "long_explanation": "Điểm ngữ pháp 'Danh từ に する' được dùng để diễn tả việc đưa ra một lựa chọn hoặc quyết định, có thể dịch là 'quyết định' hoặc 'chọn lọc' trong tiếng Anh. Nó thường được sử dụng khi quyết định giữa các lựa chọn khác nhau hoặc đưa ra quyết định trong nhiều tình huống khác nhau, chẳng hạn như chọn một món trong thực đơn, quyết định một kế hoạch hoặc chọn một món quà.",
+    "formation": "Danh từ + に + する",
+    "examples": [
+      {
+        "jp": "メニューからピザにしました。",
+        "romaji": "Menyu kara piza ni shimashita.",
+        "vn": "Tôi quyết định chọn pizza từ thực đơn."
+      },
+      {
+        "jp": "誕生日プレゼントに時計にするつもりです。",
+        "romaji": "Tanjoubi purezento ni tokei ni suru tsumori desu.",
+        "vn": "Tôi dự định chọn một chiếc đồng hồ làm quà sinh nhật."
+      },
+      {
+        "jp": "今日の午後は買い物にすることにしました。",
+        "romaji": "Kyou no gogo wa kaimono ni suru koto ni shimashita.",
+        "vn": "Tôi quyết định đi mua sắm chiều nay."
+      },
+      {
+        "jp": "海外旅行の目的地として、日本にする。",
+        "romaji": "Kaigai ryokou no mokutekichi toshite, Nihon ni suru.",
+        "vn": "Tôi sẽ chọn Nhật Bản là điểm đến cho chuyến đi nước ngoài của mình."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ に なる (Danh từ ni naru)",
+    "short_explanation": "Để trở thành; đổi thành; để biến thành.",
+    "long_explanation": "Điểm ngữ pháp 'Danh từ に なる' được dùng để thể hiện sự thay đổi hoặc chuyển đổi từ trạng thái hoặc hình thức này sang trạng thái hoặc hình thức khác. Trong tiếng Anh, nó có thể được dịch là 'trở thành', 'thay đổi thành' hoặc 'biến thành'. Nó thường được sử dụng với các danh từ chỉ nghề nghiệp, địa vị hoặc điều kiện.",
+    "formation": "Danh từ + に + なる",
+    "examples": [
+      {
+        "jp": "彼は医者になりました。",
+        "romaji": "Kare wa isha ni narimashita.",
+        "vn": "Anh ấy đã trở thành bác sĩ."
+      },
+      {
+        "jp": "子供の頃、私は先生になりたかったです。",
+        "romaji": "Kodomo no koro, watashi wa sensei ni naritakatta desu.",
+        "vn": "Khi còn nhỏ, tôi muốn trở thành giáo viên."
+      },
+      {
+        "jp": "彼女は緊張して顔が赤くなりました。",
+        "romaji": "Kanojo wa kinchou shite kao ga akaku narimashita.",
+        "vn": "Cô ấy lo lắng và mặt cô ấy đỏ bừng."
+      },
+      {
+        "jp": "春になると桜が咲きます。",
+        "romaji": "Haru ni naru to sakura ga sakimasu.",
+        "vn": "Khi trời sang xuân, hoa anh đào nở rộ."
+      }
+    ]
+  },
+  {
+    "title": "のために (no tame ni)",
+    "short_explanation": "Dùng để diễn đạt mục đích hoặc lý do; 'vì', 'vì', 'để'.",
+    "long_explanation": "Ngữ pháp のために được dùng để diễn đạt mục đích, lý do làm việc gì đó hoặc vì lợi ích của ai đó hoặc việc gì đó. Nó có thể được dịch là 'vì', 'vì lợi ích' hoặc 'để' trong tiếng Anh. Cấu tạo rất đơn giản, chỉ cần đặt のために sau một danh từ.",
+    "formation": "Danh từ + のために",
+    "examples": [
+      {
+        "jp": "勉強のために、図書館で静かな場所を探しています。",
+        "romaji": "Benkyou no tame ni, toshokan de shizukana basho o sagashiteimasu.",
+        "vn": "Để học bài, tôi tìm một nơi yên tĩnh trong thư viện."
+      },
+      {
+        "jp": "彼は家族のために、一生懸命働いています。",
+        "romaji": "Kare wa kazoku no tame ni, isshoukenmei hataraiteimasu.",
+        "vn": "Anh ấy làm việc chăm chỉ vì lợi ích của gia đình mình."
+      },
+      {
+        "jp": "健康のために、毎日運動をしています。",
+        "romaji": "Kenkou no tame ni, mainichi undou o shiteimasu.",
+        "vn": "Tôi tập thể dục mỗi ngày vì sức khỏe của mình."
+      },
+      {
+        "jp": "世界平和のために、みんなで協力しましょう。",
+        "romaji": "Sekai heiwa no tame ni, minna de kyouryoku shimashou.",
+        "vn": "Tất cả chúng ta hãy hợp tác vì hòa bình thế giới."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ の 間に (〜no aida ni)",
+    "short_explanation": "Diễn tả 'trong khi' hoặc 'trong' một khoảng thời gian hoặc thời gian cụ thể.",
+    "long_explanation": "Điểm ngữ pháp Danh từ の 間に được dùng để chỉ một khoảng thời gian hoặc khoảng thời gian cụ thể mà một hành động diễn ra. Nó thường được dịch là ‘trong khi’ hoặc ‘trong’ bằng tiếng Anh. Điểm ngữ pháp này yêu cầu một danh từ để biểu thị thời gian hoặc khoảng thời gian.",
+    "formation": "Danh từ + の間に",
+    "examples": [
+      {
+        "jp": "昼休みの間に銀行に行きます。",
+        "romaji": "Hiruyasumi no aida ni ginkou ni ikimasu.",
+        "vn": "Tôi sẽ đến ngân hàng trong giờ nghỉ trưa."
+      },
+      {
+        "jp": "夏休みの間に海外旅行に行く予定です。",
+        "romaji": "Natsuyasumi no aida ni kaigai ryokou ni iku yotei desu.",
+        "vn": "Tôi dự định đi du lịch nước ngoài trong kỳ nghỉ hè."
+      },
+      {
+        "jp": "子供たちが学校の間に買い物に行きました。",
+        "romaji": "Kodomo-tachi ga gakkou no aida ni kaimono ni ikimashita.",
+        "vn": "Tôi đi mua sắm khi bọn trẻ đang ở trường."
+      },
+      {
+        "jp": "母の日にお母さんにプレゼントを送りました。",
+        "romaji": "Haha no hi ni okaasan ni purezento o okurimashita.",
+        "vn": "Tôi đã gửi một món quà cho mẹ tôi vào Ngày của Mẹ."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ ばかり (〜bakari)",
+    "short_explanation": "Diễn tả 'chỉ', 'không có gì ngoài', 'luôn luôn' hoặc 'chỉ'.",
+    "long_explanation": "Ngữ pháp ばかり được dùng để diễn tả một điều gì đó chỉ có, không có gì ngoài, chỉ, hoặc luôn luôn. Nó có thể được gắn vào danh từ, động từ hoặc tính từ và có nhiều ý nghĩa khác nhau tùy theo ngữ cảnh.",
+    "formation": "Danh từ + ばかり, Động từ thông thường + ばかり, い-Tính từ + ばかり, な-Tính từ + だ ばかり",
+    "examples": [
+      {
+        "jp": "彼はお金の話ばかりする。",
+        "romaji": "Kare wa okane no hanashi bakari suru.",
+        "vn": "Anh ấy không nói gì khác ngoài tiền."
+      },
+      {
+        "jp": "彼女は勉強ばかりしている。",
+        "romaji": "Kanojo wa benkyou bakari shiteiru.",
+        "vn": "Cô ấy luôn học tập."
+      },
+      {
+        "jp": "デパートには高い商品ばかりだ。",
+        "romaji": "Depaato ni wa takai shouhin bakari da.",
+        "vn": "Chỉ có những mặt hàng đắt tiền trong cửa hàng bách hóa."
+      },
+      {
+        "jp": "この部屋は狭いばかりだ。",
+        "romaji": "Kono heya wa semai bakari da.",
+        "vn": "Căn phòng này chẳng có gì ngoài việc nhỏ bé."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ を あげる (Danh từ wo ageru)",
+    "short_explanation": "Đưa cái gì đó cho ai đó; 'tặng', 'đề nghị', 'tặng'.",
+    "long_explanation": "Ngữ pháp を あげる được dùng để diễn tả việc đưa cái gì đó cho ai đó. Nó có thể được dịch là 'cho', 'đề nghị' hoặc 'trình bày' bằng tiếng Anh. Cấu trúc này thường được sử dụng với các danh từ để biểu thị việc đưa ra hoặc đưa ra một vật dụng, hành động hoặc sự ưu ái hữu hình cho người khác.",
+    "formation": "Danh từ + を + あげる",
+    "examples": [
+      {
+        "jp": "プレゼントをあげる。",
+        "romaji": "Purezento wo ageru.",
+        "vn": "Tôi tặng một món quà."
+      },
+      {
+        "jp": "友達に花をあげた。",
+        "romaji": "Tomodachi ni hana wo ageta.",
+        "vn": "Tôi tặng hoa cho bạn tôi."
+      },
+      {
+        "jp": "父に時計をあげます。",
+        "romaji": "Chichi ni tokei wo agemasu.",
+        "vn": "Tôi sẽ tặng một chiếc đồng hồ cho bố tôi."
+      },
+      {
+        "jp": "彼女に手紙をあげたい。",
+        "romaji": "Kanojo ni tegami wo agetai.",
+        "vn": "Tôi muốn đưa cho cô ấy một lá thư."
+      }
+    ]
+  },
+  {
+    "title": "Danh từをいただく (Danh từ wo itadaku)",
+    "short_explanation": "Nhận hoặc chấp nhận một cái gì đó một cách lịch sự; 'nhận', 'nhận', 'chấp nhận'.",
+    "long_explanation": "Điểm ngữ pháp Danh từをいただく dùng để diễn đạt hành động tiếp nhận hoặc chấp nhận một vật gì đó một cách lịch sự hoặc khiêm nhường. Động từ 'いただく' là dạng thể hiện sự tôn trọng hơn của động từ 'もらう' (nhận), vì vậy việc sử dụng 'いただく' thể hiện sự khiêm tốn và tôn trọng người đưa cho bạn thứ gì đó.",
+    "formation": "Danh từ + を + いただく",
+    "examples": [
+      {
+        "jp": "プレゼントをいただきありがとうございます。",
+        "romaji": "Purezento wo itadaki arigatou gozaimasu.",
+        "vn": "Cảm ơn vì món quà mà tôi nhận được."
+      },
+      {
+        "jp": "先生からアドバイスをいただきました。",
+        "romaji": "Sensei kara adobaisu wo itadakimashita.",
+        "vn": "Tôi đã nhận được lời khuyên từ giáo viên của tôi."
+      },
+      {
+        "jp": "このコーヒーをいただいていいですか？",
+        "romaji": "Kono koohii wo itadaite ii desu ka?",
+        "vn": "Tôi có thể uống cà phê này được không?"
+      },
+      {
+        "jp": "会社の上司に昇進のお知らせをいただきました。",
+        "romaji": "Kaisha no joushi ni shoushin no oshirase wo itadakimashita.",
+        "vn": "Tôi nhận được thông báo thăng chức từ sếp ở công ty."
+      }
+    ]
+  },
+  {
+    "title": "Danh từをくださる",
+    "short_explanation": "Dùng để diễn tả ai đó làm việc gì đó như một ân huệ hoặc vì lợi ích của người nói.",
+    "long_explanation": "Điểm ngữ pháp 'Nounをくださる' là cách diễn đạt lịch sự dùng để nói rằng ai đó đang đưa hoặc làm điều gì đó vì lợi ích của người nói. Nó thường được sử dụng khi đề cập đến những người có địa vị xã hội cao hơn hoặc khi bày tỏ lòng biết ơn về hành động của họ.",
+    "formation": "Danh từ + を + くださる",
+    "examples": [
+      {
+        "jp": "先生が資料をくださった。",
+        "romaji": "Sensei ga shiryou wo kudasatta.",
+        "vn": "Thầy đưa cho tôi tài liệu."
+      },
+      {
+        "jp": "お母さんがおやつをくださる。",
+        "romaji": "Okaasan ga oyatsu wo kudasaru.",
+        "vn": "Mẹ tôi cho tôi đồ ăn nhẹ."
+      },
+      {
+        "jp": "上司がアドバイスをくださいました。",
+        "romaji": "Joushi ga adobaisu wo kudasaimashita.",
+        "vn": "Ông chủ của tôi đã cho tôi lời khuyên."
+      },
+      {
+        "jp": "友達がプレゼントをくださった。",
+        "romaji": "Tomodachi ga purezento wo kudasatta.",
+        "vn": "Bạn tôi đã tặng tôi một món quà."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ を くれる (Danh từ wo kureru)",
+    "short_explanation": "Diễn tả việc ai đó đưa đồ vật cho người nói hoặc ai đó ở gần người nói.",
+    "long_explanation": "Điểm ngữ pháp Danh từ を くれる được dùng để diễn tả việc ai đó (không phải người nói) đưa vật gì đó cho người nói hoặc người thân thiết với người nói. Người cho là chủ thể, người nhận là người nói hoặc người thân thiết với người nói. くれる biểu thị hành động “ủng hộ” người nói hoặc người thân thiết với người nói.",
+    "formation": "Người cho + が + Người nhận + に + Danh từ + を + くれる",
+    "examples": [
+      {
+        "jp": "友達が私にプレゼントをくれました。",
+        "romaji": "Tomodachi ga watashi ni purezento wo kuremashita.",
+        "vn": "Bạn tôi đã tặng tôi một món quà."
+      },
+      {
+        "jp": "彼が私に花をくれた。",
+        "romaji": "Kare ga watashi ni hana wo kureta.",
+        "vn": "Anh ấy tặng hoa cho tôi."
+      },
+      {
+        "jp": "先生が私に本をくれました。",
+        "romaji": "Sensei ga watashi ni hon wo kuremashita.",
+        "vn": "Thầy đưa cho tôi một cuốn sách."
+      },
+      {
+        "jp": "お母さんが弟にお菓子をくれました。",
+        "romaji": "Okaasan ga otouto ni okashi wo kuremashita.",
+        "vn": "Mẹ cho em trai tôi một ít kẹo."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ を さしあげる (Danh từ wo sashiageru)",
+    "short_explanation": "Một cách lịch sự để bày tỏ việc tặng cái gì đó.",
+    "long_explanation": "Điểm ngữ pháp Danh từ を さしあげる được dùng để nói rằng bạn đang đưa cái gì đó cho ai đó một cách lịch sự. Khi tặng thứ gì đó cho người có địa vị cao hơn, cách diễn đạt này được sử dụng. Nó được dùng kết hợp với một danh từ và thay thế cho động từ thông thường あげる (ageru) để cho.",
+    "formation": "Danh từ + を + さしあげる",
+    "examples": [
+      {
+        "jp": "先生に本をさしあげます。",
+        "romaji": "Sensei ni hon wo sashiagemasu.",
+        "vn": "Tôi sẽ tặng một cuốn sách cho giáo viên."
+      },
+      {
+        "jp": "お母さんに花をさしあげたいです。",
+        "romaji": "Okaasan ni hana wo sashiagetai desu.",
+        "vn": "Tôi muốn tặng hoa cho mẹ tôi."
+      },
+      {
+        "jp": "お客様にお茶をさしあげましょう。",
+        "romaji": "Okyakusama ni ocha wo sashiagemashou.",
+        "vn": "Hãy mời trà cho khách."
+      },
+      {
+        "jp": "先輩にプレゼントをさしあげたら、喜んでいました。",
+        "romaji": "Senpai ni purezento wo sashiagetara, yorokonde imashita.",
+        "vn": "Khi tôi tặng quà cho cấp trên của mình, họ rất vui mừng."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ もらう (Danh từ wo morau)",
+    "short_explanation": "Nhận hoặc nhận được thứ gì đó từ ai đó; 'nhận', 'nhận được'.",
+    "long_explanation": "Điểm ngữ pháp もらう (morau) được dùng để diễn đạt hành động nhận hoặc nhận được thứ gì đó từ ai đó. Nó thường nhấn mạnh rằng hành động đó được thực hiện cho bạn hoặc bạn là người hưởng lợi từ hành động đó. Sự hình thành yêu cầu một danh từ theo sau là trợ từ を (wo) trước 'もらう'.",
+    "formation": "Danh từ + を + もらう",
+    "examples": [
+      {
+        "jp": "友達からプレゼントをもらいました。",
+        "romaji": "Tomodachi kara purezento wo moraimashita.",
+        "vn": "Tôi đã nhận được một món quà từ bạn tôi."
+      },
+      {
+        "jp": "先生にアドバイスをもらいました。",
+        "romaji": "Sensei ni adobaisu wo moraimashita.",
+        "vn": "Tôi đã nhận được lời khuyên từ giáo viên của tôi."
+      },
+      {
+        "jp": "お父さんからお小遣いをもらう。",
+        "romaji": "Otousan kara okozukai wo morau.",
+        "vn": "Để nhận được một khoản trợ cấp từ cha của một người."
+      },
+      {
+        "jp": "彼女に手紙をもらった。",
+        "romaji": "Kanojo ni tegami wo moratta.",
+        "vn": "Tôi nhận được một lá thư từ cô ấy."
+      }
+    ]
+  },
+  {
+    "title": "Danh từ + 中 (Danh từ + ちゅう)",
+    "short_explanation": "Diễn tả 'ở giữa', 'trong' hoặc 'trong quá trình'.",
+    "long_explanation": "Điểm ngữ pháp 中 (ちゅう) được dùng để diễn tả một điều gì đó đang ở giữa, trong hoặc trong quá trình xảy ra. Nó được gắn vào một danh từ để truyền đạt ý nghĩa này (ví dụ: 勉強中, 仕事中, 会議中). Đôi khi nó cũng được đọc là じゅう tùy theo từ (ví dụ: 授業中).",
+    "formation": "Danh từ + 中 (ちゅう)",
+    "examples": [
+      {
+        "jp": "彼は仕事中です。",
+        "romaji": "Kare wa shigotochuu desu.",
+        "vn": "Anh ấy đang ở giữa công việc."
+      },
+      {
+        "jp": "試験中、携帯電話を使ってはいけません。",
+        "romaji": "Shiken chuu, keitai denwa wo tsukatte wa ikemasen.",
+        "vn": "Trong thời gian thi, bạn không được sử dụng điện thoại di động."
+      },
+      {
+        "jp": "映画を観ている最中に、彼は泣き始めました。",
+        "romaji": "Eiga o mite iru saichuu ni, kare wa naki hajimemashita.",
+        "vn": "Khi đang xem phim, anh ấy bắt đầu khóc."
+      },
+      {
+        "jp": "彼女は今勉強中です。",
+        "romaji": "Kanojo wa ima benkyouchuu desu.",
+        "vn": "Cô ấy hiện đang đi học."
+      }
+    ]
+  },
+  {
+    "title": "Động từ させられる (Động từ-saserareru)",
+    "short_explanation": "Thể hiện dạng nguyên nhân thụ động; 'bị buộc phải làm', 'bị buộc phải làm'.",
+    "long_explanation": "Điểm ngữ pháp của Động từ させられる là dạng nguyên nhân thụ động của động từ. Nó được sử dụng để mô tả tình huống trong đó ai đó hoặc điều gì đó gây ra hoặc ép buộc người khác làm điều gì đó. Việc xây dựng nguyên nhân thụ động này rất hữu ích để chỉ ra rằng hành động đó không được người đó thực hiện một cách tự nguyện.",
+    "formation": "Động từ nhóm 1: Thay ～う bằng ～わせられる, Động từ nhóm 2: Thay ～る bằng ～させられる, Động từ nhóm 3: する → させられる, くる →こさせられる",
+    "examples": [
+      {
+        "jp": "子供たちは先生に宿題をやらせられました。",
+        "romaji": "Kodomo-tachi wa sensei ni shukudai wo yaraseraremashita.",
+        "vn": "Giáo viên bắt bọn trẻ phải làm bài tập về nhà."
+      },
+      {
+        "jp": "彼は会社にもっと働かせられた。",
+        "romaji": "Kare wa kaisha ni motto hatarakaserareta.",
+        "vn": "Anh bị công ty buộc phải làm việc nhiều hơn."
+      },
+      {
+        "jp": "私は友達にその機密を話させられました。",
+        "romaji": "Watashi wa tomodachi ni sono kimitsu o hanasaseraremashita.",
+        "vn": "Tôi đã bị bạn tôi buộc phải tiết lộ bí mật đó."
+      },
+      {
+        "jp": "怪我をした選手は、コーチに休ませられました。",
+        "romaji": "Kega wo shita senshu wa, kouchi ni yasumaseraremashita.",
+        "vn": "Cầu thủ bị chấn thương được huấn luyện viên buộc phải nghỉ ngơi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ させる (Động từ-saseru)",
+    "short_explanation": "Diễn tả 'khiến ai đó làm gì đó', 'để ai đó làm gì đó' hoặc 'khiến ai đó làm gì đó'.",
+    "long_explanation": "Dạng động từ ～させる được dùng để diễn tả việc khiến hoặc cho phép ai đó làm điều gì đó. Nó có thể được dịch là 'khiến ai đó làm điều gì đó', 'để ai đó làm điều gì đó' hoặc 'khiến ai đó làm điều gì đó' trong tiếng Anh. Sự hình thành của dạng ～させる phụ thuộc vào động từ mà nó đi kèm.",
+    "formation": "Động từ nhóm 1: Đổi chữ hiragana cuối cùng thành ～せる, Động từ nhóm 2: Bỏ ～る và thêm ～させる, Động từ nhóm 3: する → させる, くる → こさせる",
+    "examples": [
+      {
+        "jp": "先生が生徒に宿題をさせました。",
+        "romaji": "Sensei ga seito ni shukudai o sasemashita.",
+        "vn": "Giáo viên bắt học sinh làm bài tập về nhà."
+      },
+      {
+        "jp": "母が私に部屋を掃除させました。",
+        "romaji": "Haha ga watashi ni heya o souji sasemashita.",
+        "vn": "Mẹ tôi bắt tôi dọn phòng."
+      },
+      {
+        "jp": "彼女にピアノを弾かせてあげました。",
+        "romaji": "Kanojo ni piano o hikasete agemashita.",
+        "vn": "Tôi cho cô ấy chơi piano."
+      },
+      {
+        "jp": "上司は彼にそのプログラムを作らせました。",
+        "romaji": "Joushi wa kare ni sono puroguramu o tsukurasemashita.",
+        "vn": "Ông chủ bắt anh ta tạo ra chương trình."
+      }
+    ]
+  },
+  {
+    "title": "Động từ た ことがある (Động từ ta koto ga aru)",
+    "short_explanation": "Diễn tả kinh nghiệm đã làm điều gì đó trong quá khứ.",
+    "long_explanation": "Điểm ngữ pháp ～たことがある được dùng để diễn tả trải nghiệm đã thực hiện một hành động trong quá khứ. Nó chỉ ra rằng người nói đã có kinh nghiệm làm việc gì đó ít nhất một lần trước đó. Nó được hình thành bằng cách thêm ことがある vào dạng た của động từ.",
+    "formation": "Động từ-た-dạng + ことがある",
+    "examples": [
+      {
+        "jp": "日本に行ったことがあります。",
+        "romaji": "Nihon ni itta koto ga arimasu.",
+        "vn": "Tôi đã từng đến Nhật Bản trước đây."
+      },
+      {
+        "jp": "寿司を食べたことがありますか？",
+        "romaji": "Sushi wo tabeta koto ga arimasu ka?",
+        "vn": "Bạn đã bao giờ ăn sushi trước đây chưa?"
+      },
+      {
+        "jp": "彼はマラソンを走ったことがあります。",
+        "romaji": "Kare wa marason wo hashitta koto ga arimasu.",
+        "vn": "Anh ấy đã có kinh nghiệm chạy marathon."
+      },
+      {
+        "jp": "私はスカイダイビングをしたことがありません。",
+        "romaji": "Watashi wa sukaidaibingu wo shita koto ga arimasen.",
+        "vn": "Tôi chưa bao giờ trải nghiệm nhảy dù."
+      }
+    ]
+  },
+  {
+    "title": "Động từ た ときに (Động từ た ときに)",
+    "short_explanation": "Diễn tả một hành động hoặc sự kiện xảy ra tại một thời điểm cụ thể trong quá khứ; 'khi nào', 'vào lúc đó'.",
+    "long_explanation": "Ngữ pháp たときに được dùng để diễn tả một hành động xảy ra tại một thời điểm cụ thể trong quá khứ, thường tập trung vào một sự kiện hoặc thời điểm cụ thể. Nó có thể được dịch là 'khi nào' hoặc 'vào thời điểm đó' bằng tiếng Anh. Điểm ngữ pháp này yêu cầu động từ ở dạng た theo sau là ときに để chỉ thời điểm hành động xảy ra.",
+    "formation": "Động từ-た + ときに",
+    "examples": [
+      {
+        "jp": "映画を見たときに、泣きました。",
+        "romaji": "Eiga wo mita toki ni, nakimashita.",
+        "vn": "Khi xem phim tôi đã khóc."
+      },
+      {
+        "jp": "彼に初めて会ったときに、遅刻していました。",
+        "romaji": "Kare ni hajimete atta toki ni, chikoku shite imashita.",
+        "vn": "Lần đầu tiên tôi gặp anh ấy, anh ấy đã đến muộn."
+      },
+      {
+        "jp": "日本へ行ったときに、たくさんの写真を撮りました。",
+        "romaji": "Nihon e itta toki ni, takusan no shashin wo torimashita.",
+        "vn": "Khi tôi đến Nhật Bản, tôi đã chụp rất nhiều ảnh."
+      },
+      {
+        "jp": "友達が家に来たときに、ゲームをしました。",
+        "romaji": "Tomodachi ga ie ni kita toki ni, geemu wo shimashita.",
+        "vn": "Khi bạn tôi đến nhà tôi, chúng tôi chơi trò chơi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ た ところ (Động từ ta tokoro)",
+    "short_explanation": "Diễn tả tình huống ngay sau khi một hành động vừa xảy ra.",
+    "long_explanation": "Điểm ngữ pháp たところ được dùng để diễn tả một tình huống xảy ra ngay sau khi một hành động vừa diễn ra. Nó thường được dịch là 'ngay bây giờ', 'ngay sau đó' hoặc 'khi nào'. Cấu tạo tương đối đơn giản vì nó chỉ yêu cầu động từ ở dạng た (thì quá khứ) theo sau là ところ.",
+    "formation": "Động từ (dạng た) + ところ",
+    "examples": [
+      {
+        "jp": "ドアを開けたところ、猫が飛び出してきた。",
+        "romaji": "Doa wo aketa tokoro, neko ga tobidashite kita.",
+        "vn": "Khi tôi mở cửa, một con mèo nhảy ra."
+      },
+      {
+        "jp": "電話を切ったところ、また鳴った。",
+        "romaji": "Denwa wo kitta tokoro, mata natta.",
+        "vn": "Ngay sau khi tôi cúp máy, nó lại reo lên."
+      },
+      {
+        "jp": "宿題を終わらせたところで、友達から連絡が来た。",
+        "romaji": "Shukudai wo owaraseta tokoro de, tomodachi kara renraku ga kita.",
+        "vn": "Ngay khi tôi làm xong bài tập về nhà, tôi nhận được tin nhắn từ bạn tôi."
+      },
+      {
+        "jp": "買い物をして帰ったところ、財布を失くしたことに気づいた。",
+        "romaji": "Kaimono wo shite kaetta tokoro, saifu wo nakushita koto ni kizuita.",
+        "vn": "Sau khi mua sắm và trở về nhà, tôi phát hiện mình bị mất ví."
+      }
+    ]
+  },
+  {
+    "title": "Động từ たほうがいい (〜ta hou ga ii)",
+    "short_explanation": "Được sử dụng để đưa ra lời khuyên hoặc đưa ra gợi ý cho ai đó - 'tốt hơn nếu...'.",
+    "long_explanation": "Điểm ngữ pháp たほうがいい được dùng để đưa ra lời khuyên hoặc đưa ra gợi ý cho ai đó. Nó có thể được dịch là 'sẽ tốt hơn nếu...', 'nên' hoặc 'đó là một ý tưởng hay'. Nó được hình thành bằng cách chia động từ ở thì quá khứ (dạng た) và thêm ほうがいい.",
+    "formation": "Động từ (thì quá khứ) + ほうがいい",
+    "examples": [
+      {
+        "jp": "早く寝たほうがいい。",
+        "romaji": "Hayaku neta hou ga ii.",
+        "vn": "Sẽ tốt hơn nếu bạn đi ngủ sớm."
+      },
+      {
+        "jp": "もっと勉強したほうがいい。",
+        "romaji": "Motto benkyou shita hou ga ii.",
+        "vn": "Bạn nên nghiên cứu thêm."
+      },
+      {
+        "jp": "病気の時は、薬を飲んだほうがいい。",
+        "romaji": "Byouki no toki wa, kusuri wo nonda hou ga ii.",
+        "vn": "Uống thuốc khi bị bệnh là điều nên làm."
+      },
+      {
+        "jp": "コーヒーを飲まないほうがいい。",
+        "romaji": "Koohii wo nomanai hou ga ii.",
+        "vn": "Sẽ tốt hơn nếu bạn không uống cà phê."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ために (tame ni)",
+    "short_explanation": "Dùng để diễn tả mục đích hoặc lý do của một hành động; 'vì', 'để', 'vì'.",
+    "long_explanation": "Điểm ngữ pháp ために (tame ni) được dùng để diễn đạt mục đích làm việc gì đó (trong trường hợp đó nó được dịch là 'vì lợi ích của' hoặc 'để') hoặc nguyên nhân/lý do cho một tình huống (trong trường hợp đó nó được dịch là 'vì'). Thông thường, chúng ta sử dụng dạng từ điển của động từ (ví dụ: 合格する) cho nghĩa 'để'. Đối với tính từ hoặc danh từ, gắn ために cho phù hợp (い-Tính từ + ために, な-Tính từ + な + ために, Danh từ + の + ために).",
+    "formation": "1) Động từ (dạng từ điển) + ために (mục đích)\n2) い-Tính từ + ために (lý do)\n3) な-Tính từ + な + ために (lý do)\n4) Danh từ + の + ために (lý do)",
+    "examples": [
+      {
+        "jp": "試験に合格するために、毎日勉強しています。",
+        "romaji": "Shiken ni goukaku suru tame ni, mainichi benkyou shiteimasu.",
+        "vn": "Tôi học mỗi ngày để vượt qua kỳ thi."
+      },
+      {
+        "jp": "健康のために、毎日運動しなければなりません。",
+        "romaji": "Kenkou no tame ni, mainichi undou shinakereba narimasen.",
+        "vn": "Vì sức khỏe nên tôi phải tập thể dục hàng ngày."
+      },
+      {
+        "jp": "仕事が忙しいために、友達と会う時間がありません。",
+        "romaji": "Shigoto ga isogashii tame ni, tomodachi to au jikan ga arimasen.",
+        "vn": "Vì công việc bận nên tôi không có thời gian gặp gỡ bạn bè."
+      },
+      {
+        "jp": "雨が降ったために、試合が中止されました。",
+        "romaji": "Ame ga futta tame ni, shiai ga chuushi saremashita.",
+        "vn": "Trận đấu đã bị hủy vì trời mưa."
+      }
+    ]
+  },
+  {
+    "title": "Động từ つもり (〜tsumori)",
+    "short_explanation": "Thể hiện ý định, kế hoạch hoặc quyết tâm làm điều gì đó; 'Tôi dự định', 'Tôi dự định', 'Tôi quyết tâm'.",
+    "long_explanation": "Điểm ngữ pháp ～つもり được dùng để diễn đạt ý định, kế hoạch hoặc quyết tâm làm một việc gì đó. Nó có thể được dịch là 'Tôi dự định', 'Tôi dự định' hoặc 'Tôi quyết tâm' bằng tiếng Anh. Nó được sử dụng với các động từ ở dạng thông thường.",
+    "formation": "Động từ-thông thường + つもり",
+    "examples": [
+      {
+        "jp": "明日、友達に会うつもりです。",
+        "romaji": "Ashita, tomodachi ni au tsumori desu.",
+        "vn": "Tôi dự định gặp bạn tôi vào ngày mai."
+      },
+      {
+        "jp": "今夜、晩ご飯を作るつもりです。",
+        "romaji": "Konya, bangohan o tsukuru tsumori desu.",
+        "vn": "Tôi định nấu bữa tối nay."
+      },
+      {
+        "jp": "来年、留学するつもりです。",
+        "romaji": "Rainen, ryuugaku suru tsumori desu.",
+        "vn": "Tôi dự định đi du học vào năm tới."
+      },
+      {
+        "jp": "この週末、山に登るつもりです。",
+        "romaji": "Kono shuumatsu, yama ni noboru tsumori desu.",
+        "vn": "Tôi quyết tâm leo núi vào cuối tuần này."
+      }
+    ]
+  },
+  {
+    "title": "Động từ てあげる (Động từ te ageru)",
+    "short_explanation": "Dùng để diễn tả việc làm điều gì đó cho ai đó; 'làm điều gì đó cho ai đó'",
+    "long_explanation": "Ngữ pháp てあげる được dùng để diễn tả việc người nói hoặc ai đó không phải người nghe đang làm việc gì đó cho người khác. Nó cho thấy hành động đó được thực hiện như một sự giúp đỡ hoặc vì lòng tốt. Điểm ngữ pháp này được sử dụng với các động từ ở dạng て, theo sau là あげる.",
+    "formation": "Dạng động từ-て + あげる",
+    "examples": [
+      {
+        "jp": "友達が疲れていたから、荷物を持ってあげた。",
+        "romaji": "Tomodachi ga tsukareteita kara, nimotsu o motte ageta.",
+        "vn": "Vì bạn tôi mệt nên tôi xách hành lý cho họ."
+      },
+      {
+        "jp": "弟は宿題がわからなかったので、手伝ってあげた。",
+        "romaji": "Otouto wa shukudai ga wakaranakatta node, tetsudatte ageta.",
+        "vn": "Em trai tôi không hiểu bài tập về nhà nên tôi đã giúp em ấy."
+      },
+      {
+        "jp": "彼女が遅れそうだったから、駅まで迎えに行ってあげた。",
+        "romaji": "Kanojo ga okuresou datta kara, eki made mukae ni itte ageta.",
+        "vn": "Cô ấy đến muộn nên tôi đến đón cô ấy ở ga."
+      },
+      {
+        "jp": "犬はのどが渇いたそうだったので、水を飲ませてあげた。",
+        "romaji": "Inu wa nodo ga kawaita sou datta node, mizu o nomasete ageta.",
+        "vn": "Con chó có vẻ khát nước nên tôi cho nó uống nước."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て ある (Động từ-te aru)",
+    "short_explanation": "Cho biết một hành động đã được thực hiện và kết quả của nó vẫn còn hiệu lực.",
+    "long_explanation": "Điểm ngữ pháp ～てある được dùng để diễn tả một hành động đã được thực hiện và kết quả của nó vẫn còn hiệu lực. Nó chỉ ra rằng hành động được thực hiện có chủ ý và hiệu lực của nó vẫn tiếp tục. Việc hình thành được thực hiện bằng cách chia động từ sang dạng て và sau đó thêm ある.",
+    "formation": "Dạng động từ-て + ある",
+    "examples": [
+      {
+        "jp": "窓が開けてある。",
+        "romaji": "Mado ga akete aru.",
+        "vn": "Cửa sổ đã được mở (và vẫn mở)."
+      },
+      {
+        "jp": "宿題がもう終わってある。",
+        "romaji": "Shukudai ga mou owatte aru.",
+        "vn": "Bài tập về nhà đã được làm xong (và vẫn như vậy)."
+      },
+      {
+        "jp": "洗濯物が全部干してある。",
+        "romaji": "Sentakumono ga zenbu hoshite aru.",
+        "vn": "Đồ giặt đã được treo lên để khô (và vẫn như vậy)."
+      },
+      {
+        "jp": "この部屋はきれいに掃除してある。",
+        "romaji": "Kono heya wa kirei ni souji shite aru.",
+        "vn": "Căn phòng này đã được dọn dẹp (và vẫn sạch sẽ)."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て いく (Động từ-te iku)",
+    "short_explanation": "Diễn tả một hành động tiếp tục diễn ra trong tương lai hoặc một sự thay đổi tiến triển theo thời gian.",
+    "long_explanation": "Điểm ngữ pháp て いく được dùng để biểu thị một hành động sẽ tiếp tục hoặc một sự thay đổi sẽ tiến tới tương lai. Nó có thể được gắn vào dạng て của động từ và thường được dịch là 'giữ', 'tiếp tục' hoặc 'tiếp tục' trong tiếng Anh.",
+    "formation": "Động từ ở dạng て + いく",
+    "examples": [
+      {
+        "jp": "このまま練習を続けていくと、上達するでしょう。",
+        "romaji": "Kono mama renshuu o tsuzukete iku to, joutatsu suru deshou.",
+        "vn": "Nếu bạn tiếp tục luyện tập như thế này, bạn sẽ tiến bộ."
+      },
+      {
+        "jp": "彼は成長していくうちに、自立心が強くなった。",
+        "romaji": "Kare wa seichou shite iku uchi ni, jiritsushin ga tsuyoku natta.",
+        "vn": "Khi lớn lên, tính độc lập của anh trở nên mạnh mẽ hơn."
+      },
+      {
+        "jp": "この会社はこれからも技術革新を行っていくでしょう。",
+        "romaji": "Kono kaisha wa korekara mo gijutsu kakushin o okonatte iku deshou.",
+        "vn": "Công ty này sẽ tiếp tục đổi mới công nghệ trong tương lai."
+      },
+      {
+        "jp": "子供たちはどんどん学んでいく。",
+        "romaji": "Kodomo-tachi wa dondon manande iku.",
+        "vn": "Trẻ em sẽ tiếp tục học hỏi nhiều hơn và nhiều hơn nữa."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ていただきたい (te itadakitai)",
+    "short_explanation": "Thể hiện một yêu cầu lịch sự hoặc mong muốn ai đó làm điều gì đó cho bạn.",
+    "long_explanation": "Điểm ngữ pháp ていただきたい được dùng để diễn tả một yêu cầu lịch sự hoặc mong muốn ai đó làm điều gì đó cho bạn. Nó được hình thành bằng cách gắn いただきたい vào dạng て của động từ. Nó lịch sự hơn cấu trúc て + ほしい.",
+    "formation": "Dạng động từ-て + いただきたい",
+    "examples": [
+      {
+        "jp": "資料をコピーしていただきたいです。",
+        "romaji": "Shiryou wo kopii shite itadakitai desu.",
+        "vn": "Tôi muốn bạn sao chép các tài liệu."
+      },
+      {
+        "jp": "この仕事を手伝っていただきたいのですが。",
+        "romaji": "Kono shigoto wo tetsudatte itadakitai no desu ga.",
+        "vn": "Tôi muốn nhờ sự giúp đỡ của bạn với công việc này."
+      },
+      {
+        "jp": "もしよろしければ、指導していただきたいです。",
+        "romaji": "Moshi yoroshikereba, shidou shite itadakitai desu.",
+        "vn": "Nếu không khó khăn lắm thì mong bạn hướng dẫn cho mình."
+      },
+      {
+        "jp": "駅まで送っていただきたいんですが。",
+        "romaji": "Eki made okutte itadakitain desu ga.",
+        "vn": "Tôi đang tự hỏi liệu bạn có thể đưa tôi đến nhà ga được không."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ていただく (〜te itadaku)",
+    "short_explanation": "Dùng để diễn tả việc nhận được sự ưu ái hoặc giúp đỡ của ai đó; 'để vui lòng làm'.",
+    "long_explanation": "Điểm ngữ pháp ～ていただく được dùng để diễn tả việc ai đó đã giúp đỡ hoặc giúp đỡ một cách tử tế. Đó là cách lịch sự và khiêm tốn hơn để nói rằng bạn đã nhận được sự giúp đỡ của ai đó. Sự hình thành được tạo ra bằng cách gắn dạng て của động từ + いただく.",
+    "formation": "Dạng động từ-て + いただく",
+    "examples": [
+      {
+        "jp": "メールを送っていただいて、ありがとうございます。",
+        "romaji": "Meeru o okutte itadaite, arigatou gozaimasu.",
+        "vn": "Cảm ơn bạn đã vui lòng gửi email."
+      },
+      {
+        "jp": "荷物を運んでいただいて、助かりました。",
+        "romaji": "Nimotsu o hakonde itadaite, tasukarimashita.",
+        "vn": "Bạn thực sự đã giúp tôi bằng cách mang hành lý."
+      },
+      {
+        "jp": "資料をチェックしていただきたいです。",
+        "romaji": "Shiryou o chekku shite itadakitai desu.",
+        "vn": "Tôi muốn bạn vui lòng kiểm tra các tài liệu."
+      },
+      {
+        "jp": "先生にアドバイスをしていただきました。",
+        "romaji": "Sensei ni adobaisu o shite itadakimashita.",
+        "vn": "Thầy đã tận tình cho tôi lời khuyên."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て いただけませんか (Động từ te itadakemasen ka)",
+    "short_explanation": "Một yêu cầu lịch sự; 'Bạn có thể vui lòng...', 'Bạn có phiền không...'",
+    "long_explanation": "Ngữ pháp て いただけませんか được dùng để đưa ra yêu cầu lịch sự với ai đó. Nó là một dạng lịch sự hơn của て くれませんか, và có thể được dịch là 'Bạn có thể vui lòng...' hoặc 'Bạn có phiền...' trong tiếng Anh. Để sử dụng, hãy chuyển động từ sang dạng て và thêm いただけませんか.",
+    "formation": "Dạng động từ-て + いただけませんか",
+    "examples": [
+      {
+        "jp": "この手紙を投函していただけませんか。",
+        "romaji": "Kono tegami wo toukan shite itadakemasen ka.",
+        "vn": "Bạn có thể vui lòng gửi lá thư này cho tôi được không?"
+      },
+      {
+        "jp": "この荷物を持っていただけませんか。",
+        "romaji": "Kono nimotsu wo motte itadakemasen ka.",
+        "vn": "Bạn có thể vui lòng mang hành lý này cho tôi được không?"
+      },
+      {
+        "jp": "隣の部屋にいる人に静かにしていただけませんか。",
+        "romaji": "Tonari no heya ni iru hito ni shizuka ni shite itadakemasen ka.",
+        "vn": "Bạn có thể yêu cầu người bên cạnh im lặng được không?"
+      },
+      {
+        "jp": "説明書を読んでいただけませんか。",
+        "romaji": "Setsumeisho wo yonde itadakemasen ka.",
+        "vn": "Bạn có thể vui lòng đọc hướng dẫn sử dụng được không?"
+      }
+    ]
+  },
+  {
+    "title": "Động từ て いる (Động từ-te iru)",
+    "short_explanation": "Diễn tả một hành động đang diễn ra hoặc một trạng thái bắt nguồn từ một hành động trong quá khứ.",
+    "long_explanation": "Dạng ている được dùng để diễn tả một hành động đang diễn ra hoặc một trạng thái bắt nguồn từ một hành động trong quá khứ. Nó được hình thành bằng cách chia động từ sang dạng て và sau đó thêm いる. Trong tiếng Anh, điều này có thể được dịch là động từ hoặc 'có động từ'. Cách sử dụng của nó phụ thuộc vào loại động từ: động từ hành động hoặc động từ trạng thái.",
+    "formation": "Động từ (dạng て) + いる",
+    "examples": [
+      {
+        "jp": "今、本を読んでいます。",
+        "romaji": "Ima, hon wo yonde imasu.",
+        "vn": "Bây giờ tôi đang đọc một cuốn sách."
+      },
+      {
+        "jp": "彼は英語を勉強しています。",
+        "romaji": "Kare wa eigo wo benkyou shite imasu.",
+        "vn": "Anh ấy đang học tiếng Anh."
+      },
+      {
+        "jp": "ケーキが冷蔵庫に入っています。",
+        "romaji": "Keeki ga reizouko ni haitte imasu.",
+        "vn": "Bánh ở trong tủ lạnh."
+      },
+      {
+        "jp": "部屋がきれいになっています。",
+        "romaji": "Heya ga kirei ni natte imasu.",
+        "vn": "Căn phòng đã trở nên sạch sẽ."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て いる ところ (Động từ te iru tokoro)",
+    "short_explanation": "Diễn tả một hành động đang xảy ra; 'ở giữa', 'trong quá trình'.",
+    "long_explanation": "Điểm ngữ pháp て いる ところ được dùng để diễn đạt một hành động đang hoặc đang diễn ra. Nó có thể được dịch là 'ở giữa' hoặc 'trong quá trình' bằng tiếng Anh. Nó được hình thành bằng cách sử dụng dạng て của động từ theo sau là いる và ところ.",
+    "formation": "Dạng động từ-て + いる ところ",
+    "examples": [
+      {
+        "jp": "彼は宿題をしているところです。",
+        "romaji": "Kare wa shukudai wo shite iru tokoro desu.",
+        "vn": "Anh ấy đang làm dở bài tập về nhà của mình."
+      },
+      {
+        "jp": "私たちは映画を見ているところでした。",
+        "romaji": "Watashitachi wa eiga wo mite iru tokoro deshita.",
+        "vn": "Chúng tôi đang trong quá trình xem một bộ phim."
+      },
+      {
+        "jp": "子供たちは公園で遊んでいるところです。",
+        "romaji": "Kodomotachi wa kouen de asonde iru tokoro desu.",
+        "vn": "Bọn trẻ đang chơi đùa trong công viên."
+      },
+      {
+        "jp": "彼女はケーキを作っているところで、すぐ来ます。",
+        "romaji": "Kanojo wa keeki wo tsukutte iru tokoro de, sugu kimasu.",
+        "vn": "Cô ấy đang làm bánh và sẽ đến sớm thôi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ている間に (te iru aida ni)",
+    "short_explanation": "Diễn tả 'trong khi' hoặc 'trong thời gian' điều gì đó đang xảy ra.",
+    "long_explanation": "Điểm ngữ pháp ～ている間に được dùng để diễn đạt một hành động hoặc sự kiện xảy ra trong thời gian một hành động hoặc sự kiện khác đang diễn ra. Nó thường được dịch sang 'trong khi' hoặc 'trong thời gian' bằng tiếng Anh. Nó được hình thành bằng cách kết hợp dạng て của động từ với いる và thêm 間に.",
+    "formation": "Dạng động từ-て + いる + 間に",
+    "examples": [
+      {
+        "jp": "映画を見ている間に、彼は寝てしまった。",
+        "romaji": "Eiga o mite iru aida ni, kare wa nete shimatta.",
+        "vn": "Đang xem phim thì ngủ quên mất."
+      },
+      {
+        "jp": "子供が遊んでいる間に、私は料理を作ります。",
+        "romaji": "Kodomo ga asonde iru aida ni, watashi wa ryouri o tsukurimasu.",
+        "vn": "Trong khi bọn trẻ chơi, tôi sẽ nấu ăn."
+      },
+      {
+        "jp": "会議が行われている間に、雨が降り始めた。",
+        "romaji": "Kaigi ga okonawarete iru aida ni, ame ga furihajimeta.",
+        "vn": "Khi cuộc họp đang diễn ra thì trời bắt đầu mưa."
+      },
+      {
+        "jp": "彼が仕事をしている間に、私たちは買い物に行く。",
+        "romaji": "Kare ga shigoto o shite iru aida ni, watashitachi wa kaimono ni iku.",
+        "vn": "Trong khi anh ấy làm việc, chúng tôi sẽ đi mua sắm."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ておく (〜te oku)",
+    "short_explanation": "Thực hiện một hành động để chuẩn bị cho một tình huống trong tương lai; 'làm điều gì đó trước'.",
+    "long_explanation": "Điểm ngữ pháp ～ておく được sử dụng khi bạn muốn diễn đạt việc thực hiện một hành động nhằm chuẩn bị cho một tình huống trong tương lai hoặc để làm điều gì đó trước. Nó được gắn vào thể te của một động từ và thể hiện ý tưởng làm điều gì đó trước, như một hành động chuẩn bị.",
+    "formation": "Dạng động từ-て + おく",
+    "examples": [
+      {
+        "jp": "駅で切符を買っておこう。",
+        "romaji": "Eki de kippu wo katte okou.",
+        "vn": "Hãy mua vé trước tại nhà ga."
+      },
+      {
+        "jp": "明日早く起きるために、今晩早く寝ておきます。",
+        "romaji": "Ashita hayaku okiru tame ni, konban hayaku nete okimasu.",
+        "vn": "Tối nay tôi sẽ đi ngủ sớm để ngày mai dậy sớm."
+      },
+      {
+        "jp": "試験前に勉強しておかないと、失敗するかもしれない。",
+        "romaji": "Shiken mae ni benkyou shite okanai to, shippai suru kamo shirenai.",
+        "vn": "Nếu tôi không học trước trước kỳ thi, tôi có thể trượt."
+      },
+      {
+        "jp": "彼が到着する前に、部屋をきれいに掃除しておきましょう。",
+        "romaji": "Kare ga touchaku suru mae ni, heya wo kirei ni souji shite okimashou.",
+        "vn": "Hãy dọn dẹp phòng trước khi anh ấy đến."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て くださいませんか (Động từ-te kudasaimasen ka)",
+    "short_explanation": "Lời yêu cầu lịch sự khi nhờ ai đó giúp đỡ.",
+    "long_explanation": "Điểm ngữ pháp て くださいませんか là một cách lịch sự để nhờ ai đó giúp đỡ hoặc yêu cầu họ làm điều gì đó. Nó trang trọng hơn dạng て đơn giản theo sau là ください, và nó thường được sử dụng trong các tình huống trang trọng hơn hoặc khi nói chuyện với người không thân thiết.",
+    "formation": "Động từ ở dạng て + くださいませんか",
+    "examples": [
+      {
+        "jp": "コーヒーを飲んでくださいませんか。",
+        "romaji": "Koohii o nonde kudasaimasen ka.",
+        "vn": "Bạn có vui lòng uống một ít cà phê không?"
+      },
+      {
+        "jp": "ドアを閉めてくださいませんか。",
+        "romaji": "Doa o shimete kudasaimasen ka.",
+        "vn": "Bạn vui lòng đóng cửa lại được không?"
+      },
+      {
+        "jp": "明日お昼に会ってくださいませんか。",
+        "romaji": "Ashita ohiru ni atte kudasaimasen ka.",
+        "vn": "Bạn vui lòng gặp tôi vào bữa trưa ngày mai được không?"
+      },
+      {
+        "jp": "その資料を送ってくださいませんか。",
+        "romaji": "Sono shiryou o okutte kudasaimasen ka.",
+        "vn": "Bạn vui lòng gửi cho tôi tài liệu đó được không?"
+      }
+    ]
+  },
+  {
+    "title": "Động từ て くださる (Động từ-te kudasaru)",
+    "short_explanation": "Bày tỏ lòng biết ơn khi nhận được sự ưu ái của ai đó; 'để vui lòng làm'.",
+    "long_explanation": "Điểm ngữ pháp て くださる được dùng để bày tỏ lòng biết ơn khi nhận được sự giúp đỡ hoặc hành động từ người khác. Đó là một cách kính trọng để nói rằng ai đó vui lòng làm điều gì đó cho người nói hoặc người nghe. Động từ được chia ở dạng ～て và theo sau là くださる.",
+    "formation": "Động từ dạng て + くださる",
+    "examples": [
+      {
+        "jp": "先生が手伝ってくださる。",
+        "romaji": "Sensei ga tetsudatte kudasaru.",
+        "vn": "Thầy tận tình giúp đỡ."
+      },
+      {
+        "jp": "お母さんが美味しい料理を作ってくださる。",
+        "romaji": "Okaasan ga oishii ryouri wo tsukutte kudasaru.",
+        "vn": "Mẹ tôi vui lòng nấu những bữa ăn ngon."
+      },
+      {
+        "jp": "友達が私を駅まで送ってくださる。",
+        "romaji": "Tomodachi ga watashi wo eki made okutte kudasaru.",
+        "vn": "Bạn tôi vui lòng cho tôi đi nhờ đến nhà ga."
+      },
+      {
+        "jp": "部長がすぐに質問に答えてくださる。",
+        "romaji": "Buchou ga sugu ni shitsumon ni kotaete kudasaru.",
+        "vn": "Người quản lý vui lòng trả lời các câu hỏi ngay lập tức."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て くる (Động từ te kuru)",
+    "short_explanation": "Một hành động bắt đầu trong quá khứ và tiếp tục đến hiện tại hoặc tương lai; 'đến', 'bắt đầu', 'trở thành'.",
+    "long_explanation": "Điểm ngữ pháp て くる dùng để diễn tả một hành động bắt đầu trong quá khứ và tiếp tục đến hiện tại hoặc tương lai. Nó cũng có thể hiển thị một sự thay đổi về trạng thái hoặc điều kiện. Sự hình thành bao gồm việc gắn dạng て của động từ theo sau là くる.",
+    "formation": "Động từ dạng て + くる",
+    "examples": [
+      {
+        "jp": "最近、日本語が分かってくるようになりました。",
+        "romaji": "Saikin, nihongo ga wakatte kuru you ni narimashita.",
+        "vn": "Gần đây tôi đã hiểu được tiếng Nhật."
+      },
+      {
+        "jp": "寒くなってきたので、コートを着ましょう。",
+        "romaji": "Samuku natte kita node, kooto wo kimashou.",
+        "vn": "Vì trời trở lạnh rồi nên hãy mặc áo khoác vào nhé."
+      },
+      {
+        "jp": "雨がやんできました。",
+        "romaji": "Ame ga yande kimashita.",
+        "vn": "Mưa đã tạnh (và trời tạnh)."
+      },
+      {
+        "jp": "彼がだんだん怖くなってきた。",
+        "romaji": "Kare ga dandan kowaku natte kita.",
+        "vn": "Anh ta ngày càng trở nên đáng sợ hơn."
+      }
+    ]
+  },
+  {
+    "title": "Động từ てくれませんか (〜te kuremasen ka)",
+    "short_explanation": "Một cách lịch sự để yêu cầu ai đó làm điều gì đó cho bạn; 'Bạn có thể vui lòng không', 'Bạn có vui lòng không', 'Bạn có muốn không'.",
+    "long_explanation": "Ngữ pháp ～てくれませんか được dùng để yêu cầu ai đó làm việc gì đó một cách lịch sự cho bạn. Nó được hình thành bằng cách sử dụng dạng て của một động từ theo sau là くれませんか. Nó được dịch là 'Bạn có thể vui lòng không', 'Bạn có vui lòng không' hoặc 'Bạn có muốn không' bằng tiếng Anh.",
+    "formation": "Dạng động từ-て + くれませんか",
+    "examples": [
+      {
+        "jp": "ドアを開けてくれませんか。",
+        "romaji": "Doa wo akete kuremasen ka.",
+        "vn": "Bạn có thể vui lòng mở cửa được không?"
+      },
+      {
+        "jp": "これを見てくれませんか。",
+        "romaji": "Kore wo mite kuremasen ka.",
+        "vn": "Bạn vui lòng xem cái này được không?"
+      },
+      {
+        "jp": "手伝ってくれませんか。",
+        "romaji": "Tetsudatte kuremasen ka.",
+        "vn": "Bạn sẽ không giúp tôi à?"
+      },
+      {
+        "jp": "明日、迎えに来てくれませんか。",
+        "romaji": "Ashita, mukae ni kite kuremasen ka.",
+        "vn": "Ngày mai bạn có thể đến đón tôi được không?"
+      }
+    ]
+  },
+  {
+    "title": "Động từ て くれる (Động từ-te kureru)",
+    "short_explanation": "Diễn tả việc ai đó làm điều gì đó cho người nói (hoặc một người khác trong nhóm người nói); 'làm điều gì đó cho tôi/chúng tôi'.",
+    "long_explanation": "Điểm ngữ pháp て くれる dùng để diễn tả khi ai đó làm gì cho, hoặc đưa cái gì đó cho người nói (hoặc ai đó trong nhóm của người nói). Hành động này thường được thực hiện một cách tự nguyện hoặc như một ân huệ của người thực hiện hành động đó. Nó thường được dịch sang tiếng Anh là 'làm điều gì đó cho tôi' hoặc 'đưa điều gì đó cho tôi'.",
+    "formation": "Dạng động từ + くれる",
+    "examples": [
+      {
+        "jp": "友達が宿題を手伝ってくれました。",
+        "romaji": "Tomodachi ga shukudai wo tetsudatte kuremashita.",
+        "vn": "Bạn tôi đã giúp tôi làm bài tập về nhà."
+      },
+      {
+        "jp": "弟が部屋を掃除してくれた。",
+        "romaji": "Otouto ga heya wo souji shite kureta.",
+        "vn": "Em trai tôi đã dọn phòng cho tôi."
+      },
+      {
+        "jp": "先生が質問に答えてくれます。",
+        "romaji": "Sensei ga shitsumon ni kotaete kuremasu.",
+        "vn": "Thầy giải đáp thắc mắc cho em nhé."
+      },
+      {
+        "jp": "彼女が手紙を書いてくれる。",
+        "romaji": "Kanojo ga tegami wo kaite kureru.",
+        "vn": "Cô ấy viết thư cho tôi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て + さしあげる (Động từ TE sashiageru)",
+    "short_explanation": "Một cách lịch sự để bày tỏ việc cho hoặc làm điều gì đó cho ai đó.",
+    "long_explanation": "Điểm ngữ pháp 'Động từ て + さしあげる' được dùng để diễn đạt hành động đưa hoặc làm việc gì đó cho ai đó một cách lịch sự. Nó chủ yếu được sử dụng khi người nói đề nghị hoặc làm điều gì đó cho người có địa vị xã hội cao hơn hoặc thể hiện sự tôn trọng đối với người đó. Để hình thành cách diễn đạt này, bạn cần chia động từ sang dạng て và đính kèm さしあげる.",
+    "formation": "Dạng động từ-て + さしあげる",
+    "examples": [
+      {
+        "jp": "お茶を入れてさしあげます。",
+        "romaji": "Ocha wo irete sashiagemasu.",
+        "vn": "Tôi sẽ chuẩn bị và phục vụ trà (cho bạn)."
+      },
+      {
+        "jp": "メッセージを送ってさしあげました。",
+        "romaji": "Messeiji wo okutte sashiagemashita.",
+        "vn": "Tôi đã gửi tin nhắn (cho bạn)."
+      },
+      {
+        "jp": "荷物を持ってさしあげましょうか。",
+        "romaji": "Nimotsu wo motte sashiagemashou ka.",
+        "vn": "Tôi sẽ mang hành lý (cho bạn) nhé?"
+      },
+      {
+        "jp": "お電話をかけてさしあげます。",
+        "romaji": "Odenwa wo kakete sashiagemasu.",
+        "vn": "Tôi sẽ gọi điện thoại (cho bạn)."
+      }
+    ]
+  },
+  {
+    "title": "Động từ てしまう (〜te shimau)",
+    "short_explanation": "Diễn tả hành động vô ý hoặc gây hậu quả đáng tiếc; 'kết thúc việc làm', 'vô tình làm'.",
+    "long_explanation": "Điểm ngữ pháp ～てしまう dùng để biểu thị những hành động vô ý hoặc gây ra hậu quả đáng tiếc. Nó thường có thể được dịch là “kết thúc việc làm” hoặc “vô tình làm” bằng tiếng Anh. Sự hình thành yêu cầu thêm しまう vào dạng て của động từ.",
+    "formation": "Dạng động từ + しまう",
+    "examples": [
+      {
+        "jp": "ケーキを全部食べてしまった。",
+        "romaji": "Keeki wo zenbu tabete shimatta.",
+        "vn": "Cuối cùng tôi đã ăn hết chiếc bánh."
+      },
+      {
+        "jp": "宿題を忘れてしまいました。",
+        "romaji": "Shukudai wo wasurete shimaimashita.",
+        "vn": "Tôi vô tình quên bài tập về nhà."
+      },
+      {
+        "jp": "彼に秘密を言ってしまった。",
+        "romaji": "Kare ni himitsu wo itte shimatta.",
+        "vn": "Tôi vô tình nói cho anh ấy biết bí mật."
+      },
+      {
+        "jp": "値札を見ずに高い服を買ってしまった。",
+        "romaji": "Nefuda wo mizu ni takai fuku wo katte shimatta.",
+        "vn": "Cuối cùng tôi đã mua những bộ quần áo đắt tiền mà không nhìn vào bảng giá."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て ほしい (Động từ-te hoshii)",
+    "short_explanation": "Thể hiện mong muốn người khác làm điều gì đó; 'Tôi muốn (ai đó)'.",
+    "long_explanation": "Ngữ pháp て ほしい được dùng để diễn đạt mong muốn của người nói muốn người khác thực hiện một hành động. Nó được hình thành bằng cách kết hợp dạng て của động từ với ほしい. Chủ ngữ thường được theo sau bởi trợ từ に, nhưng nó có thể bị lược bỏ trong lời nói thông thường.",
+    "formation": "Dạng động từ-て + ほしい",
+    "examples": [
+      {
+        "jp": "子供にもっと勉強してほしい。",
+        "romaji": "Kodomo ni motto benkyou shite hoshii.",
+        "vn": "Tôi muốn con tôi học nhiều hơn."
+      },
+      {
+        "jp": "彼にもっと早く来てほしい。",
+        "romaji": "Kare ni motto hayaku kite hoshii.",
+        "vn": "Tôi muốn anh ấy đến sớm hơn."
+      },
+      {
+        "jp": "友達にその本を読んでほしい。",
+        "romaji": "Tomodachi ni sono hon o yonde hoshii.",
+        "vn": "Tôi muốn bạn tôi đọc cuốn sách đó."
+      },
+      {
+        "jp": "先生に質問に答えてほしい。",
+        "romaji": "Sensei ni shitsumon ni kotaete hoshii.",
+        "vn": "Tôi muốn giáo viên trả lời câu hỏi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ てみる (〜te miru)",
+    "short_explanation": "Dùng để diễn đạt 'cố gắng' hoặc 'cố gắng làm'.",
+    "long_explanation": "Điểm ngữ pháp ～てみる được dùng với động từ để diễn đạt 'cố gắng' hoặc 'cố gắng' làm điều gì đó. Nó nhấn mạnh ý tưởng thử một điều gì đó hoặc thử nó, thường để xem kết quả hoặc kết quả sẽ như thế nào.",
+    "formation": "Dạng động từ-て + みる",
+    "examples": [
+      {
+        "jp": "この料理を作ってみます。",
+        "romaji": "Kono ryouri o tsukutte mimasu.",
+        "vn": "Tôi sẽ cố gắng làm món ăn này."
+      },
+      {
+        "jp": "その服を着てみてください。",
+        "romaji": "Sono fuku o kite mite kudasai.",
+        "vn": "Hãy thử những bộ quần áo đó."
+      },
+      {
+        "jp": "新しいレストランに行ってみよう。",
+        "romaji": "Atarashii resutoran ni itte miyou.",
+        "vn": "Chúng ta hãy thử đến nhà hàng mới."
+      },
+      {
+        "jp": "映画を見てみたいです。",
+        "romaji": "Eiga o mite mitai desu.",
+        "vn": "Tôi muốn thử xem phim."
+      }
+    ]
+  },
+  {
+    "title": "Động từ てもらいたい (～te moraitai)",
+    "short_explanation": "Thể hiện mong muốn nhận được sự ưu ái hoặc dịch vụ từ người khác.",
+    "long_explanation": "Điểm ngữ pháp ～てもらいたい được dùng để thể hiện mong muốn nhận được sự giúp đỡ, dịch vụ hoặc hành động từ người khác. Nó được hình thành bằng cách gắn もらいたい vào dạng て của động từ. Cấu trúc này nhấn mạnh sự giúp đỡ hoặc ưu ái mà người nói mong muốn từ người khác.",
+    "formation": "Động từ-て-dạng + もらいたい",
+    "examples": [
+      {
+        "jp": "この荷物を運んでもらいたいです。",
+        "romaji": "Kono nimotsu o hakonde moraitai desu.",
+        "vn": "Tôi muốn bạn mang hành lý này cho tôi."
+      },
+      {
+        "jp": "彼にそのニュースを教えてもらいたい。",
+        "romaji": "Kare ni sono nyuusu o oshiete moraitai.",
+        "vn": "Tôi muốn anh ấy báo tin cho tôi."
+      },
+      {
+        "jp": "友達に日本語を教えてもらいたい。",
+        "romaji": "Tomodachi ni Nihongo o oshiete moraitai.",
+        "vn": "Tôi muốn bạn tôi dạy tôi tiếng Nhật."
+      },
+      {
+        "jp": "スタッフにチェックインの方法を説明してもらいたい。",
+        "romaji": "Sutaffu ni chekkuin no houhou o setsumei shite moraitai.",
+        "vn": "Tôi muốn nhân viên giải thích quy trình nhận phòng cho tôi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ て もらう (Động từ-te morau)",
+    "short_explanation": "Thể hiện việc nhận được sự giúp đỡ hoặc hành động từ ai đó.",
+    "long_explanation": "Điểm ngữ pháp của Động từ て もらう được dùng để diễn đạt việc người nói hoặc người thứ ba nhận được sự giúp đỡ hoặc hành động từ người khác. Nó mô tả một hành động được thực hiện bởi ai đó vì lợi ích của người nói hoặc người thứ ba, hàm ý biết ơn hoặc yêu cầu từ người thụ hưởng.",
+    "formation": "Dạng động từ-て + もらう",
+    "examples": [
+      {
+        "jp": "友達に宿題を手伝ってもらった。",
+        "romaji": "Tomodachi ni shukudai o tetsudatte moratta.",
+        "vn": "Tôi nhờ bạn tôi giúp tôi làm bài tập về nhà."
+      },
+      {
+        "jp": "母に部屋を掃除してもらいました。",
+        "romaji": "Haha ni heya o souji shite moraimashita.",
+        "vn": "Tôi nhờ mẹ dọn phòng cho tôi."
+      },
+      {
+        "jp": "彼に荷物を持ってもらいたい。",
+        "romaji": "Kare ni nimotsu o motte moraitai.",
+        "vn": "Tôi muốn anh ấy xách hành lý hộ tôi."
+      },
+      {
+        "jp": "先生に質問に答えてもらえますか？",
+        "romaji": "Sensei ni shitsumon ni kotaete moraemasu ka?",
+        "vn": "Tôi có thể nhờ giáo viên trả lời câu hỏi của tôi được không?"
+      }
+    ]
+  },
+  {
+    "title": "Động từ てもらえませんか (～te moraemasen ka)",
+    "short_explanation": "Một cách lịch sự để yêu cầu ai đó giúp đỡ hoặc yêu cầu ai đó làm điều gì đó.",
+    "long_explanation": "Điểm ngữ pháp ～てもらえませんか là một cách lịch sự và gián tiếp để yêu cầu ai đó làm điều gì đó cho bạn hoặc yêu cầu giúp đỡ. Nó được hình thành bằng cách chia động từ sang dạng て và thêm もらえませんか. Hình thức này được sử dụng trong các cuộc hội thoại để thể hiện sự lịch sự và khiêm tốn.",
+    "formation": "Dạng động từ-て + もらえませんか",
+    "examples": [
+      {
+        "jp": "この手紙を見てもらえませんか。",
+        "romaji": "Kono tegami o mite moraemasen ka?",
+        "vn": "Bạn có thể xem qua bức thư này giúp tôi được không?"
+      },
+      {
+        "jp": "荷物を持ってもらえませんか。",
+        "romaji": "Nimotsu o motte moraemasen ka?",
+        "vn": "Bạn có thể mang hành lý này cho tôi được không?"
+      },
+      {
+        "jp": "部屋を掃除してもらえませんか。",
+        "romaji": "Heya o souji shite moraemasen ka?",
+        "vn": "Bạn có thể dọn phòng cho tôi được không?"
+      },
+      {
+        "jp": "明日のミーティングに参加してもらえませんか。",
+        "romaji": "Ashita no miitingu ni sanka shite moraemasen ka?",
+        "vn": "Bạn có thể tham dự cuộc họp ngày mai giúp tôi được không?"
+      }
+    ]
+  },
+  {
+    "title": "Động từ ない ことがある (Động từ-nai koto ga aru)",
+    "short_explanation": "Diễn tả rằng điều gì đó không phải lúc nào cũng xảy ra hoặc có những trường hợp nó không xảy ra.",
+    "long_explanation": "Điểm ngữ pháp ないことがある được dùng để chỉ ra rằng có những trường hợp hoặc thời điểm mà việc gì đó không xảy ra hoặc chưa được thực hiện. Nó được hình thành bằng cách kết hợp dạng phủ định của động từ (ない) với ことがある.",
+    "formation": "Dạng phủ định của động từ + ことがある",
+    "examples": [
+      {
+        "jp": "彼は会議に出席しないことがある。",
+        "romaji": "Kare wa kaigi ni shusseki shinai koto ga aru.",
+        "vn": "Có những lúc anh ấy không tham dự các cuộc họp."
+      },
+      {
+        "jp": "この電車は定刻に来ないことがある。",
+        "romaji": "Kono densha wa teikoku ni konai koto ga aru.",
+        "vn": "Có những lúc chuyến tàu này không đến đúng giờ."
+      },
+      {
+        "jp": "私は朝食を食べないことがある。",
+        "romaji": "Watashi wa choushoku o tabenai koto ga aru.",
+        "vn": "Có những lúc tôi không ăn sáng."
+      },
+      {
+        "jp": "彼女は電話に出ないことがある。",
+        "romaji": "Kanojo wa denwa ni denai koto ga aru.",
+        "vn": "Có những lúc cô ấy không trả lời điện thoại."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ない + ことにする (Động từ nai koto ni suru)",
+    "short_explanation": "Quyết định không làm điều gì đó.",
+    "long_explanation": "Điểm ngữ pháp Động từ ない + ことにする được dùng để diễn tả quyết định không làm điều gì đó. Cấu trúc này cho thấy người nói đã đưa ra lựa chọn có ý thức để không thực hiện hành động được thể hiện trong động từ.",
+    "formation": "Dạng động từ-ない + ことにする",
+    "examples": [
+      {
+        "jp": "明日のパーティーに行かないことにする。",
+        "romaji": "Ashita no paatii ni ikanai koto ni suru.",
+        "vn": "Tôi đã quyết định không đến bữa tiệc ngày mai."
+      },
+      {
+        "jp": "そのケーキを食べないことにします。",
+        "romaji": "Sono keeki wo tabenai koto ni shimasu.",
+        "vn": "Tôi đã quyết định không ăn chiếc bánh đó."
+      },
+      {
+        "jp": "今日はジョギングをしないことにする。",
+        "romaji": "Kyou wa jogingu wo shinai koto ni suru.",
+        "vn": "Tôi đã quyết định không đi chạy bộ ngày hôm nay."
+      },
+      {
+        "jp": "彼と会わないことにしました。",
+        "romaji": "Kare to awanai koto ni shimashita.",
+        "vn": "Tôi đã quyết định không gặp anh ấy."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ない ことになる (Động từ nai koto ni naru)",
+    "short_explanation": "Thể hiện một kết quả; 'kết thúc không phải vậy', 'nó sẽ trở thành như vậy', 'nó sẽ có nghĩa như vậy'.",
+    "long_explanation": "Điểm ngữ pháp của Động từ ない ことになる được dùng để diễn đạt một kết quả hoặc hậu quả. Nó được dịch là 'cuối cùng thì không', 'nó sẽ trở thành như vậy' hoặc 'nó có nghĩa là như vậy' trong tiếng Anh. Nó được hình thành bằng cách sử dụng dạng phủ định (ない) của một động từ theo sau là ことになる.",
+    "formation": "Động từ phủ định (ない) + ことになる",
+    "examples": [
+      {
+        "jp": "今日彼が来ないことになると、私たちの予定はキャンセルされます。",
+        "romaji": "Kyou kare ga konai koto ni naru to, watashitachi no yotei wa kyanseru saremasu.",
+        "vn": "Nếu hôm nay anh ấy không đến, kế hoạch của chúng ta sẽ bị hủy bỏ."
+      },
+      {
+        "jp": "このプロジェクトが進まないことになると、収益が減るでしょう。",
+        "romaji": "Kono purojekuto ga susumanai koto ni naru to, shuueki ga heru deshou.",
+        "vn": "Nếu dự án này không tiến triển đồng nghĩa với việc doanh thu sẽ giảm."
+      },
+      {
+        "jp": "彼女は試験に合格しないことになると、卒業が遅れます。",
+        "romaji": "Kanojo wa shiken ni goukaku shinai koto ni naru to, sotsugyou ga okuremasu.",
+        "vn": "Nếu cô ấy không vượt qua kỳ thi, việc tốt nghiệp của cô ấy sẽ bị trì hoãn."
+      },
+      {
+        "jp": "雨が降ると、ピクニックが行われないことになるでしょう。",
+        "romaji": "Ame ga furu to, pikunikku ga okonawarenai koto ni naru deshou.",
+        "vn": "Nếu trời mưa thì chuyến dã ngoại sẽ không diễn ra."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ないほうがいい (Động từ nai hou ga ii)",
+    "short_explanation": "Diễn tả ý tưởng rằng tốt hơn là không nên làm điều gì đó.",
+    "long_explanation": "Ngữ pháp ないほうがいい được dùng để gợi ý rằng tốt hơn hết là không nên thực hiện một hành động nào đó. Nó được hình thành bằng cách lấy dạng phủ định của động từ và thêm ほうがいい.",
+    "formation": "Dạng phủ định của động từ + ほうがいい",
+    "examples": [
+      {
+        "jp": "この薬は飲まないほうがいいです。",
+        "romaji": "Kono kusuri wa nomanai hou ga ii desu.",
+        "vn": "Tốt hơn hết là không nên dùng thuốc này."
+      },
+      {
+        "jp": "急いでいるときは、走らないほうがいい。",
+        "romaji": "Isoide iru toki wa, hashiranai hou ga ii.",
+        "vn": "Khi đang vội thì tốt hơn hết là đừng chạy."
+      },
+      {
+        "jp": "彼に秘密を知られたくなければ、話さないほうがいい。",
+        "romaji": "Kare ni himitsu o shiraretakunakereba, hanasanai hou ga ii.",
+        "vn": "Nếu bạn không muốn anh ấy biết bí mật của mình thì tốt nhất đừng nói cho anh ấy biết."
+      },
+      {
+        "jp": "雨の日には、外出しないほうがいい。",
+        "romaji": "Ame no hi ni wa, gaishutsu shinai hou ga ii.",
+        "vn": "Tốt hơn hết là đừng ra ngoài vào ngày mưa."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ながら (〜nagara)",
+    "short_explanation": "Diễn tả 'while' hoặc 'as' theo nghĩa làm hai việc cùng một lúc.",
+    "long_explanation": "Điểm ngữ pháp ～ながら được dùng để chỉ ra rằng có hai hành động xảy ra đồng thời hoặc một hành động đang diễn ra trong khi một hành động khác đang diễn ra. Điều này có thể được dịch sang 'while' hoặc 'as' bằng tiếng Anh. Nó chủ yếu được sử dụng với động từ.",
+    "formation": "Thân động từ-masu + ながら",
+    "examples": [
+      {
+        "jp": "テレビを見ながら宿題をしました。",
+        "romaji": "Terebi wo minagara shukudai wo shimashita.",
+        "vn": "Tôi đã làm bài tập về nhà trong khi xem tivi."
+      },
+      {
+        "jp": "音楽を聞きながら料理をしました。",
+        "romaji": "Ongaku wo kikinagara ryouri wo shimashita.",
+        "vn": "Tôi nấu ăn trong khi nghe nhạc."
+      },
+      {
+        "jp": "歩きながらスマホを見るのは危険です。",
+        "romaji": "Arukinagara sumaho wo miru no wa kiken desu.",
+        "vn": "Nhìn vào điện thoại thông minh của bạn trong khi đi bộ là nguy hiểm."
+      },
+      {
+        "jp": "彼は話しながら笑っていました。",
+        "romaji": "Kare wa hanashi nagara waratte imashita.",
+        "vn": "Anh ấy vừa cười vừa nói."
+      }
+    ]
+  },
+  {
+    "title": "Động từ なさい (〜nasai)",
+    "short_explanation": "Một dạng mệnh lệnh dùng để ra lệnh hoặc hướng dẫn; 'Xin hãy làm', 'Hãy làm điều này'.",
+    "long_explanation": "Điểm ngữ pháp なさい được dùng để ra lệnh hoặc chỉ dẫn, thường được giáo viên, phụ huynh hoặc các nhân vật có thẩm quyền khác sử dụng khi xưng hô với người trẻ hơn hoặc có địa vị thấp hơn. Nó được hình thành bằng cách gắn なさい vào gốc động từ. Hình thức này nghe có vẻ lịch sự nhưng có thể coi là mạnh mẽ và trực tiếp.",
+    "formation": "Thân động từ + なさい",
+    "examples": [
+      {
+        "jp": "部屋を掃除しなさい。",
+        "romaji": "Heya wo souji shinasai.",
+        "vn": "Dọn dẹp phòng của bạn."
+      },
+      {
+        "jp": "勉強しなさい。",
+        "romaji": "Benkyou shinasai.",
+        "vn": "Nghiên cứu."
+      },
+      {
+        "jp": "早く起きなさい。",
+        "romaji": "Hayaku okinasai.",
+        "vn": "Thức dậy sớm."
+      },
+      {
+        "jp": "宿題をやりなさい。",
+        "romaji": "Shukudai wo yarinasai.",
+        "vn": "Làm bài tập về nhà của bạn."
+      }
+    ]
+  },
+  {
+    "title": "Động từ にくい (〜nikui)",
+    "short_explanation": "Thể hiện sự khó khăn hoặc phức tạp; 'khó', 'khó', 'không dễ'.",
+    "long_explanation": "Điểm ngữ pháp ～にくい được dùng để diễn tả một hành động khó hoặc tương đối khó thực hiện. Nó được sử dụng bằng cách gắn にくい vào gốc động từ. Nó có thể được dịch là 'khó', 'khó' hoặc 'không dễ' trong tiếng Anh.",
+    "formation": "Thân động từ + にくい",
+    "examples": [
+      {
+        "jp": "この字は読みにくいです。",
+        "romaji": "Kono ji wa yomi nikui desu.",
+        "vn": "Ký tự này khó đọc."
+      },
+      {
+        "jp": "このドアは開けにくい。",
+        "romaji": "Kono doa wa ake nikui.",
+        "vn": "Cánh cửa này khó mở."
+      },
+      {
+        "jp": "彼の字は読みにくい。",
+        "romaji": "Kare no ji wa yomi nikui.",
+        "vn": "Chữ viết tay của anh ấy rất khó đọc."
+      },
+      {
+        "jp": "この料理は作りにくい。",
+        "romaji": "Kono ryouri wa tsukuri nikui.",
+        "vn": "Món ăn này rất khó làm."
+      }
+    ]
+  },
+  {
+    "title": "Động từ やすい (〜yasui)",
+    "short_explanation": "Chỉ ra rằng việc gì đó rất dễ thực hiện; 'dễ làm', 'dễ làm'.",
+    "long_explanation": "Ngữ pháp やすい được dùng để diễn tả việc gì đó dễ làm hoặc dễ dàng đối với ai đó. Nó được gắn vào gốc động từ và có thể được dịch là 'dễ dàng' hoặc 'dễ dàng' trong tiếng Anh. Sự hình thành này chỉ được sử dụng với động từ.",
+    "formation": "Thân động từ + やすい",
+    "examples": [
+      {
+        "jp": "この本は読みやすいです。",
+        "romaji": "Kono hon wa yomiyasui desu.",
+        "vn": "Cuốn sách này rất dễ đọc."
+      },
+      {
+        "jp": "このシャツは着やすい。",
+        "romaji": "Kono shatsu wa kiyasui.",
+        "vn": "Áo này dễ mặc lắm."
+      },
+      {
+        "jp": "彼は話しやすい人です。",
+        "romaji": "Kare wa hanashiyasui hito desu.",
+        "vn": "Anh ấy là một người dễ nói chuyện."
+      },
+      {
+        "jp": "この料理は作りやすい。",
+        "romaji": "Kono ryouri wa tsukuriyasui.",
+        "vn": "Món ăn này rất dễ làm."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ようと思う (Động từ-you to omou)",
+    "short_explanation": "Thể hiện ý định hoặc kế hoạch làm điều gì đó; 'Tôi nghĩ tôi sẽ làm', 'Tôi dự định', 'Tôi dự định'.",
+    "long_explanation": "Điểm ngữ pháp ようと思う được dùng để diễn đạt ý định hoặc dự định làm điều gì đó trong tương lai. Nó có thể được dịch là 'Tôi nghĩ tôi sẽ', 'Tôi dự định' hoặc 'Tôi dự định' bằng tiếng Anh. Sự hình thành liên quan đến việc sử dụng dạng ý chí của động từ theo sau là と思う.",
+    "formation": "Động từ-ý chí + と思う",
+    "examples": [
+      {
+        "jp": "明日、映画を見ようと思います。",
+        "romaji": "Ashita, eiga o miyou to omoimasu.",
+        "vn": "Tôi nghĩ ngày mai tôi sẽ xem phim."
+      },
+      {
+        "jp": "週末に友達と遊ぼうと思っています。",
+        "romaji": "Shuumatsu ni tomodachi to asobou to omotteimasu.",
+        "vn": "Tôi dự định đi chơi với bạn bè vào cuối tuần."
+      },
+      {
+        "jp": "勉強をもっと頑張ろうと思う。",
+        "romaji": "Benkyou o motto ganbarou to omou.",
+        "vn": "Tôi dự định sẽ học chăm chỉ hơn."
+      },
+      {
+        "jp": "来年は海外旅行に行こうと思っている。",
+        "romaji": "Rainen wa kaigai ryokou ni ikou to omotteiru.",
+        "vn": "Tôi dự định đi du lịch nước ngoài vào năm tới."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ように (〜you ni)",
+    "short_explanation": "Được sử dụng để diễn đạt 'như', 'như thể', 'để' hoặc 'vì vậy'.",
+    "long_explanation": "Điểm ngữ pháp ～ように được sử dụng để diễn đạt những ý nghĩa khác nhau tùy theo ngữ cảnh: 'như', 'như thể', 'để', hoặc 'vì vậy'. Các kiểu hình thành có thể bao gồm: Danh từ + のように, Từ điển động từ/dạng phủ định + ように, い-tính từ + ように, v.v.",
+    "formation": "Ví dụ: Danh từ + のように / Động từ thông thường + ように / い-tính từ + ように",
+    "examples": [
+      {
+        "jp": "彼女は鳥のように軽やかに踊る。",
+        "romaji": "Kanojo wa tori no you ni karoyaka ni odoru.",
+        "vn": "Cô ấy nhảy nhẹ nhàng như một con chim."
+      },
+      {
+        "jp": "覚えたことを忘れないように、毎日復習しましょう。",
+        "romaji": "Oboeta koto wo wasurenai you ni, mainichi fukushuu shimashou.",
+        "vn": "Để không quên những gì đã học, hãy ôn lại mỗi ngày."
+      },
+      {
+        "jp": "歌手になるように、毎日歌の練習をしています。",
+        "romaji": "Kashu ni naru you ni, mainichi uta no renshuu wo shiteimasu.",
+        "vn": "Để trở thành ca sĩ, tôi tập hát hàng ngày."
+      },
+      {
+        "jp": "道を渡る時、車が来ないように確認してください。",
+        "romaji": "Michi wo wataru toki, kuruma ga konai you ni kakunin shite kudasai.",
+        "vn": "Khi băng qua đường, hãy đảm bảo không có xe ô tô nào chạy tới."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ようにする (Động từ ~you ni suru)",
+    "short_explanation": "Hãy nỗ lực để; cố gắng ; lo việc đó; đảm bảo điều đó.",
+    "long_explanation": "Ngữ pháp ようにする được dùng để diễn tả rằng ai đó đang nỗ lực, cố gắng hoặc đảm bảo rằng điều gì đó sẽ xảy ra. Nó có thể được dịch là 'đảm bảo', 'cố gắng' hoặc 'đảm bảo điều đó' bằng tiếng Anh. Cấu trúc rất đơn giản, bao gồm một động từ ở dạng từ điển theo sau là ようにする.",
+    "formation": "Dạng động từ-từ điển + ようにする",
+    "examples": [
+      {
+        "jp": "毎日運動するようにしています。",
+        "romaji": "Mainichi undou suru you ni shiteimasu.",
+        "vn": "Tôi cố gắng tập thể dục mỗi ngày."
+      },
+      {
+        "jp": "早く寝るようにしてください。",
+        "romaji": "Hayaku neru you ni shite kudasai.",
+        "vn": "Hãy cố gắng đi ngủ sớm nhé."
+      },
+      {
+        "jp": "約束を守るようにします。",
+        "romaji": "Yakusoku o mamoru you ni shimasu.",
+        "vn": "Tôi chắc chắn sẽ giữ lời hứa của mình."
+      },
+      {
+        "jp": "彼に会わないようにする。",
+        "romaji": "Kare ni awanai you ni suru.",
+        "vn": "Tôi sẽ cố gắng không nhìn thấy anh ấy."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ようになる (〜you ni naru)",
+    "short_explanation": "Thể hiện sự thay đổi về khả năng, tình huống hoặc trạng thái; 'có thể', 'đến', 'bắt đầu'.",
+    "long_explanation": "Ngữ pháp ようになる hàm ý sự thay đổi hoặc phát triển liên quan đến khả năng, tình huống hoặc trạng thái mới. Nó có thể được dịch sang tiếng Anh là 'có thể', 'đến' hoặc 'bắt đầu'. Ngữ pháp này thường được sử dụng khi nói về một kỹ năng đã học được hoặc sự thay đổi trong thói quen hoặc tình huống theo thời gian.",
+    "formation": "Động từ-từ điển/dạng tiềm năng + ようになる",
+    "examples": [
+      {
+        "jp": "日本語が話せるようになりました。",
+        "romaji": "Nihongo ga hanaseru you ni narimashita.",
+        "vn": "Tôi đã có thể nói được tiếng Nhật."
+      },
+      {
+        "jp": "最近、早く寝るようになった。",
+        "romaji": "Saikin, hayaku neru you ni natta.",
+        "vn": "Gần đây tôi hay đi ngủ sớm."
+      },
+      {
+        "jp": "彼はピアノを弾けるようになりました。",
+        "romaji": "Kare wa piano wo hikeru you ni narimashita.",
+        "vn": "Anh ấy đã có thể chơi piano."
+      },
+      {
+        "jp": "この仕事を始めてから、毎日忙しいと感じるようになりました。",
+        "romaji": "Kono shigoto o hajimete kara, mainichi isogashii to kanjiru you ni narimashita.",
+        "vn": "Kể từ khi bắt đầu công việc này, tôi bắt đầu cảm thấy bận rộn mỗi ngày."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ように言う (Động từ-you ni iu)",
+    "short_explanation": "Bảo ai đó làm điều gì đó; 'bảo làm', 'hướng dẫn làm'.",
+    "long_explanation": "Điểm ngữ pháp Động từ ように言う được sử dụng khi ai đó bảo hoặc hướng dẫn người khác làm điều gì đó. Nó có thể được dịch là 'bảo làm' hoặc 'hướng dẫn làm' bằng tiếng Anh. Sự hình thành được tạo ra bằng cách thêm ように言う vào dạng thông thường của động từ.",
+    "formation": "Động từ thông thường + ように言う",
+    "examples": [
+      {
+        "jp": "先生は私たちに宿題をやるように言いました。",
+        "romaji": "Sensei wa watashitachi ni shukudai o yaru you ni iimashita.",
+        "vn": "Giáo viên bảo chúng tôi làm bài tập về nhà."
+      },
+      {
+        "jp": "母は弟に部屋を片付けるように言いました。",
+        "romaji": "Haha wa otouto ni heya wo katazukeru you ni iimashita.",
+        "vn": "Mẹ tôi bảo em trai tôi dọn phòng."
+      },
+      {
+        "jp": "上司は私に報告書を提出するように言いました。",
+        "romaji": "Joushi wa watashi ni houkokusho wo teishutsu suru you ni iimashita.",
+        "vn": "Sếp tôi bảo tôi nộp báo cáo."
+      },
+      {
+        "jp": "友達が私に早く来るように言いました。",
+        "romaji": "Tomodachi ga watashi ni hayaku kuru you ni iimashita.",
+        "vn": "Bạn tôi bảo tôi đến sớm."
+      }
+    ]
+  },
+  {
+    "title": "Động từ られる (〜rareru)",
+    "short_explanation": "Thể hiện giọng nói thụ động hoặc dạng tiềm năng cho động từ.",
+    "long_explanation": "Điểm ngữ pháp られる có thể được sử dụng để diễn đạt thể bị động hoặc dạng tiềm năng của động từ. Thể bị động chỉ ra rằng hành động đang được thực hiện đối với chủ thể, trong khi thể tiềm năng thể hiện khả năng hoặc khả năng thực hiện một hành động. Sự hình thành của られる phụ thuộc vào loại động từ (う, る hoặc động từ bất quy tắc).",
+    "formation": "う-động từ (thụ động): Thay う cuối cùng bằng われる / る-động từ (thụ động & tiềm năng): Thay る bằng られる / Bất quy tắc: する → される, くる → こられる",
+    "examples": [
+      {
+        "jp": "彼は先生に褒められました。",
+        "romaji": "Kare wa sensei ni homeraremashita.",
+        "vn": "Anh được cô giáo khen ngợi."
+      },
+      {
+        "jp": "彼は友達に笑われました。",
+        "romaji": "Kare wa tomodachi ni warawaremashita.",
+        "vn": "Anh bị bạn bè cười nhạo."
+      },
+      {
+        "jp": "映画は観られましたか？",
+        "romaji": "Eiga wa miraremashita ka?",
+        "vn": "Bạn có thể xem phim được không?"
+      },
+      {
+        "jp": "彼女はリーダーに選ばれました。",
+        "romaji": "Kanojo wa riidaa ni erabaremashita.",
+        "vn": "Cô được chọn làm người lãnh đạo."
+      }
+    ]
+  },
+  {
+    "title": "Động từ る ことがある (〜ru koto ga aru)",
+    "short_explanation": "Dùng để diễn tả một việc gì đó thỉnh thoảng xảy ra hoặc đã từng xảy ra trước đó.",
+    "long_explanation": "Điểm ngữ pháp る ことがある được dùng để diễn tả một việc gì đó thỉnh thoảng xảy ra hoặc đã xảy ra trong quá khứ. Nó chỉ ra rằng hành động đó không phải là một sự kiện thường xuyên hay liên tục mà là một điều gì đó thỉnh thoảng xảy ra hoặc đã xảy ra ít nhất một lần.",
+    "formation": "Dạng động từ-từ điển + ことがある",
+    "examples": [
+      {
+        "jp": "彼は遅刻することがあります。",
+        "romaji": "Kare wa chikoku suru koto ga arimasu.",
+        "vn": "Anh ấy đôi khi đến muộn."
+      },
+      {
+        "jp": "私は寝坊することがあります。",
+        "romaji": "Watashi wa nebou suru koto ga arimasu.",
+        "vn": "Đôi khi tôi ngủ quên."
+      },
+      {
+        "jp": "彼女は歌を歌うことがあります。",
+        "romaji": "Kanojo wa uta o utau koto ga arimasu.",
+        "vn": "Đôi khi cô ấy hát những bài hát."
+      },
+      {
+        "jp": "子供の頃、よく山に登ることがありました。",
+        "romaji": "Kodomo no koro, yoku yama ni noboru koto ga arimashita.",
+        "vn": "Khi tôi còn nhỏ, tôi thỉnh thoảng leo núi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ることができる (〜ru koto ga dekiru)",
+    "short_explanation": "Thể hiện khả năng hoặc khả năng thực hiện một hành động; 'có thể', 'có thể', 'có thể'.",
+    "long_explanation": "Điểm ngữ pháp ～ることができる được dùng để diễn đạt khả năng hoặc khả năng thực hiện một hành động trong tiếng Nhật. Nó có thể được dịch là 'có thể', 'có thể' hoặc 'có thể' bằng tiếng Anh. Sự hình thành được thực hiện bằng cách thêm cụm từ 'ことができる' vào động từ ở dạng liên hợp る của nó.",
+    "formation": "Động từ-る + ことができる",
+    "examples": [
+      {
+        "jp": "私は日本語を話すことができます。",
+        "romaji": "Watashi wa nihongo wo hanasu koto ga dekimasu.",
+        "vn": "Tôi có thể nói tiếng Nhật."
+      },
+      {
+        "jp": "彼はギターを弾くことができます。",
+        "romaji": "Kare wa gitaa wo hiku koto ga dekimasu.",
+        "vn": "Anh ấy có thể chơi ghi-ta."
+      },
+      {
+        "jp": "この問題を解決することができますか？",
+        "romaji": "Kono mondai wo kaiketsu suru koto ga dekimasu ka?",
+        "vn": "Bạn có thể giải quyết vấn đề này?"
+      },
+      {
+        "jp": "彼女は犬を泳がせることができます。",
+        "romaji": "Kanojo wa inu wo oyogaseru koto ga dekimasu.",
+        "vn": "Cô ấy có thể làm cho con chó bơi."
+      }
+    ]
+  },
+  {
+    "title": "Động từ ることにする (〜ru koto ni suru)",
+    "short_explanation": "Quyết định làm điều gì đó, đưa ra quyết định.",
+    "long_explanation": "Điểm ngữ pháp ～ることにする được dùng để diễn tả việc ai đó đã đưa ra quyết định làm việc gì đó hoặc đã quyết định một phương án hành động cụ thể. Nó được hình thành bằng cách gắn ことにする vào động từ ở dạng る.",
+    "formation": "Động từ-る + ことにする",
+    "examples": [
+      {
+        "jp": "来週、ジムに行くことにしました。",
+        "romaji": "Raishuu, jimu ni iku koto ni shimashita.",
+        "vn": "Tôi quyết định đi tập gym vào tuần tới."
+      },
+      {
+        "jp": "この靴を買うことにしました。",
+        "romaji": "Kono kutsu wo kau koto ni shimashita.",
+        "vn": "Tôi quyết định mua đôi giày này."
+      },
+      {
+        "jp": "毎日、散歩をすることにしました。",
+        "romaji": "Mainichi, sanpo wo suru koto ni shimashita.",
+        "vn": "Tôi quyết định đi dạo mỗi ngày."
+      },
+      {
+        "jp": "彼に電話をかけることにします。",
+        "romaji": "Kare ni denwa wo kakeru koto ni shimasu.",
+        "vn": "Tôi đã quyết định gọi cho anh ấy."
+      }
+    ]
+  },
+  {
+    "title": "Động từ る ことになる (〜ru koto ni naru)",
+    "short_explanation": "Cho biết một điều gì đó đã được quyết định hoặc sắp xếp; 'điều đó đã được quyết định', 'hóa ra là thế'.",
+    "long_explanation": "Điểm ngữ pháp る ことになる được dùng để diễn tả một việc gì đó đã được quyết định hoặc sắp xếp. Nó thường chỉ ra một quyết định được thực hiện bởi người khác hoặc do hoàn cảnh. Nó có thể được dịch là 'điều đó đã được quyết định' hoặc 'hóa ra là thế' trong tiếng Anh. Sự hình thành yêu cầu một động từ ở dạng る (từ điển).",
+    "formation": "Động từ-る + ことになる",
+    "examples": [
+      {
+        "jp": "今日は会議がなくなることになりました。",
+        "romaji": "Kyou wa kaigi ga nakunaru koto ni narimashita.",
+        "vn": "Người ta đã quyết định rằng hôm nay sẽ không có cuộc họp nào cả."
+      },
+      {
+        "jp": "来週、友達と旅行することになった。",
+        "romaji": "Raishuu, tomodachi to ryokou suru koto ni natta.",
+        "vn": "Người ta đã sắp xếp rằng tôi sẽ đi du lịch với bạn bè vào tuần tới."
+      },
+      {
+        "jp": "彼女が今度のプロジェクトのリーダーになることになりました。",
+        "romaji": "Kanojo ga kondo no purojekuto no riida ni naru koto ni narimashita.",
+        "vn": "Người ta đã quyết định rằng cô ấy sẽ là người lãnh đạo dự án tiếp theo."
+      },
+      {
+        "jp": "急に仕事が入ったので、休みを取ることになった。",
+        "romaji": "Kyuu ni shigoto ga haitta node, yasumi wo toru koto ni natta.",
+        "vn": "Do có việc đột xuất nên quyết định nghỉ một ngày."
+      }
+    ]
+  },
+  {
+    "title": "Động từ るときに (〜ru toki ni)",
+    "short_explanation": "Diễn tả thời điểm một hành động nào đó diễn ra; 'khi nào', 'vào lúc đó'.",
+    "long_explanation": "Điểm ngữ pháp ～るときに được dùng để chỉ thời điểm xảy ra một hành động hoặc sự kiện nào đó. Nó có thể được dịch là 'khi nào' hoặc 'vào thời điểm đó' bằng tiếng Anh. Sự hình thành bao gồm việc gắn ときに vào động từ ở dạng từ điển (る) của nó.",
+    "formation": "Động từ-る + ときに",
+    "examples": [
+      {
+        "jp": "映画を見るときに、ポップコーンを食べます。",
+        "romaji": "Eiga wo miru toki ni, poppukoon wo tabemasu.",
+        "vn": "Khi tôi xem phim, tôi ăn bỏng ngô."
+      },
+      {
+        "jp": "寝るときに、部屋の電気を消します。",
+        "romaji": "Neru toki ni, heya no denki wo keshimasu.",
+        "vn": "Khi đi ngủ, tôi tắt đèn phòng."
+      },
+      {
+        "jp": "運動するときに、水分補給が大切です。",
+        "romaji": "Undou suru toki ni, suibun hokyuu ga taisetsu desu.",
+        "vn": "Khi tập thể dục, điều quan trọng là phải giữ nước."
+      },
+      {
+        "jp": "旅行するときに、カメラを持っていくことが好きです。",
+        "romaji": "Ryokou suru toki ni, kamera wo motteiku koto ga suki desu.",
+        "vn": "Khi đi du lịch, tôi thích mang theo máy ảnh."
+      }
+    ]
+  },
+  {
+    "title": "Động từ る ところ (Động từ-ru tokoro)",
+    "short_explanation": "Diễn tả trạng thái hoặc thời điểm khi một hành động sắp xảy ra hoặc đang diễn ra.",
+    "long_explanation": "Điểm ngữ pháp 'Động từ る ところ' được dùng để diễn tả việc một người sắp làm điều gì đó hoặc đang trong quá trình thực hiện việc đó. Nó có thể được dịch là 'chỉ sắp' hoặc 'ở giữa' bằng tiếng Anh, tùy theo ngữ cảnh.",
+    "formation": "Dạng động từ-từ điển + ところ",
+    "examples": [
+      {
+        "jp": "彼は食べるところです。",
+        "romaji": "Kare wa taberu tokoro desu.",
+        "vn": "Anh ấy đang trong quá trình ăn uống."
+      },
+      {
+        "jp": "私は出かけるところです。",
+        "romaji": "Watashi wa dekakeru tokoro desu.",
+        "vn": "Tôi sắp rời đi."
+      },
+      {
+        "jp": "彼女は泣くところでした。",
+        "romaji": "Kanojo wa naku tokoro deshita.",
+        "vn": "Cô ấy sắp khóc."
+      },
+      {
+        "jp": "私たちは勉強するところです。",
+        "romaji": "Watashitachi wa benkyou suru tokoro desu.",
+        "vn": "Chúng tôi đang trong quá trình học tập."
+      }
+    ]
+  },
+  {
+    "title": "Động từ 出す (~dasu)",
+    "short_explanation": "Diễn tả hành động lấy cái gì đó ra, bắt đầu một hành động hoặc nhấn mạnh một động từ.",
+    "long_explanation": "Động từ 出す (~dasu) được dùng để diễn tả hành động lấy thứ gì đó ra, bắt đầu một hành động hoặc nhấn mạnh động từ gắn liền với nó. Để hình thành điểm ngữ pháp này, chỉ cần gắn 出す (~dasu) vào gốc động từ.",
+    "formation": "Thân động từ + 出す (~dasu)",
+    "examples": [
+      {
+        "jp": "本を棚から出してください。",
+        "romaji": "Hon o tana kara dashite kudasai.",
+        "vn": "Vui lòng lấy cuốn sách ra khỏi kệ."
+      },
+      {
+        "jp": "彼は部屋から急いで出ました。",
+        "romaji": "Kare wa heya kara isoide demashita.",
+        "vn": "Anh lao ra khỏi phòng."
+      },
+      {
+        "jp": "授業が始まる前に宿題を出してください。",
+        "romaji": "Jugyou ga hajimaru mae ni shukudai wo dashite kudasai.",
+        "vn": "Nộp bài tập về nhà trước khi lớp học bắt đầu."
+      },
+      {
+        "jp": "彼女は歌い出しました。",
+        "romaji": "Kanojo wa utaidashimashita.",
+        "vn": "Cô ấy bắt đầu hát."
+      }
+    ]
+  },
+  {
+    "title": "Động từ 方 (〜hou)",
+    "short_explanation": "Chỉ ra cách thức hoặc phương pháp làm việc gì đó; thường được đọc là '～かた' ('làm thế nào', 'con đường').",
+    "long_explanation": "Điểm ngữ pháp ～方 được dùng để diễn đạt cách thức hoặc phương pháp thực hiện một việc gì đó, tương tự như 'làm thế nào' hoặc 'cách làm' trong tiếng Anh. Nó có thể được gắn vào gốc động từ để tạo thành một danh từ chỉ phương pháp thực hiện hành động. Trong thực tế, ～方 thường được đọc là '～かた' (ví dụ: 作り方＝つくりかた).",
+    "formation": "Thân động từ + 方 (đọc là かた)",
+    "examples": [
+      {
+        "jp": "誰かがケーキの作り方を知っていますか？",
+        "romaji": "Dareka ga keeki no tsukurikata o shitteimasu ka?",
+        "vn": "Có ai biết cách làm bánh không?"
+      },
+      {
+        "jp": "彼女は英語の話し方を学んでいます。",
+        "romaji": "Kanojo wa eigo no hanashikata o manandeimasu.",
+        "vn": "Cô ấy đang học cách nói tiếng Anh."
+      },
+      {
+        "jp": "このパソコンの使い方を教えてください。",
+        "romaji": "Kono pasokon no tsukaikata o oshiete kudasai.",
+        "vn": "Xin hãy dạy tôi cách sử dụng máy tính này."
+      },
+      {
+        "jp": "数学の問題の解き方を覚えるのが難しいです。",
+        "romaji": "Suugaku no mondai no tokikata o oboeru no ga muzukashii desu.",
+        "vn": "Thật khó để nhớ cách giải các bài toán."
+      }
+    ]
+  },
+  {
+    "title": "Động từ 終わる (〜owaru)",
+    "short_explanation": "Hành động bằng lời nói được hoàn thành; 'kết thúc', 'kết thúc'.",
+    "long_explanation": "Động từ 終わる (owaru) được dùng để diễn tả một hành động đã hoàn thành hoặc một việc gì đó đã kết thúc. Mặc dù kết thúc bằng る, 終わる là một godan (u-động từ), vì vậy nó không tuân theo cách chia động từ ichidan (る-động từ) điển hình. Nó được dịch là 'kết thúc', 'kết thúc' hoặc 'kết thúc' trong tiếng Anh.",
+    "formation": "終わる (owaru) là một godan (động từ u)",
+    "examples": [
+      {
+        "jp": "映画が終わったら、家に帰ります。",
+        "romaji": "Eiga ga owattara, ie ni kaerimasu.",
+        "vn": "Khi bộ phim kết thúc, tôi sẽ về nhà."
+      },
+      {
+        "jp": "仕事が終わるまで、待ってください。",
+        "romaji": "Shigoto ga owaru made, matte kudasai.",
+        "vn": "Vui lòng đợi cho đến khi công việc kết thúc."
+      },
+      {
+        "jp": "パーティーはもうすぐ終わります。",
+        "romaji": "Paatii wa mou sugu owarimasu.",
+        "vn": "Bữa tiệc sẽ kết thúc sớm thôi."
+      },
+      {
+        "jp": "試験が終わったら、友達と遊びに行く予定です。",
+        "romaji": "Shiken ga owattara, tomodachi to asobi ni iku yotei desu.",
+        "vn": "Sau khi kỳ thi kết thúc, tôi dự định đi chơi với bạn bè."
+      }
+    ]
+  },
+  {
+    "title": "Động từ + 続ける (つづける, tsuzukeru)",
+    "short_explanation": "Tiếp tục làm hoặc tiếp tục thực hiện một hành động.",
+    "long_explanation": "Điểm ngữ pháp 続ける (tsuzukeru) được gắn vào dạng masu-gốc của động từ và nó biểu thị tính liên tục đang diễn ra của một hành động. Nó có thể được dịch là 'tiếp tục làm' hoặc 'tiếp tục làm' bằng tiếng Anh.",
+    "formation": "Động từ-masu-gốc + 続ける",
+    "examples": [
+      {
+        "jp": "彼は毎日ジムで運動を続けています。",
+        "romaji": "Kare wa mainichi jimu de undou o tsuzuketeimasu.",
+        "vn": "Anh ấy vẫn tiếp tục tập luyện ở phòng gym mỗi ngày."
+      },
+      {
+        "jp": "彼女は勉強を続けるために図書館に行きました。",
+        "romaji": "Kanojo wa benkyou o tsuzukeru tame ni toshokan ni ikimashita.",
+        "vn": "Cô đến thư viện để tiếp tục học."
+      },
+      {
+        "jp": "私たちは雨にも関わらず散歩を続けました。",
+        "romaji": "Watashitachi wa ame ni mo kakawarazu sanpo o tsuzukemashita.",
+        "vn": "Chúng tôi tiếp tục đi bộ bất chấp trời mưa."
+      },
+      {
+        "jp": "彼は仕事を続けることに決めた。",
+        "romaji": "Kare wa shigoto o tsuzukeru koto ni kimeta.",
+        "vn": "Anh quyết định tiếp tục làm việc."
+      }
+    ]
+  },
+  {
+    "title": "～かしら (〜kashira)",
+    "short_explanation": "Cho thấy sự không chắc chắn hoặc nghi ngờ; 'Tôi tự hỏi', 'Tôi không chắc chắn'.",
+    "long_explanation": "Điểm ngữ pháp ～かしら được dùng để diễn tả sự không chắc chắn hoặc nghi ngờ về một tình huống nào đó. Nó có thể được dịch là 'Tôi thắc mắc' hoặc 'Tôi không chắc chắn' trong tiếng Anh. Nó chủ yếu được phụ nữ sử dụng trong các cuộc trò chuyện thông thường nhưng cũng có thể được nam giới sử dụng trong một số bối cảnh. ～かしら được dùng với động từ, tính từ い, tính từ な và danh từ.",
+    "formation": "Động từ thông thường + かしら, い-Tính từ + かしら, な-Tính từ + かしら, Danh từ + かしら",
+    "examples": [
+      {
+        "jp": "今日は雨が降るかしら？",
+        "romaji": "Kyou wa ame ga furu kashira?",
+        "vn": "Tôi tự hỏi liệu hôm nay trời có mưa không?"
+      },
+      {
+        "jp": "このケーキは美味しいかしら？",
+        "romaji": "Kono keeki wa oishii kashira?",
+        "vn": "Cho em hỏi bánh này có ngon không?"
+      },
+      {
+        "jp": "彼は病気かしら？",
+        "romaji": "Kare wa byouki kashira?",
+        "vn": "Tôi tự hỏi liệu anh ấy có bị bệnh không?"
+      },
+      {
+        "jp": "彼女は学生かしら？",
+        "romaji": "Kanojo wa gakusei kashira?",
+        "vn": "Tôi tự hỏi liệu cô ấy có phải là sinh viên không?"
+      }
+    ]
+  },
+  {
+    "title": "～かどうか (〜ka dou ka)",
+    "short_explanation": "Được sử dụng để diễn đạt 'whether' hoặc 'if' trong câu hỏi hoặc câu nói gián tiếp.",
+    "long_explanation": "Điểm ngữ pháp ～かどうか được dùng để diễn đạt 'liệu' hoặc 'nếu' trong câu hỏi hoặc câu gián tiếp. Nó thường được sử dụng để thể hiện sự không chắc chắn hoặc để hỏi thông tin một cách lịch sự hơn. ～かどうか có thể được sử dụng với động từ, tính từ い, tính từ な và danh từ.",
+    "formation": "Động từ thông thường + かどうか, い-Tính từ + かどうか, な-Tính từ + (だ)かどうか, Danh từ + (だ)かどうか",
+    "examples": [
+      {
+        "jp": "彼が来るかどうか知りません。",
+        "romaji": "Kare ga kuru ka dou ka shirimasen.",
+        "vn": "Tôi không biết liệu anh ấy có đến hay không."
+      },
+      {
+        "jp": "この本が面白いかどうか教えてください。",
+        "romaji": "Kono hon ga omoshiroi ka dou ka oshiete kudasai.",
+        "vn": "Xin vui lòng cho tôi biết cuốn sách này có thú vị hay không."
+      },
+      {
+        "jp": "彼女が綺麗だかどうかは分かりません。",
+        "romaji": "Kanojo ga kirei da ka dou ka wa wakarimasen.",
+        "vn": "Tôi không biết cô ấy có đẹp hay không."
+      },
+      {
+        "jp": "彼が先生だかどうか覚えていません。",
+        "romaji": "Kare ga sensei da ka dou ka oboete imasen.",
+        "vn": "Tôi không nhớ ông ấy có phải là giáo viên hay không."
+      }
+    ]
+  },
+  {
+    "title": "～かなあ (〜kanaa)",
+    "short_explanation": "Thể hiện sự không chắc chắn hoặc thắc mắc; 'Tôi tự hỏi', 'Tôi không chắc chắn'.",
+    "long_explanation": "Điểm ngữ pháp ～かなあ được dùng để diễn tả cảm giác không chắc chắn hoặc thắc mắc về một tình huống hoặc câu nói nào đó. Nó có thể được dịch là 'Tôi thắc mắc' hoặc 'Tôi không chắc chắn' trong tiếng Anh. Trong tiếng Nhật nói thông thường, khi sử dụng danh từ hoặc tính từ な trước かなあ, liên từ だ thường được lược bỏ hoặc thay thế bằng の (ví dụ: 学生かなあ hoặc 学生なのかなあ). Không nên sử dụng điểm ngữ pháp này khi đặt câu hỏi trực tiếp với ai đó vì nó có thể bị coi là quá trực tiếp hoặc bất lịch sự.",
+    "formation": "Động từ thông thường + かなあ, い-Tính từ + かなあ, (な-Tính từ/Danh từ) + (だ) + かなあ",
+    "examples": [
+      {
+        "jp": "明日雨が降るかなあ。",
+        "romaji": "Ashita ame ga furu kanaa.",
+        "vn": "Tôi tự hỏi liệu ngày mai trời có mưa không."
+      },
+      {
+        "jp": "このケーキは美味しいかなあ。",
+        "romaji": "Kono keeki wa oishii kanaa.",
+        "vn": "Tôi tự hỏi bánh này có ngon không?"
+      },
+      {
+        "jp": "彼は病気かなあ。",
+        "romaji": "Kare wa byouki kanaa.",
+        "vn": "Tôi tự hỏi liệu anh ấy có bị bệnh không."
+      },
+      {
+        "jp": "彼女は学生かなあ。",
+        "romaji": "Kanojo wa gakusei kanaa.",
+        "vn": "Tôi tự hỏi liệu cô ấy có phải là sinh viên không."
+      }
+    ]
+  },
+  {
+    "title": "～かもしれない (〜kamoshirenai)",
+    "short_explanation": "Thể hiện sự không chắc chắn; 'có lẽ', 'có thể', 'có thể'.",
+    "long_explanation": "Điểm ngữ pháp ～かもしれない được dùng để diễn tả sự không chắc chắn hoặc khả năng xảy ra điều gì đó. Nó có thể được dịch là 'có thể', 'có thể' hoặc 'có thể' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ. Trong lời nói hàng ngày, người nói thường lược bỏ だ trước かもしれない đối với danh từ và tính từ な.",
+    "formation": "Động từ thông thường + かもしれない, い-Tính từ + かもしれない, な-Tính từ + だかもしれない, Danh từ + だかもしれない",
+    "examples": [
+      {
+        "jp": "明日雨が降るかもしれない。",
+        "romaji": "Ashita ame ga furu kamoshirenai.",
+        "vn": "Ngày mai trời có thể mưa."
+      },
+      {
+        "jp": "このケーキは美味しいかもしれない。",
+        "romaji": "Kono keeki wa oishii kamoshirenai.",
+        "vn": "Chiếc bánh này có thể ngon."
+      },
+      {
+        "jp": "彼が病気かもしれない。",
+        "romaji": "Kare ga byouki kamoshirenai.",
+        "vn": "Anh ấy có thể bị bệnh."
+      },
+      {
+        "jp": "彼女は学生かもしれない。",
+        "romaji": "Kanojo wa gakusei kamoshirenai.",
+        "vn": "Cô ấy có thể là một sinh viên."
+      }
+    ]
+  },
+  {
+    "title": "～から (〜kara)",
+    "short_explanation": "Thể hiện một lý do hoặc nguyên nhân; 'bởi vì', 'vì', 'do'.",
+    "long_explanation": "Điểm ngữ pháp ～から được dùng để diễn tả lý do, nguyên nhân hoặc nguồn gốc của sự việc nào đó. Nó có thể được dịch là 'vì', 'kể từ' hoặc 'do' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + から, い-Tính từ + から, な-Tính từ + だから, Danh từ + だから",
+    "examples": [
+      {
+        "jp": "雨が降るから、傘を持って行ってください。",
+        "romaji": "Ame ga furu kara, kasa wo motte itte kudasai.",
+        "vn": "Vì trời đang mưa nên hãy mang theo ô."
+      },
+      {
+        "jp": "このケーキは美味しいから、みんな食べるでしょう。",
+        "romaji": "Kono keeki wa oishii kara, minna taberu deshou.",
+        "vn": "Vì bánh này ngon nên chắc ai cũng sẽ ăn."
+      },
+      {
+        "jp": "彼は病気だから、学校を休みます。",
+        "romaji": "Kare wa byouki dakara, gakkou wo yasumimasu.",
+        "vn": "Anh ấy sẽ nghỉ học vì bị ốm."
+      },
+      {
+        "jp": "今日は日曜日だから、学校がありません。",
+        "romaji": "Kyou wa nichiyoubi dakara, gakkou ga arimasen.",
+        "vn": "Hôm nay không có trường học vì là chủ nhật."
+      }
+    ]
+  },
+  {
+    "title": "～けれど (〜keredo)",
+    "short_explanation": "Chỉ ra một sự tương phản hoặc mâu thuẫn nhẹ nhàng; 'nhưng', 'tuy nhiên'.",
+    "long_explanation": "Điểm ngữ pháp ～けれど được dùng để thể hiện sự tương phản hoặc mâu thuẫn nhẹ nhàng giữa hai câu phát biểu. Nó có thể được dịch là 'nhưng' hoặc 'tuy nhiên' bằng tiếng Anh. Nó tương đối thân mật và có thể được thay thế bằng những cách diễn đạt trang trọng hơn như けれども hoặc が. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + けれど, い-Tính từ + けれど, な-Tính từ + だけれど, Danh từ + だけれど",
+    "examples": [
+      {
+        "jp": "今日は忙しいけれど、明日はもっと時間がある。",
+        "romaji": "Kyou wa isogashii keredo, ashita wa motto jikan ga aru.",
+        "vn": "Hôm nay tôi bận, nhưng ngày mai tôi có nhiều thời gian hơn."
+      },
+      {
+        "jp": "このレストランは高いけれど、料理が美味しい。",
+        "romaji": "Kono resutoran wa takai keredo, ryouri ga oishii.",
+        "vn": "Nhà hàng này đắt tiền nhưng đồ ăn rất ngon."
+      },
+      {
+        "jp": "彼は若いけれど、とても経験豊富だ。",
+        "romaji": "Kare wa wakai keredo, totemo keiken houfu da.",
+        "vn": "Anh ấy còn trẻ nhưng rất có kinh nghiệm."
+      },
+      {
+        "jp": "彼女は病気だけれど、明るく元気だ。",
+        "romaji": "Kanojo wa byouki da keredo, akaruku genki da.",
+        "vn": "Cô ấy bị bệnh nhưng cô ấy vui vẻ và tràn đầy năng lượng."
+      }
+    ]
+  },
+  {
+    "title": "～させてください (〜sasete kudasai)",
+    "short_explanation": "Thể hiện một yêu cầu lịch sự để cho phép hoặc cho phép ai đó làm điều gì đó.",
+    "long_explanation": "Điểm ngữ pháp ～させてください được dùng để đưa ra yêu cầu lịch sự cho phép hoặc cho phép ai đó làm việc gì đó. Nó có thể được dịch là 'xin vui lòng cho tôi' hoặc 'xin vui lòng cho phép tôi' bằng tiếng Anh. Nó được hình thành bằng cách lấy dạng nguyên nhân của động từ và thêm ください.",
+    "formation": "Dạng động từ nguyên nhân + ください",
+    "examples": [
+      {
+        "jp": "もう少し考えさせてください。",
+        "romaji": "Mou sukoshi kangaesasete kudasai.",
+        "vn": "Xin hãy để tôi suy nghĩ thêm một chút."
+      },
+      {
+        "jp": "写真を撮らせてください。",
+        "romaji": "Shashin o torasete kudasai.",
+        "vn": "Xin vui lòng cho tôi chụp một bức ảnh."
+      },
+      {
+        "jp": "もうちょっと練習させてください。",
+        "romaji": "Mou chotto renshuu sasete kudasai.",
+        "vn": "Xin hãy cho tôi luyện tập thêm một chút."
+      },
+      {
+        "jp": "ここで待たせてください。",
+        "romaji": "Koko de matasete kudasai.",
+        "vn": "Xin hãy để tôi đợi ở đây."
+      }
+    ]
+  },
+  {
+    "title": "～し、～し、～ (〜shi, 〜shi, 〜)",
+    "short_explanation": "Thể hiện nhiều lý do hoặc đặc điểm; 'và', 'bởi vì', 'vì'.",
+    "long_explanation": "Điểm ngữ pháp ～し、～し、～ được dùng để kết nối nhiều lý do hoặc đặc điểm hỗ trợ cho một kết luận hoặc một câu phát biểu. Nó có thể được dịch là 'và', 'bởi vì' hoặc 'kể từ' bằng tiếng Anh. Ngữ pháp này có thể được sử dụng với động từ, tính từ い, tính từ な và danh từ.",
+    "formation": "Động từ thông thường + し, い-Tính từ + し, な-Tính từ + だし, Danh từ + だし",
+    "examples": [
+      {
+        "jp": "彼は若いし、元気だし、フレンドリーだし、みんなと仲良くなれると思います。",
+        "romaji": "Kare wa wakai shi, genki da shi, furendorī da shi, minna to nakayoku nareru to omoimasu.",
+        "vn": "Anh ấy trẻ, năng động, thân thiện và tôi nghĩ anh ấy có thể hòa đồng với mọi người."
+      },
+      {
+        "jp": "このレストランは料理が美味しいし、雰囲気がいいし、価格も手頃だからお勧めです。",
+        "romaji": "Kono resutoran wa ryouri ga oishii shi, fun'iki ga ii shi, kakaku mo tegoro dakara osusume desu.",
+        "vn": "Tôi giới thiệu nhà hàng này vì đồ ăn ngon, không khí đẹp và giá cả hợp lý."
+      },
+      {
+        "jp": "彼女は勉強ができるし、スポーツも得意だし、性格もいい。",
+        "romaji": "Kanojo wa benkyou ga dekiru shi, supōtsu mo tokui da shi, seikaku mo ii.",
+        "vn": "Cô học giỏi, chơi thể thao giỏi và có nhân cách tốt."
+      },
+      {
+        "jp": "今日は寒いし、雨も降っているし、家でゆっくり休んだ方がいいでしょう。",
+        "romaji": "Kyou wa samui shi, ame mo futte iru shi, ie de yukkuri yasunda hou ga ii deshou.",
+        "vn": "Hôm nay trời lạnh, lại mưa nữa, ở nhà nghỉ ngơi sẽ tốt hơn."
+      }
+    ]
+  },
+  {
+    "title": "～すぎる (〜sugiru)",
+    "short_explanation": "Thể hiện rằng một cái gì đó là quá mức hoặc quá mức; 'quá nhiều', 'quá', 'kết thúc'.",
+    "long_explanation": "Điểm ngữ pháp ～すぎる được dùng để diễn tả điều gì đó quá mức hoặc vượt quá một mức độ nhất định. Nó có thể được dịch là 'quá nhiều', 'quá' hoặc 'quá' trong tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い hay tính từ な.",
+    "formation": "Thân động từ + すぎる, い-Tính từ (bỏ い) + すぎる, な-Tính từ + すぎる",
+    "examples": [
+      {
+        "jp": "この部屋は暑すぎる。",
+        "romaji": "Kono heya wa atsui sugiru.",
+        "vn": "Căn phòng này nóng quá."
+      },
+      {
+        "jp": "彼は早く来すぎた。",
+        "romaji": "Kare wa hayaku kisugita.",
+        "vn": "Anh ấy đến quá sớm."
+      },
+      {
+        "jp": "この箱は重すぎて持ち上げられない。",
+        "romaji": "Kono hako wa omosugite mochiagerarenai.",
+        "vn": "Cái hộp này nặng quá không nhấc nổi."
+      },
+      {
+        "jp": "彼女は忙しくて遊びすぎはしない。",
+        "romaji": "Kanojo wa isogashikute asobisugi wa shinai.",
+        "vn": "Cô ấy quá bận để chơi quá nhiều."
+      }
+    ]
+  },
+  {
+    "title": "～ずつ (〜zutsu)",
+    "short_explanation": "Cho biết sự phân bố bằng nhau; 'mỗi', 'mỗi', 'mỗi người'.",
+    "long_explanation": "Điểm ngữ pháp ～ずつ được dùng để diễn tả sự phân bổ đồng đều của một vật gì đó, cho dù đó là một hành động, một số lượng hay một vật phẩm. Nó được dịch là 'mỗi', 'mỗi' hoặc 'mỗi người' bằng tiếng Anh.",
+    "formation": "Danh từ + ずつ",
+    "examples": [
+      {
+        "jp": "りんごを2つずつ配ります。",
+        "romaji": "Ringo wo futatsu zutsu kubarimasu.",
+        "vn": "Tôi sẽ phân phát mỗi người 2 quả táo."
+      },
+      {
+        "jp": "私たちは週に一度ずつ掃除をします。",
+        "romaji": "Watashitachi wa shuu ni ichido zutsu souji o shimasu.",
+        "vn": "Mỗi người chúng tôi dọn dẹp mỗi tuần một lần."
+      },
+      {
+        "jp": "みんなは同じ距離を一歩ずつ歩いた。",
+        "romaji": "Minna wa onaji kyori o ippo zutsu aruita.",
+        "vn": "Mọi người đều đi cùng một khoảng cách, từng bước một."
+      },
+      {
+        "jp": "彼女は子供たちに一枚ずつプレゼントをくれました。",
+        "romaji": "Kanojo wa kodomotachi ni ichimai zutsu purezento o kuremashita.",
+        "vn": "Cô tặng mỗi em một món quà."
+      }
+    ]
+  },
+  {
+    "title": "～そうだ (〜sou da)",
+    "short_explanation": "Thể hiện sự xuất hiện, dường như hoặc cảm giác của một cái gì đó; 'có vẻ như', 'có vẻ', 'xuất hiện'.",
+    "long_explanation": "Điểm ngữ pháp ～そうだ được dùng để mô tả hình dáng hoặc cảm giác của sự vật dựa trên những gì được quan sát hoặc suy luận. Nó có thể được dịch là 'trông giống như', 'có vẻ' hoặc 'xuất hiện' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い hay tính từ な.",
+    "formation": "Động từ-ますgốc + そうだ, い-Tính từ (không có い) + そうだ, な-Tính từ + そうだ",
+    "examples": [
+      {
+        "jp": "その花はとてもきれいそうだ。",
+        "romaji": "Sono hana wa totemo kirei sou da.",
+        "vn": "Bông hoa đó trông rất đẹp."
+      },
+      {
+        "jp": "彼は疲れそうだ。",
+        "romaji": "Kare wa tsukare sou da.",
+        "vn": "Anh ấy trông có vẻ mệt mỏi."
+      },
+      {
+        "jp": "この本は面白そうだ。",
+        "romaji": "Kono hon wa omoshiro sou da.",
+        "vn": "Cuốn sách này có vẻ thú vị."
+      },
+      {
+        "jp": "雨が降りそうだ。",
+        "romaji": "Ame ga furi sou da.",
+        "vn": "Có vẻ như trời sắp mưa."
+      }
+    ]
+  },
+  {
+    "title": "そんな (sonna) + Danh từ",
+    "short_explanation": "Thể hiện 'loại/loại'; đề cập đến một cái gì đó ở gần người nghe hoặc được đề cập trước đó.",
+    "long_explanation": "Từ 'そんな' được dùng trước danh từ để chỉ 'loại đó' hoặc 'loại đó', thường đề cập đến vật gì đó ở gần người nghe hoặc đã được đề cập trước đó trong cuộc trò chuyện. Nó chỉ định danh từ dựa trên ngữ cảnh hoặc sự hiểu biết chung giữa người nói và người nghe.",
+    "formation": "そんな + Danh từ",
+    "examples": [
+      {
+        "jp": "そんな話、信じられない。",
+        "romaji": "Sonna hanashi, shinjirarenai.",
+        "vn": "Tôi không thể tin được loại câu chuyện đó."
+      },
+      {
+        "jp": "そんな映画、見たくない。",
+        "romaji": "Sonna eiga, mitakunai.",
+        "vn": "Tôi không muốn xem loại phim đó."
+      }
+    ]
+  },
+  {
+    "title": "そんなに～ (sonna ni〜)",
+    "short_explanation": "Diễn tả 'không nhiều lắm', 'không phải thế', hoặc 'không hẳn vậy ~'.",
+    "long_explanation": "Điểm ngữ pháp そんなに là trạng từ dùng để diễn tả một điều gì đó không đến mức quá mức như mô tả hoặc không đến mức đó. Nó thường được dịch là 'không nhiều lắm', 'không phải thế', hoặc 'không như vậy ~'. Nó thường được theo sau bởi dạng phủ định của động từ hoặc tính từ.",
+    "formation": "そんなに + Phủ định động từ, そんなに + Phủ định tính từ",
+    "examples": [
+      {
+        "jp": "そんなに急がなくてもいいですよ。",
+        "romaji": "Sonna ni isoganakutemo ii desu yo.",
+        "vn": "Bạn không cần phải vội vàng như vậy."
+      },
+      {
+        "jp": "そんなに難しくない問題だと思います。",
+        "romaji": "Sonna ni muzukashikunai mondai da to omoimasu.",
+        "vn": "Tôi không nghĩ vấn đề lại khó đến thế."
+      },
+      {
+        "jp": "彼女はそんなに背が高くありません。",
+        "romaji": "Kanojo wa sonna ni se ga takaku arimasen.",
+        "vn": "Cô ấy không cao đến thế."
+      },
+      {
+        "jp": "そんなにたくさん食べる必要はないと思う。",
+        "romaji": "Sonna ni takusan taberu hitsuyou wa nai to omou.",
+        "vn": "Tôi không nghĩ cần phải ăn nhiều như vậy."
+      }
+    ]
+  },
+  {
+    "title": "～たらいい (〜tara ii)",
+    "short_explanation": "Thể hiện mong muốn hoặc gợi ý về một kết quả cụ thể; 'sẽ tốt nếu', 'nên', 'tôi hy vọng'.",
+    "long_explanation": "Điểm ngữ pháp ～たらいい được dùng để thể hiện mong muốn, gợi ý hoặc hy vọng về một kết quả cụ thể. Nó có thể được dịch là 'sẽ tốt nếu', 'nên' hoặc 'tôi hy vọng' bằng tiếng Anh. Cấu tạo rất đơn giản và được sử dụng với các động từ ở dạng quá khứ thông thường.",
+    "formation": "Động từ-quá khứ thông thường + たらいい",
+    "examples": [
+      {
+        "jp": "もっと勉強したらいいですよ。",
+        "romaji": "Motto benkyou shitara ii desu yo.",
+        "vn": "Sẽ tốt hơn nếu bạn nghiên cứu thêm."
+      },
+      {
+        "jp": "雨が止んだらいいな。",
+        "romaji": "Ame ga yandara ii na.",
+        "vn": "Tôi hy vọng mưa sẽ tạnh."
+      },
+      {
+        "jp": "早く元気になったらいいですね。",
+        "romaji": "Hayaku genki ni nattara ii desu ne.",
+        "vn": "Sẽ tốt hơn nếu bạn sớm khỏe lại."
+      },
+      {
+        "jp": "彼に連絡したらいいと思います。",
+        "romaji": "Kare ni renraku shitara ii to omoimasu.",
+        "vn": "Tôi nghĩ sẽ tốt hơn nếu bạn liên lạc với anh ấy."
+      }
+    ]
+  },
+  {
+    "title": "～たら いかがですか (〜tara ikaga desu ka)",
+    "short_explanation": "Đưa ra những lời đề nghị lịch sự; 'nếu', 'nếu', 'sẽ tốt nếu'.",
+    "long_explanation": "Điểm ngữ pháp ～たら いかがですか được dùng để đưa ra lời đề nghị lịch sự, hỏi ý kiến hoặc ngụ ý rằng điều gì đó sẽ tốt hoặc đáng mong muốn nếu đáp ứng được điều kiện. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường, quá khứ + たら いかがですか, い-Tính từ + かったら いかがですか, な-Tính từ + だったらいかがですか, Danh từ + だったら いかがですか",
+    "examples": [
+      {
+        "jp": "図書館に行ったらいかがですか。",
+        "romaji": "Toshokan ni ittara ikaga desu ka.",
+        "vn": "Đi đến thư viện thì thế nào?"
+      },
+      {
+        "jp": "寒かったらカーディガンを着るのはいかがですか。",
+        "romaji": "Samukattara kaadigan wo kiru no wa ikaga desu ka.",
+        "vn": "Mặc áo len nếu trời lạnh thì sao?"
+      },
+      {
+        "jp": "部屋が暗かったら照明を付けるのはいかがですか。",
+        "romaji": "Heya ga kurakattara shoumei wo tsukeru no wa ikaga desu ka.",
+        "vn": "Nếu bạn bật đèn nếu phòng tối thì sao?"
+      },
+      {
+        "jp": "自分の意見だったら他人に聞くのはいかがですか。",
+        "romaji": "Jibun no iken dattara tanin ni kiku no wa ikaga desu ka.",
+        "vn": "Vậy còn việc hỏi người khác xem đó có phải là ý kiến của riêng bạn thì sao?"
+      }
+    ]
+  },
+  {
+    "title": "～たら どうですか (〜tara doudesuka)",
+    "short_explanation": "Thể hiện một gợi ý hoặc lời khuyên; 'nếu như', 'thế còn', 'tại sao bạn không'.",
+    "long_explanation": "Điểm ngữ pháp ～たら どうですか được dùng để đưa ra gợi ý hoặc đưa ra lời khuyên cho ai đó. Nó có thể được dịch là 'nếu như', 'thế còn' hoặc 'tại sao bạn không' bằng tiếng Anh. Cấu trúc này được dùng với động từ dạng た để đưa ra lời đề nghị nhẹ nhàng, lịch sự.",
+    "formation": "Dạng động từ-た + ら どうですか",
+    "examples": [
+      {
+        "jp": "スキーに行ったらどうですか？",
+        "romaji": "Sukii ni ittara doudesuka?",
+        "vn": "Đi trượt tuyết thì thế nào?"
+      },
+      {
+        "jp": "少し休んだらどうですか？",
+        "romaji": "Sukoshi yasundara doudesuka?",
+        "vn": "Nếu bạn nghỉ ngơi một chút thì sao?"
+      },
+      {
+        "jp": "この本を読んだらどうですか？",
+        "romaji": "Kono hon wo yondara doudesuka?",
+        "vn": "Tại sao bạn không đọc cuốn sách này?"
+      },
+      {
+        "jp": "タクシーで帰ったらどうですか？",
+        "romaji": "Takushii de kaettara doudesuka?",
+        "vn": "Còn về nhà bằng taxi thì sao?"
+      }
+    ]
+  },
+  {
+    "title": "～たり～たり (〜tari 〜tari)",
+    "short_explanation": "Dùng để liệt kê nhiều hành động hoặc trạng thái; 'làm những việc như', 'và vân vân', 'v.v.'",
+    "long_explanation": "Điểm ngữ pháp ～たり～たり được dùng để liệt kê hai hoặc nhiều hành động hoặc trạng thái mà không xác định thứ tự hoặc tầm quan trọng của chúng. Nó ngụ ý rằng những hành động hoặc trạng thái này là những ví dụ tiêu biểu và có thể có những hành động hoặc trạng thái khác. Cấu trúc này rất hữu ích để mô tả các hành động chung hoặc theo thói quen.",
+    "formation": "Động từ-ta + り + động từ tiếp theo-ta + り, い-Tính từ + かったり + động từ tiếp theo-ta + り, な-Tính từ + だったり + động từ tiếp theo-ta + り, Danh từ + だったり + động từ tiếp theo-ta + り",
+    "examples": [
+      {
+        "jp": "週末は映画を観たり、本を読んだりする。",
+        "romaji": "Shuumatsu wa eiga wo mitari, hon wo yondari suru.",
+        "vn": "Vào cuối tuần, tôi làm những việc như xem phim và đọc sách."
+      },
+      {
+        "jp": "彼女は料理が上手だったり、歌がうまかったりする。",
+        "romaji": "Kanojo wa ryouri ga jouzu dattari, uta ga umakattari suru.",
+        "vn": "Cô ấy giỏi những thứ như nấu ăn và ca hát."
+      },
+      {
+        "jp": "このリゾートではスキーをしたり、温泉に入ったりできる。",
+        "romaji": "Kono rizooto de wa sukii wo shitari, onsen ni haittari dekiru.",
+        "vn": "Tại khu nghỉ dưỡng này, bạn có thể làm những việc như trượt tuyết và tắm suối nước nóng."
+      },
+      {
+        "jp": "この地域の天気は暑かったり、寒かったりする。",
+        "romaji": "Kono chiiki no tenki wa atsukattari, samukattari suru.",
+        "vn": "Thời tiết ở khu vực này có thể nóng hoặc lạnh."
+      }
+    ]
+  },
+  {
+    "title": "～だろう (〜darou)",
+    "short_explanation": "Thể hiện xác suất, khả năng hoặc sự chắc chắn; 'có lẽ', 'có lẽ', 'tôi nghĩ'.",
+    "long_explanation": "Điểm ngữ pháp ～だろう được dùng để diễn đạt khả năng, khả năng xảy ra hoặc sự chắc chắn về một tình huống hoặc sự kiện. Nó có thể được dịch là 'có lẽ', 'có thể' hoặc 'tôi nghĩ' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + だろう, い-Tính từ (bỏ い) + だろう, な-Tính từ + だろう, Danh từ + だろう",
+    "examples": [
+      {
+        "jp": "明日は晴れるだろう。",
+        "romaji": "Ashita wa hareru darou.",
+        "vn": "Có lẽ ngày mai trời sẽ nắng."
+      },
+      {
+        "jp": "彼は忙しいだろう。",
+        "romaji": "Kare wa isogashii darou.",
+        "vn": "Có lẽ anh ấy đang bận."
+      },
+      {
+        "jp": "この本は面白いだろう。",
+        "romaji": "Kono hon wa omoshiroi darou.",
+        "vn": "Cuốn sách này có lẽ thú vị."
+      },
+      {
+        "jp": "彼女は先生だろう。",
+        "romaji": "Kanojo wa sensei darou.",
+        "vn": "Có lẽ cô ấy là một giáo viên."
+      }
+    ]
+  },
+  {
+    "title": "～っていう (〜tte iu)",
+    "short_explanation": "Được sử dụng để trích dẫn, định nghĩa hoặc chỉ định một danh từ.",
+    "long_explanation": "Điểm ngữ pháp ～っていう được dùng để trích dẫn, định nghĩa hoặc chỉ định một danh từ. Nó có thể được dịch là 'được gọi', 'có nghĩa là' hoặc 'ý tôi là' bằng tiếng Anh. Cách diễn đạt này tương tự như ～という, nhưng nó giản dị hơn và thường được sử dụng trong hội thoại.",
+    "formation": "Danh từ/Tính từ/Động từ + っていう + Danh từ",
+    "examples": [
+      {
+        "jp": "ピザっていう料理が大好きです。",
+        "romaji": "Piza tte iu ryouri ga daisuki desu.",
+        "vn": "Tôi thích món ăn được gọi là pizza."
+      },
+      {
+        "jp": "彼っていう男性はすごく面白いです。",
+        "romaji": "Kare tte iu dansei wa sugoku omoshiroi desu.",
+        "vn": "Người đàn ông đó (được gọi là ‘kare’) thực sự rất thú vị."
+      },
+      {
+        "jp": "この映画っていうのは本当に感動的だよ。",
+        "romaji": "Kono eiga tte iu no wa hontou ni kandouteki da yo.",
+        "vn": "Ý tôi là, bộ phim này thực sự rất cảm động."
+      },
+      {
+        "jp": "彼女が言っているっていう店はここではない。",
+        "romaji": "Kanojo ga itte iru tte iu mise wa koko de wa nai.",
+        "vn": "Ý tôi là, cửa hàng mà cô ấy đang nói đến không có ở đây."
+      }
+    ]
+  },
+  {
+    "title": "～で (〜de)",
+    "short_explanation": "Chỉ ra phương tiện, phương pháp hoặc địa điểm.",
+    "long_explanation": "Điểm ngữ pháp ～で được dùng để chỉ phương tiện hoặc phương pháp được sử dụng để thực hiện một hành động hoặc để xác định địa điểm diễn ra hành động. Nó thường được sử dụng với động từ và đứng sau danh từ.",
+    "formation": "Danh từ + ～で",
+    "examples": [
+      {
+        "jp": "私は自転車で学校に行きます。",
+        "romaji": "Watashi wa jitensha de gakkou ni ikimasu.",
+        "vn": "Tôi đi học bằng xe đạp."
+      },
+      {
+        "jp": "彼は日本語で手紙を書いた。",
+        "romaji": "Kare wa nihongo de tegami wo kaita.",
+        "vn": "Anh ấy đã viết một lá thư bằng tiếng Nhật."
+      },
+      {
+        "jp": "鉛筆で絵を描きました。",
+        "romaji": "Enpitsu de e wo kakimashita.",
+        "vn": "Tôi đã vẽ một bức tranh bằng bút chì."
+      },
+      {
+        "jp": "レストランで昼食を食べました。",
+        "romaji": "Resutoran de chuushoku wo tabemashita.",
+        "vn": "Tôi đã ăn trưa tại một nhà hàng."
+      }
+    ]
+  },
+  {
+    "title": "～でしょう (〜deshou)",
+    "short_explanation": "Một phỏng đoán hoặc xác suất; 'có lẽ', 'tôi nghĩ', 'có vẻ như vậy'.",
+    "long_explanation": "Điểm ngữ pháp ～でしょう được dùng để biểu thị một phỏng đoán hoặc xác suất. Nó có thể được dịch là 'có lẽ', 'tôi nghĩ' hoặc 'có vẻ như' bằng tiếng Anh. Nó có thể được sử dụng với động từ, tính từ い, tính từ な và danh từ.",
+    "formation": "Động từ-ますgốc + でしょう, い-Tính từ + でしょう, な-Tính từ + でしょう, Danh từ + でしょう",
+    "examples": [
+      {
+        "jp": "明日は晴れでしょう。",
+        "romaji": "Ashita wa hare deshou.",
+        "vn": "Có lẽ ngày mai trời sẽ nắng."
+      },
+      {
+        "jp": "彼は元気でしょう。",
+        "romaji": "Kare wa genki deshou.",
+        "vn": "Có lẽ anh ấy ổn."
+      },
+      {
+        "jp": "この本は面白いでしょう。",
+        "romaji": "Kono hon wa omoshiroi deshou.",
+        "vn": "Cuốn sách này có lẽ thú vị."
+      },
+      {
+        "jp": "彼女は医者でしょう。",
+        "romaji": "Kanojo wa isha deshou.",
+        "vn": "Có lẽ cô ấy là bác sĩ."
+      }
+    ]
+  },
+  {
+    "title": "～てはいけない (〜te wa ikenai)",
+    "short_explanation": "Thể hiện sự cấm đoán; 'không được', 'không thể'.",
+    "long_explanation": "Điểm ngữ pháp ～てはいけない được dùng để diễn đạt sự nghiêm cấm hoặc điều gì đó không được phép làm. Nó có thể được dịch là 'không được', 'không thể' hoặc 'không nên' bằng tiếng Anh. Nó được hình thành bằng cách thêm dạng て của động từ theo sau là はいけない.",
+    "formation": "Động từ-て-dạng + はいけない",
+    "examples": [
+      {
+        "jp": "公園でたばこを吸ってはいけない。",
+        "romaji": "Kouen de tabako o sutte wa ikenai.",
+        "vn": "Bạn không được hút thuốc trong công viên."
+      },
+      {
+        "jp": "ここで写真を撮ってはいけない。",
+        "romaji": "Koko de shashin o totte wa ikenai.",
+        "vn": "Bạn không thể chụp ảnh ở đây."
+      },
+      {
+        "jp": "図書館で大きな声を出してはいけない。",
+        "romaji": "Toshokan de ookina koe o dashite wa ikenai.",
+        "vn": "Bạn không được nói to trong thư viện."
+      },
+      {
+        "jp": "バスの中で立っている人に席を譲ってはいけない。(Note: Unusual in real life, but grammatically correct.)",
+        "romaji": "Basu no naka de tatteiru hito ni seki o yuzutte wa ikenai.",
+        "vn": "Bạn không nên nhường ghế cho người đứng trên xe buýt. (Lưu ý: Kỳ lạ trong bối cảnh xã hội thực tế, nhưng ngữ pháp hợp lệ.)"
+      }
+    ]
+  },
+  {
+    "title": "～てもいい (〜temo ii)",
+    "short_explanation": "Để cho hoặc xin phép; 'không sao đâu', 'có thể', 'có thể'.",
+    "long_explanation": "Điểm ngữ pháp ～てもいい được dùng để cho phép hoặc xin phép làm điều gì đó. Nó có thể được dịch là 'không sao đâu', 'có thể' hoặc 'có thể' bằng tiếng Anh. Sự hình thành có nguồn gốc bằng cách thêm てもいい sau dạng て của động từ.",
+    "formation": "Dạng động từ-て + もいい",
+    "examples": [
+      {
+        "jp": "ここで写真を撮ってもいいですか。",
+        "romaji": "Koko de shashin wo tottemo ii desu ka?",
+        "vn": "Chụp ảnh ở đây có được không?"
+      },
+      {
+        "jp": "このリンゴを食べてもいいですか。",
+        "romaji": "Kono ringo wo tabetemo ii desu ka.",
+        "vn": "Tôi có thể ăn quả táo này được không?"
+      },
+      {
+        "jp": "試験が終わったら、帰ってもいいです。",
+        "romaji": "Shiken ga owattara, kaettemo ii desu.",
+        "vn": "Bạn có thể về nhà sau khi kỳ thi kết thúc."
+      },
+      {
+        "jp": "今夜友達と遊んでもいい。",
+        "romaji": "Kon'ya tomodachi to asondemo ii.",
+        "vn": "Tối nay đi chơi với bạn bè cũng được."
+      }
+    ]
+  },
+  {
+    "title": "～ても/でも (〜te mo/demo)",
+    "short_explanation": "Diễn tả 'ngay cả khi' hoặc 'mặc dù'; được sử dụng để truyền đạt sự mâu thuẫn hoặc tương phản.",
+    "long_explanation": "Điểm ngữ pháp ～ても/でも được dùng để diễn tả 'ngay cả nếu' hoặc 'mặc dù' trong câu, thể hiện ý nghĩa mâu thuẫn hoặc tương phản. Sự hình thành của ても khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い hay tính từ な. Đối với danh từ, でも được sử dụng.",
+    "formation": "Động từ-て-dạng + も, い-Tính từ (-い) + くても, な-Tính từ + でも, Danh từ + でも",
+    "examples": [
+      {
+        "jp": "雨が降っても、学校に行きます。",
+        "romaji": "Ame ga futte mo, gakkou ni ikimasu.",
+        "vn": "Dù trời có mưa tôi cũng sẽ đi học."
+      },
+      {
+        "jp": "この部屋が汚くても、掃除しないつもりです。",
+        "romaji": "Kono heya ga kitanakute mo, souji shinai tsumori desu.",
+        "vn": "Dù căn phòng này có bẩn thì tôi cũng không có ý định dọn dẹp."
+      },
+      {
+        "jp": "その映画が面白くなくても、見ます。",
+        "romaji": "Sono eiga ga omoshirokunakute mo, mimasu.",
+        "vn": "Cho dù bộ phim đó không thú vị thì tôi cũng sẽ xem."
+      },
+      {
+        "jp": "彼女が病気でも、働きます。",
+        "romaji": "Kanojo ga byouki demo, hatarakimasu.",
+        "vn": "Kể cả khi cô ấy bị bệnh, cô ấy vẫn sẽ làm việc."
+      }
+    ]
+  },
+  {
+    "title": "～といい (〜to ii)",
+    "short_explanation": "Thể hiện mong muốn hoặc hy vọng; 'Tôi hy vọng', 'sẽ tốt nếu'.",
+    "long_explanation": "Điểm ngữ pháp ～といい được dùng để diễn đạt mong muốn hoặc hy vọng về một tình huống hoặc kết quả nhất định. Nó có thể được dịch là 'Tôi hy vọng', 'sẽ tốt nếu' hoặc 'sẽ tốt nếu' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + といい, い-Tính từ + といい, な-Tính từ + だといい, Danh từ + だといい",
+    "examples": [
+      {
+        "jp": "明日晴れるといいね。",
+        "romaji": "Ashita hareru to ii ne.",
+        "vn": "Tôi hy vọng ngày mai trời sẽ nắng."
+      },
+      {
+        "jp": "この試験に合格するといい。",
+        "romaji": "Kono shiken ni goukaku suru to ii.",
+        "vn": "Tôi hy vọng có thể vượt qua kỳ thi này."
+      },
+      {
+        "jp": "彼が元気だといいな。",
+        "romaji": "Kare ga genki da to ii na.",
+        "vn": "Tôi hy vọng anh ấy đang làm tốt."
+      },
+      {
+        "jp": "そのレストランが美味しいといいですね。",
+        "romaji": "Sono resutoran ga oishii to ii desu ne.",
+        "vn": "Sẽ thật tuyệt nếu nhà hàng đó ngon."
+      }
+    ]
+  },
+  {
+    "title": "～という (〜to iu) Danh từ",
+    "short_explanation": "Được sử dụng để định nghĩa hoặc giải thích một danh từ cụ thể hơn.",
+    "long_explanation": "Điểm ngữ pháp ～という được dùng để định nghĩa hoặc giải thích một danh từ cụ thể hơn. Nó thường được dịch là 'được gọi', 'được đặt tên' hoặc 'có nghĩa là' bằng tiếng Anh. Nó có thể được sử dụng với danh từ, tính từ な và động từ tính từ.",
+    "formation": "Danh từ + という + Danh từ, な-Tính từ + という + Danh từ, Tính từ Động từ + という + Danh từ",
+    "examples": [
+      {
+        "jp": "彼は日本語が流暢なアメリカ人という人です。",
+        "romaji": "Kare wa nihongo ga ryuuchou na amerikajin to iu hito desu.",
+        "vn": "Anh ấy là người Mỹ nói tiếng Nhật trôi chảy."
+      },
+      {
+        "jp": "昨日、美味しかったというケーキを食べました。",
+        "romaji": "Kinou, oishikatta to iu keeki wo tabemashita.",
+        "vn": "Hôm qua tôi đã ăn một chiếc bánh được cho là ngon."
+      },
+      {
+        "jp": "有名な歌手という彼女は、たくさんのファンがいます。",
+        "romaji": "Yuumei na kashu to iu kanojo wa, takusan no fan ga imasu.",
+        "vn": "Cô được mệnh danh là ca sĩ nổi tiếng, có rất nhiều người hâm mộ."
+      },
+      {
+        "jp": "環境に優しいという製品が人気があります。",
+        "romaji": "Kankyou ni yasashii to iu seihin ga ninki ga arimasu.",
+        "vn": "Những sản phẩm được cho là thân thiện với môi trường đang được ưa chuộng."
+      }
+    ]
+  },
+  {
+    "title": "どういう Danh từ (dou iu Danh từ)",
+    "short_explanation": "Yêu cầu làm rõ hoặc biết thêm thông tin về một danh từ; 'loại gì', 'loại gì'.",
+    "long_explanation": "Ngữ pháp Danh từ どういう được dùng để hỏi thêm thông tin hoặc làm rõ về một danh từ cụ thể. Nó có thể được dịch là 'loại gì' hoặc 'loại gì' trong tiếng Anh. Sự hình thành chỉ đơn giản là sử dụng どういう theo sau là danh từ được đề cập.",
+    "formation": "どういう + Danh từ",
+    "examples": [
+      {
+        "jp": "どういう仕事をしていますか？",
+        "romaji": "Dou iu shigoto wo shite imasu ka?",
+        "vn": "Bạn làm loại công việc gì?"
+      },
+      {
+        "jp": "どういう映画が好きですか？",
+        "romaji": "Dou iu eiga ga suki desu ka?",
+        "vn": "Bạn thích loại phim nào?"
+      },
+      {
+        "jp": "どういう服を着たいですか？",
+        "romaji": "Dou iu fuku wo kitai desu ka?",
+        "vn": "Bạn muốn mặc loại quần áo nào?"
+      },
+      {
+        "jp": "どういう理由で遅れましたか？",
+        "romaji": "Dou iu riyuu de okuremashita ka?",
+        "vn": "Lý do gì khiến bạn đến muộn?"
+      }
+    ]
+  },
+  {
+    "title": "～と思う (〜to omou)",
+    "short_explanation": "Thể hiện suy nghĩ hoặc ý kiến của một người; 'Tôi nghĩ', 'Tôi tin'.",
+    "long_explanation": "Điểm ngữ pháp ～と思う được dùng để bày tỏ suy nghĩ hoặc ý kiến của một người về một chủ đề hoặc tình huống cụ thể. Nó có thể được dịch là 'Tôi nghĩ' hoặc 'Tôi tin' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + と思う, い-Tính từ + と思う, な-Tính từ + だと思う, Danh từ + だと思う",
+    "examples": [
+      {
+        "jp": "明日晴れると思います。",
+        "romaji": "Ashita hareru to omoimasu.",
+        "vn": "Tôi nghĩ ngày mai trời sẽ nắng."
+      },
+      {
+        "jp": "この映画は面白いと思う。",
+        "romaji": "Kono eiga wa omoshiroi to omou.",
+        "vn": "Tôi nghĩ bộ phim này thú vị."
+      },
+      {
+        "jp": "彼は親切だと思います。",
+        "romaji": "Kare wa shinsetsu da to omoimasu.",
+        "vn": "Tôi nghĩ anh ấy tốt bụng."
+      },
+      {
+        "jp": "鈴木さんは先生だと思う。",
+        "romaji": "Suzuki-san wa sensei da to omou.",
+        "vn": "Tôi nghĩ Suzuki-san là một giáo viên."
+      }
+    ]
+  },
+  {
+    "title": "～という (〜to iu)",
+    "short_explanation": "Dùng để trích dẫn, bày tỏ tin đồn hoặc định nghĩa điều gì đó.",
+    "long_explanation": "Điểm ngữ pháp ～という được dùng để trích dẫn lời nói của ai đó, diễn đạt điều gì đó bạn nghe hoặc đọc được từ người khác hoặc xác định và làm rõ chủ đề. Nó có thể được dịch là 'được gọi', 'cái đó' hoặc 'người ta nói'. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + という, い-Tính từ + という, な-Tính từ + という, Danh từ + という",
+    "examples": [
+      {
+        "jp": "彼は「好きだ」と言った。",
+        "romaji": "Kare wa 'suki da' to itta.",
+        "vn": "Anh ấy nói 'Anh thích em'."
+      },
+      {
+        "jp": "その映画は面白いという評判があります。",
+        "romaji": "Sono eiga wa omoshiroi to iu hyouban ga arimasu.",
+        "vn": "Phim có tiếng là thú vị."
+      },
+      {
+        "jp": "日本には富士山という高い山があります。",
+        "romaji": "Nihon ni wa Fujisan to iu takai yama ga arimasu.",
+        "vn": "Ở Nhật Bản có một ngọn núi cao tên là núi Phú Sĩ."
+      },
+      {
+        "jp": "彼女は難しい仕事をしているという話です。",
+        "romaji": "Kanojo wa muzukashii shigoto o shiteiru to iu hanashi desu.",
+        "vn": "Tôi nghe nói cô ấy đang làm một công việc khó khăn."
+      }
+    ]
+  },
+  {
+    "title": "～ないといけない (〜nai to ikenai)",
+    "short_explanation": "Thể hiện sự cần thiết; 'phải', 'phải', 'cần'.",
+    "long_explanation": "Điểm ngữ pháp ～ないといけない được dùng để diễn đạt ý nghĩa về sự cần thiết hoặc nghĩa vụ, tương tự như 'phải', 'phải' hoặc 'cần' trong tiếng Anh. Cấu trúc này được hình thành bằng cách sử dụng dạng phủ định của động từ (kết thúc bằng ない) theo sau là といけない.",
+    "formation": "Động từ phủ định + といけない",
+    "examples": [
+      {
+        "jp": "明日試験があるから、今夜勉強しないといけない。",
+        "romaji": "Ashita shiken ga aru kara, kon'ya benkyou shinai to ikenai.",
+        "vn": "Ngày mai tôi có bài kiểm tra nên tối nay tôi phải học."
+      },
+      {
+        "jp": "９時に出発しないといけない。",
+        "romaji": "Ku-ji ni shuppatsu shinai to ikenai.",
+        "vn": "Chúng ta phải rời đi lúc 9 giờ."
+      },
+      {
+        "jp": "風邪をひかないように、手をよく洗わないといけない。",
+        "romaji": "Kaze o hikanai you ni, te o yoku arawanai to ikenai.",
+        "vn": "Để tránh bị cảm lạnh, chúng ta phải rửa tay thật sạch."
+      },
+      {
+        "jp": "この仕事は明日までに終わらないといけない。",
+        "romaji": "Kono shigoto wa ashita made ni owaranai to ikenai.",
+        "vn": "Công việc này phải được hoàn thành vào ngày mai."
+      }
+    ]
+  },
+  {
+    "title": "～なきゃいけない (〜nakya ikenai)",
+    "short_explanation": "Thể hiện sự cần thiết hoặc nghĩa vụ; 'phải', 'phải'.",
+    "long_explanation": "Điểm ngữ pháp ～なきゃいけない được dùng để diễn đạt ý nghĩa về sự cần thiết hoặc nghĩa vụ, tương tự như cách nói 'phải' hoặc 'phải' trong tiếng Anh. Nó là một dạng thông tục và thông tục hơn của điểm ngữ pháp ～なければいけない. Sự hình thành của động từ là khác nhau, nhưng nó không được sử dụng với tính từ い, tính từ な hoặc danh từ.",
+    "formation": "Động từ thông thường (dạng phủ định không có い) + なきゃいけない",
+    "examples": [
+      {
+        "jp": "明日までに宿題を終わらなきゃいけない。",
+        "romaji": "Ashita made ni shukudai wo owaranakya ikenai.",
+        "vn": "Tôi phải hoàn thành bài tập về nhà vào ngày mai."
+      },
+      {
+        "jp": "もうすぐ出かけるから、急いで準備しなきゃいけない。",
+        "romaji": "Mou sugu dekakeru kara, isoide junbi shinakya ikenai.",
+        "vn": "Chúng ta sắp rời đi nên tôi phải nhanh lên và chuẩn bị sẵn sàng."
+      },
+      {
+        "jp": "このプロジェクトは来週提出しなきゃいけない。",
+        "romaji": "Kono purojekuto wa raishuu teishutsu shinakya ikenai.",
+        "vn": "Tôi phải nộp dự án này vào tuần tới."
+      },
+      {
+        "jp": "電車に乗る前に、切符を買わなきゃいけない。",
+        "romaji": "Densha ni noru mae ni, kippu wo kawanakya ikenai.",
+        "vn": "Tôi phải mua vé trước khi lên tàu."
+      }
+    ]
+  },
+  {
+    "title": "～なくちゃいけない (〜naku cha ikenai)",
+    "short_explanation": "Thể hiện sự bắt buộc phải làm điều gì đó; 'phải', 'phải', 'cần'.",
+    "long_explanation": "Điểm ngữ pháp ～なくちゃいけない được dùng để diễn tả sự bắt buộc hoặc cần thiết phải làm một việc gì đó. Nó có thể được dịch là 'phải', 'phải' hoặc 'cần' bằng tiếng Anh. Điểm ngữ pháp này chủ yếu được sử dụng với động từ.",
+    "formation": "Dạng động từ-ない (kết thúc -ない bị lược bỏ) + なくちゃいけない",
+    "examples": [
+      {
+        "jp": "仕事に行かなくちゃいけないので、早起きしなければなりません。",
+        "romaji": "Shigoto ni ikanakucha ikenai node, hayaoki shinakereba narimasen.",
+        "vn": "Tôi phải đi làm nên phải dậy sớm."
+      },
+      {
+        "jp": "試験があるから、勉強しなくちゃいけません。",
+        "romaji": "Shiken ga aru kara, benkyou shinakucha ikemasen.",
+        "vn": "Tôi có bài kiểm tra nên tôi phải học."
+      },
+      {
+        "jp": "パスポートを更新しなくちゃいけないので、大使館に行かなければ。",
+        "romaji": "Pasupooto wo koushin shinakucha ikenai node, taishikan ni ikanakereba.",
+        "vn": "Tôi phải gia hạn hộ chiếu nên tôi cần đến đại sứ quán."
+      },
+      {
+        "jp": "今日はお金を払わなくちゃいけないから、銀行に行かないと。",
+        "romaji": "Kyou wa okane wo harawanakucha ikenai kara, ginkou ni ikanaito.",
+        "vn": "Hôm nay tôi phải trả tiền nên tôi cần phải đến ngân hàng."
+      }
+    ]
+  },
+  {
+    "title": "～なくてはいけない (〜nakute wa ikenai)",
+    "short_explanation": "Thể hiện sự cần thiết hoặc nghĩa vụ; 'phải', 'phải'.",
+    "long_explanation": "Điểm ngữ pháp ～なくてはいけない được dùng để diễn tả sự cần thiết hoặc nghĩa vụ phải làm một việc gì đó. Nó có thể được dịch là 'phải' hoặc 'phải' bằng tiếng Anh. Sự hình thành đòi hỏi dạng phủ định của động từ và theo sau là いけない (không thể đi/tiến bộ). Nó chỉ ra rằng nếu việc gì đó không được thực hiện thì đó sẽ là một vấn đề hoặc không phù hợp.",
+    "formation": "Dạng phủ định của động từ + なくてはいけない",
+    "examples": [
+      {
+        "jp": "宿題をしなくてはいけない。",
+        "romaji": "Shukudai o shinakute wa ikenai.",
+        "vn": "Tôi phải làm bài tập về nhà."
+      },
+      {
+        "jp": "この手紙を明日までに出さなくてはいけない。",
+        "romaji": "Kono tegami o ashita made ni dasanakute wa ikenai.",
+        "vn": "Tôi phải gửi lá thư này trước ngày mai."
+      },
+      {
+        "jp": "食べ物を無駄にしなくてはいけない。",
+        "romaji": "Tabemono o muda ni shinakute wa ikenai.",
+        "vn": "Chúng ta không được lãng phí thức ăn."
+      },
+      {
+        "jp": "早退したいが、授業が終わるまで待たなくてはいけない。",
+        "romaji": "Soutai shitai ga, jugyou ga owaru made matanakute wa ikenai.",
+        "vn": "Tôi muốn về sớm nhưng phải đợi cho đến khi lớp học kết thúc."
+      }
+    ]
+  },
+  {
+    "title": "～なくてもいい (〜nakutemo ii)",
+    "short_explanation": "Diễn tả việc gì đó không cần thiết phải làm; 'không thì cũng được', 'không cần'.",
+    "long_explanation": "Điểm ngữ pháp ～なくてもいい được dùng để diễn tả một hành động hoặc tình huống nào đó là không cần thiết hoặc bắt buộc, ngụ ý rằng nếu nó không xảy ra thì cũng không sao. Nó có thể được dịch là 'không sao đâu' hoặc 'không cần thiết' trong tiếng Anh. Ngữ pháp này được sử dụng với động từ.",
+    "formation": "Động từ-ない-dạng + てもいい",
+    "examples": [
+      {
+        "jp": "コーヒーは飲まなくてもいいです。",
+        "romaji": "Koohii wa nomanakutemo ii desu.",
+        "vn": "Bạn không cần phải uống cà phê."
+      },
+      {
+        "jp": "宿題を今日しなくてもいいです。",
+        "romaji": "Shukudai wo kyou shinakutemo ii desu.",
+        "vn": "Sẽ không sao nếu hôm nay bạn không làm bài tập về nhà."
+      },
+      {
+        "jp": "すぐに返事をしなくてもいいですよ。",
+        "romaji": "Sugu ni henji wo shinakutemo ii desu yo.",
+        "vn": "Bạn không cần phải trả lời ngay lập tức."
+      },
+      {
+        "jp": "全部食べなくてもいいですから、無理しないでください。",
+        "romaji": "Zenbu tabenakutemo ii desu kara, muri shinai de kudasai.",
+        "vn": "Bạn không cần phải ăn tất cả mọi thứ, vì vậy đừng ép buộc bản thân."
+      }
+    ]
+  },
+  {
+    "title": "～なければ ならない (〜nakereba naranai)",
+    "short_explanation": "Thể hiện nghĩa vụ hoặc sự cần thiết; 'phải', 'phải', 'cần'.",
+    "long_explanation": "Điểm ngữ pháp ～なければ ならない được dùng để diễn đạt sự bắt buộc hoặc sự cần thiết. Trong tiếng Anh, nó có thể được dịch là 'phải', 'phải' hoặc 'cần'. Sự hình thành khác nhau tùy thuộc vào việc nó có được sử dụng với một động từ hay không. Nó không thể được sử dụng với tính từ い, tính từ な hoặc danh từ.",
+    "formation": "Dạng động từ-ない + なければ ならない",
+    "examples": [
+      {
+        "jp": "宿題をやらなければならない。",
+        "romaji": "Shukudai wo yaranakereba naranai.",
+        "vn": "Tôi phải làm bài tập về nhà."
+      },
+      {
+        "jp": "明日までにこの本を読まなければならない。",
+        "romaji": "Ashita made ni kono hon wo yomanakereba naranai.",
+        "vn": "Tôi phải đọc cuốn sách này vào ngày mai."
+      },
+      {
+        "jp": "授業に遅れないように、早く起きなければならない。",
+        "romaji": "Jugyou ni okurenai you ni, hayaku okinakereba naranai.",
+        "vn": "Tôi phải dậy sớm để không bị trễ lớp."
+      },
+      {
+        "jp": "旅行に行く前に切符を買わなければならない。",
+        "romaji": "Ryokou ni iku mae ni kippu wo kawanakereba naranai.",
+        "vn": "Tôi phải mua vé trước khi đi du lịch."
+      }
+    ]
+  },
+  {
+    "title": "～に (〜ni)",
+    "short_explanation": "Cho biết phương hướng, điểm đến, mục đích hoặc thời gian.",
+    "long_explanation": "Điểm ngữ pháp ～に là một trong những trợ từ linh hoạt nhất trong tiếng Nhật. Nó thường được sử dụng để chỉ hướng hoặc đích đến của một hành động, để thể hiện mục đích của một hành động hoặc vật phẩm hoặc để chỉ định một thời điểm. Tùy thuộc vào ngữ cảnh, nó có thể được dịch là 'to', 'at', 'in', 'on' hoặc 'for' bằng tiếng Anh.",
+    "formation": "Danh từ + に",
+    "examples": [
+      {
+        "jp": "母は私にケーキを作りました。",
+        "romaji": "Haha wa watashi ni keiki wo tsukurimashita.",
+        "vn": "Mẹ tôi đã làm một chiếc bánh cho tôi."
+      },
+      {
+        "jp": "彼女は東京に引っ越しました。",
+        "romaji": "Kanojo wa Toukyou ni hikkoshimashita.",
+        "vn": "Cô ấy chuyển đến Tokyo."
+      },
+      {
+        "jp": "銀行にお金を預けます。",
+        "romaji": "Ginkou ni okane wo azukemasu.",
+        "vn": "Tôi gửi tiền vào ngân hàng."
+      },
+      {
+        "jp": "私は７時に起きます。",
+        "romaji": "Watashi wa shichi ji ni okimasu.",
+        "vn": "Tôi thức dậy lúc 7 giờ."
+      }
+    ]
+  },
+  {
+    "title": "～ので (〜node)",
+    "short_explanation": "Diễn tả lý do hoặc nguyên nhân cho việc gì đó; 'bởi vì', 'vì', 'vì vậy'.",
+    "long_explanation": "Điểm ngữ pháp ～ので được dùng để diễn tả lý do hoặc nguyên nhân của việc gì đó. Nó có thể được dịch là 'bởi vì', 'vì' hoặc 'vì vậy' bằng tiếng Anh. Nó tương tự như から nhưng được coi là lịch sự và trang trọng hơn. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + ので, い-Tính từ + ので, な-Tính từ + なので, Danh từ + なので",
+    "examples": [
+      {
+        "jp": "明日試験があるので、今晩勉強します。",
+        "romaji": "Ashita shiken ga aru node, konban benkyou shimasu.",
+        "vn": "Tôi sẽ học tối nay vì ngày mai có bài kiểm tra."
+      },
+      {
+        "jp": "このドレスが高いので、買わないことにします。",
+        "romaji": "Kono doresu ga takai node, kawanai koto ni shimasu.",
+        "vn": "Tôi sẽ không mua chiếc váy này vì nó đắt."
+      },
+      {
+        "jp": "田中さんは病気なので、今日は来ません。",
+        "romaji": "Tanaka-san wa byouki na node, kyou wa kimasen.",
+        "vn": "Tanaka-san sẽ không đến hôm nay vì anh ấy bị ốm."
+      },
+      {
+        "jp": "雨が降っているので、外に出ない方がいいですよ。",
+        "romaji": "Ame ga futte iru node, soto ni denai hou ga ii desu yo.",
+        "vn": "Tốt hơn là không nên ra ngoài vì trời đang mưa."
+      }
+    ]
+  },
+  {
+    "title": "～のです (〜no desu)",
+    "short_explanation": "Đưa ra lời giải thích hoặc cung cấp thông tin cơ bản; 'sự thật là', 'lý do là', 'thực sự'.",
+    "long_explanation": "Điểm ngữ pháp ～のです được dùng để đưa ra lời giải thích hoặc cung cấp thông tin cơ bản về một tình huống, thường được sử dụng khi cần biện minh hoặc làm rõ lời phát biểu của một người. Nó có thể được dịch là 'thực tế là', 'lý do là' hoặc 'thực sự' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + のです, い-Tính từ + のです, な-Tính từ + なのです, Danh từ + なのです",
+    "examples": [
+      {
+        "jp": "この本は難しいのです。",
+        "romaji": "Kono hon wa muzukashii no desu.",
+        "vn": "Bạn thấy đấy, cuốn sách này rất khó."
+      },
+      {
+        "jp": "明日は忙しいのです。",
+        "romaji": "Ashita wa isogashii no desu.",
+        "vn": "Sự thật là ngày mai tôi bận."
+      },
+      {
+        "jp": "彼女は英語の先生なのです。",
+        "romaji": "Kanojo wa eigo no sensei na no desu.",
+        "vn": "Lý do là cô ấy là giáo viên tiếng Anh."
+      },
+      {
+        "jp": "私は風邪なのです。",
+        "romaji": "Watashi wa kaze na no desu.",
+        "vn": "Thực ra là tôi bị cảm lạnh."
+      }
+    ]
+  },
+  {
+    "title": "～のに (〜no ni)",
+    "short_explanation": "Dùng để thể hiện sự tương phản giữa kỳ vọng và thực tế, hoặc biểu thị mục đích làm việc gì đó",
+    "long_explanation": "Điểm ngữ pháp ～のに có hai cách sử dụng chính. Đầu tiên là thể hiện sự tương phản giữa kỳ vọng và thực tế, với các bản dịch như 'mặc dù', 'bất chấp' hoặc 'bất chấp' trong tiếng Anh. Thứ hai là để chỉ mục đích làm việc gì đó, được dịch là 'để' hoặc 'vì mục đích'. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + のに, い-Tính từ + のに, な-Tính từ + なのに, Danh từ + なのに",
+    "examples": [
+      {
+        "jp": "遅刻したのに、先生は怒らなかった。",
+        "romaji": "Chikoku shita no ni, sensei wa okoranakatta.",
+        "vn": "Dù tôi đến muộn nhưng cô giáo không hề nổi giận."
+      },
+      {
+        "jp": "彼は疲れているのに、まだ働いています。",
+        "romaji": "Kare wa tsukarete iru no ni, mada hataraite imasu.",
+        "vn": "Dù mệt mỏi nhưng anh vẫn làm việc."
+      },
+      {
+        "jp": "勉強するのに静かな場所が必要です。",
+        "romaji": "Benkyou suru no ni, shizukana basho ga hitsuyou desu.",
+        "vn": "Để học, tôi cần một nơi yên tĩnh."
+      },
+      {
+        "jp": "健康のために毎日運動するのに、うちでヨガをしている。",
+        "romaji": "Kenkou no tame ni mainichi undou suru no ni, uchi de yoga wo shite iru.",
+        "vn": "Để rèn luyện sức khỏe mỗi ngày, tôi tập yoga tại nhà."
+      }
+    ]
+  },
+  {
+    "title": "～ばいい (〜ba ii)",
+    "short_explanation": "Thể hiện một gợi ý hoặc lời khuyên; 'nên', 'sẽ tốt nếu'.",
+    "long_explanation": "Điểm ngữ pháp ～ばいい được dùng để diễn tả một lời đề nghị, lời khuyên hoặc lời khuyên. Nó có thể được dịch là 'nên' hoặc 'sẽ tốt nếu' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ-ば-dạng + いい, い-Tính từ + ければいい, な-Tính từ + であればいい, Danh từ + であればいい",
+    "examples": [
+      {
+        "jp": "もっと勉強すればいい。",
+        "romaji": "Motto benkyou sureba ii.",
+        "vn": "Bạn nên nghiên cứu thêm."
+      },
+      {
+        "jp": "お腹が空いたら、何か食べればいい。",
+        "romaji": "Onaka ga suita ra, nanika tabereba ii.",
+        "vn": "Nếu bạn đói, bạn nên ăn gì đó."
+      },
+      {
+        "jp": "もっと速く走ればいい。",
+        "romaji": "Motto hayaku hashireba ii.",
+        "vn": "Bạn nên chạy nhanh hơn."
+      },
+      {
+        "jp": "わからなければ、先生に聞けばいい。",
+        "romaji": "Wakaranakereba, sensei ni kikeba ii.",
+        "vn": "Nếu không hiểu thì nên hỏi thầy."
+      }
+    ]
+  },
+  {
+    "title": "～まで (〜made)",
+    "short_explanation": "Biểu thị mức độ, 'cho đến', 'lên đến', 'đến mức', 'thậm chí'.",
+    "long_explanation": "Điểm ngữ pháp ～まで được dùng để diễn đạt mức độ hoặc phạm vi về thời gian, khoảng cách hoặc mức độ. Nó có thể được dịch là 'cho đến', 'lên đến', 'đến mức' hoặc 'thậm chí' bằng tiếng Anh. Nó được sử dụng với động từ, tính từ い, tính từ な hoặc danh từ.",
+    "formation": "Động từ + まで, い-Tính từ + まで, な-Tính từ + まで, Danh từ + まで",
+    "examples": [
+      {
+        "jp": "仕事が終わるまで待っています。",
+        "romaji": "Shigoto ga owaru made matteimasu.",
+        "vn": "Tôi sẽ đợi cho đến khi công việc kết thúc."
+      },
+      {
+        "jp": "ここから駅まで歩いて10分かかります。",
+        "romaji": "Koko kara eki made aruite juppun kakarimasu.",
+        "vn": "Từ đây đến ga mất 10 phút đi bộ."
+      },
+      {
+        "jp": "私は彼が成功するまで応援します。",
+        "romaji": "Watashi wa kare ga seikou suru made ouen shimasu.",
+        "vn": "Tôi sẽ ủng hộ anh ấy cho đến khi anh ấy thành công."
+      },
+      {
+        "jp": "彼女は猫まで好きです。",
+        "romaji": "Kanojo wa neko made suki desu.",
+        "vn": "Cô ấy thích cả mèo nữa."
+      }
+    ]
+  },
+  {
+    "title": "～までに (〜made ni)",
+    "short_explanation": "Diễn tả 'trước' hoặc 'trước' một thời gian hoặc hành động nhất định.",
+    "long_explanation": "Điểm ngữ pháp ～までに được dùng để chỉ một việc gì đó phải được hoàn thành hoặc xảy ra trước một thời điểm nhất định hoặc trước một hành động cụ thể. Nó có thể được sử dụng với động từ, danh từ và biểu thức thời gian.",
+    "formation": "Động từ thông thường + までに, Danh từ + までに, Biểu thức thời gian + までに",
+    "examples": [
+      {
+        "jp": "明日の朝８時までに起きてください。",
+        "romaji": "Ashita no asa hachiji made ni okite kudasai.",
+        "vn": "Hãy thức dậy trước 8 giờ sáng ngày mai."
+      },
+      {
+        "jp": "来週の金曜日までにレポートを提出してください。",
+        "romaji": "Raishuu no kinyoubi made ni repooto wo teishutsu shite kudasai.",
+        "vn": "Vui lòng gửi báo cáo trước thứ Sáu tuần tới."
+      },
+      {
+        "jp": "彼が帰るまでに料理を終わらせたい。",
+        "romaji": "Kare ga kaeru made ni ryouri wo owarasetai.",
+        "vn": "Tôi muốn nấu xong trước khi anh ấy quay lại."
+      },
+      {
+        "jp": "３０分までに駅に着く必要があります。",
+        "romaji": "Sanjuppun made ni eki ni tsuku hitsuyou ga arimasu.",
+        "vn": "Chúng ta cần đến nhà ga trước 30 phút (kể từ bây giờ)."
+      }
+    ]
+  },
+  {
+    "title": "～まま (〜mama)",
+    "short_explanation": "Diễn tả 'nguyên trạng', 'trong khi' hoặc 'trạng thái không thay đổi'.",
+    "long_explanation": "Điểm ngữ pháp ～まま được dùng để diễn tả một trạng thái hoặc điều kiện không thay đổi hoặc tiếp tục, thường được dịch là 'nguyên trạng', 'trong khi' hoặc 'không thay đổi'. Nó có thể được sử dụng với động từ và tính từ để chỉ ra rằng một cái gì đó vẫn ở một trạng thái hoặc điều kiện nhất định.",
+    "formation": "Dạng động từ-て + いる+ まま, Tính từ (い & な) + まま, Danh từ + のまま",
+    "examples": [
+      {
+        "jp": "ドアを開けたまま出かけてしまった。",
+        "romaji": "Doa o aketa mama dekakete shimatta.",
+        "vn": "Tôi vô tình rời đi với cánh cửa mở."
+      },
+      {
+        "jp": "彼は目覚まし時計を止めたまま寝てしまった。",
+        "romaji": "Kare wa mezamashi dokei o tometa mama nete shimatta.",
+        "vn": "Anh ngủ quên khi đồng hồ báo thức dừng lại."
+      },
+      {
+        "jp": "その部屋はきれいなままにしておいてください。",
+        "romaji": "Sono heya wa kirei na mama ni shite oite kudasai.",
+        "vn": "Vui lòng giữ phòng sạch sẽ."
+      },
+      {
+        "jp": "彼女は子供のままの心を持っている。",
+        "romaji": "Kanojo wa kodomo no mama no kokoro o motte iru.",
+        "vn": "Cô ấy có trái tim của một đứa trẻ."
+      }
+    ]
+  },
+  {
+    "title": "～みたいだ (〜mitai da)",
+    "short_explanation": "Biểu thị sự tương đồng, giống nhau hoặc 'thích'; 'có vẻ như', 'xuất hiện', 'có vẻ như'.",
+    "long_explanation": "Điểm ngữ pháp ～みたいだ được dùng để diễn tả sự việc nào đó xuất hiện, có vẻ giống hoặc giống với một thứ khác. Nó có thể được sử dụng với danh từ, động từ, tính từ い và tính từ な. Nó có thể được dịch là 'có vẻ như', 'xuất hiện' hoặc 'trông giống như' bằng tiếng Anh.",
+    "formation": "Động từ thông thường + みたいだ, い-Tính từ + みたいだ, な-Tính từ + みたいだ, Danh từ + みたいだ",
+    "examples": [
+      {
+        "jp": "彼女が病気のみたいだ。",
+        "romaji": "Kanojo ga byouki no mitai da.",
+        "vn": "Có vẻ như cô ấy đang bị bệnh."
+      },
+      {
+        "jp": "このドレスは高いみたいだ。",
+        "romaji": "Kono doresu wa takai mitai da.",
+        "vn": "Chiếc váy này có vẻ đắt tiền."
+      },
+      {
+        "jp": "あの人は有名人みたいだ。",
+        "romaji": "Ano hito wa yuumeijin mitai da.",
+        "vn": "Người đó trông giống như một người nổi tiếng."
+      },
+      {
+        "jp": "彼は今忙しいみたいだ。",
+        "romaji": "Kare wa ima isogashii mitai da.",
+        "vn": "Có vẻ như dạo này anh ấy đang bận."
+      }
+    ]
+  },
+  {
+    "title": "～も (〜mo)",
+    "short_explanation": "Biểu thị 'cũng', 'quá' hoặc 'cũng'.",
+    "long_explanation": "Điểm ngữ pháp ～も được dùng để diễn đạt điều gì đó cũng đúng hoặc để bổ sung thêm một số thông tin cho câu nói trước đó. Nó có thể được dịch là 'cũng', 'quá' hoặc 'cũng' bằng tiếng Anh. Điểm ngữ pháp có thể được sử dụng với động từ, tính từ và danh từ.",
+    "formation": "Động từ thông thường + も, い-Tính từ + も, な-Tính từ + も, Danh từ + も",
+    "examples": [
+      {
+        "jp": "私もお寿司が好きです。",
+        "romaji": "Watashi mo osushi ga suki desu.",
+        "vn": "Tôi cũng thích sushi."
+      },
+      {
+        "jp": "彼女は英語も日本語も話せます。",
+        "romaji": "Kanojo wa eigo mo nihongo mo hanasemasu.",
+        "vn": "Cô ấy có thể nói được cả tiếng Anh và tiếng Nhật."
+      },
+      {
+        "jp": "その映画は面白いし、彼も見たいと言っています。",
+        "romaji": "Sono eiga wa omoshiroi shi, kare mo mitai to itteimasu.",
+        "vn": "Bộ phim đó thú vị lắm, và anh ấy cũng nói muốn xem nó."
+      },
+      {
+        "jp": "今日は寒いです。明日も寒いでしょう。",
+        "romaji": "Kyou wa samui desu. Ashita mo samui deshou.",
+        "vn": "Hôm nay trời lạnh. Có lẽ ngày mai trời cũng sẽ lạnh."
+      }
+    ]
+  },
+  {
+    "title": "～ようだ (〜you da)",
+    "short_explanation": "Thể hiện sự xuất hiện, sự tương đồng hoặc suy luận; 'có vẻ như', 'có vẻ như', 'có vẻ như'.",
+    "long_explanation": "Điểm ngữ pháp ～ようだ được dùng để diễn đạt hình thức, sự tương đồng hoặc suy luận về một tình huống hoặc hành động. Nó có thể được dịch là 'có vẻ như', 'có vẻ như' hoặc 'có vẻ như' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Dạng động từ-て + ようだ, い-Tính từ (bỏ い) + ようだ, な-Tính từ + のようだ, Danh từ + のようだ",
+    "examples": [
+      {
+        "jp": "彼は元気がないようだ。",
+        "romaji": "Kare wa genki ga nai you da.",
+        "vn": "Anh ấy dường như đang thiếu năng lượng."
+      },
+      {
+        "jp": "この料理は美味しいようだ。",
+        "romaji": "Kono ryouri wa oishii you da.",
+        "vn": "Món ăn này có vẻ ngon."
+      },
+      {
+        "jp": "彼女は有名人のようだ。",
+        "romaji": "Kanojo wa yuumeijin no you da.",
+        "vn": "Cô ấy có vẻ như là một người nổi tiếng."
+      },
+      {
+        "jp": "この部屋は図書館のようだ。",
+        "romaji": "Kono heya wa toshokan no you da.",
+        "vn": "Căn phòng này trông giống như một thư viện."
+      }
+    ]
+  },
+  {
+    "title": "～んです (〜n desu)",
+    "short_explanation": "Đưa ra lời giải thích hoặc lý do; 'chính là vậy', 'vấn đề là', 'lý do là'.",
+    "long_explanation": "Điểm ngữ pháp ～んです được dùng để đưa ra lời giải thích hoặc lý do cho một tình huống hoặc hành động. Nó có thể được dịch là 'chính là vậy', 'sự việc là' hoặc 'lý do là' bằng tiếng Anh. Sự hình thành khác nhau tùy thuộc vào việc nó được sử dụng với động từ, tính từ い, tính từ な hay danh từ.",
+    "formation": "Động từ thông thường + んです, い-Tính từ + んです, な-Tính từ + なんです, Danh từ + なんです",
+    "examples": [
+      {
+        "jp": "遅れたんですが、電車が遅れました。",
+        "romaji": "Okuretan desuga, densha ga okuremashita.",
+        "vn": "Tôi đến muộn vì tàu bị trễ."
+      },
+      {
+        "jp": "疲れたんです。",
+        "romaji": "Tsukareta n desu.",
+        "vn": "Tôi mệt (đó là lý do tại sao)."
+      },
+      {
+        "jp": "彼は優しいんです。",
+        "romaji": "Kare wa yasashii n desu.",
+        "vn": "Vấn đề là anh ấy tốt bụng."
+      },
+      {
+        "jp": "宿題が多いんです。",
+        "romaji": "Shukudai ga ooi n desu.",
+        "vn": "Lý do là tôi có rất nhiều bài tập về nhà."
+      }
+    ]
+  },
+  {
+    "title": "文A。そのうえ 文B。",
+    "short_explanation": "Hiển thị thông tin bổ sung; 'hơn nữa', 'ngoài ra', 'ngoài ra'.",
+    "long_explanation": "Điểm ngữ pháp này được sử dụng để kết nối hai câu, trong đó câu đầu tiên 文A cung cấp một số thông tin và câu thứ hai 文B bổ sung thêm thông tin liên quan. Nó có thể được dịch là 'hơn nữa', 'bên cạnh đó' hoặc 'ngoài ra' bằng tiếng Anh.",
+    "formation": "Câu A + そのうえ + Câu B + 。",
+    "examples": [
+      {
+        "jp": "このソフトウェアは使いやすい。そのうえ、価格も手ごろだ。",
+        "romaji": "Kono sofutouea wa tsukaiyasui. Sono ue, kakaku mo tegoro da.",
+        "vn": "Phần mềm này rất dễ sử dụng. Hơn nữa, giá cả là hợp lý."
+      },
+      {
+        "jp": "彼女は美人だ。そのうえ、頭もいい。",
+        "romaji": "Kanojo wa bijin da. Sono ue, atama mo ii.",
+        "vn": "Cô ấy thật đẹp. Ngoài ra, cô ấy còn thông minh."
+      },
+      {
+        "jp": "この映画は面白い。そのうえ、俳優たちの演技も素晴らしい。",
+        "romaji": "Kono eiga wa omoshiroi. Sono ue, haiyuutachi no engi mo subarashii.",
+        "vn": "Bộ phim này rất thú vị. Bên cạnh đó, diễn xuất của các diễn viên cũng rất tuyệt vời."
+      },
+      {
+        "jp": "東京はたくさんの観光スポットがある。そのうえ、美味しいレストランも多い。",
+        "romaji": "Toukyou wa takusan no kankou supotto ga aru. Sono ue, oishii resutoran mo oi.",
+        "vn": "Tokyo có rất nhiều điểm tham quan. Ngoài ra còn có rất nhiều quán ăn ngon."
+      }
+    ]
+  },
+  {
+    "title": "文A。それで 文B (Bun A. Sorede Bun B)",
+    "short_explanation": "Dùng để nối hai câu; 'Vì vậy', 'Đó là lý do tại sao', 'Vì vậy'.",
+    "long_explanation": "Điểm ngữ pháp 文A。それで 文B dùng để nối hai câu và thể hiện câu thứ hai (文B) là kết quả hoặc hệ quả của câu thứ nhất (文A). Nó có thể được dịch là 'vì vậy', 'đó là lý do tại sao' hoặc 'do đó' bằng tiếng Anh.",
+    "formation": "Câu A。それで Câu B。",
+    "examples": [
+      {
+        "jp": "今日は暑いです。それで、エアコンをつけました。",
+        "romaji": "Kyou wa atsui desu. Sorede, eakon wo tsukemashita.",
+        "vn": "Hôm nay trời nóng. Thế là tôi bật điều hòa."
+      },
+      {
+        "jp": "電車が遅れました。それで、仕事に遅れてしまいました。",
+        "romaji": "Densha ga okuremashita. Sorede, shigoto ni okurete shimaimashita.",
+        "vn": "Chuyến tàu bị trì hoãn. Đó là lý do tại sao tôi đi làm muộn."
+      },
+      {
+        "jp": "彼は疲れている。それで、早く寝ることにした。",
+        "romaji": "Kare wa tsukarete iru. Sorede, hayaku neru koto ni shita.",
+        "vn": "Anh ấy mệt mỏi. Vì vậy, anh quyết định đi ngủ sớm."
+      },
+      {
+        "jp": "試験に合格しました。それで、友達とお祝いパーティーを開きました。",
+        "romaji": "Shiken ni goukaku shimashita. Sorede, tomodachi to oiwai paatii wo hirakimashita.",
+        "vn": "Tôi đã vượt qua kỳ thi. Vì vậy, tôi đã tổ chức một bữa tiệc mừng với bạn bè."
+      }
+    ]
+  },
+  {
+    "title": "文A。それに 文B (Bun A. Soreni Bun B)",
+    "short_explanation": "Thể hiện 'ngoài; Ngoài ra,' được sử dụng để bao gồm thông tin bổ sung.",
+    "long_explanation": "Điểm ngữ pháp 文A。それに 文B này được dùng để diễn đạt một tuyên bố bổ sung về những gì đã được đề cập trước đó. Nó có thể được dịch là 'ngoài ra', 'ngoài ra' hoặc 'trên hết' bằng tiếng Anh. Nó kết nối hai câu bằng cách làm nổi bật thông tin, ý kiến ​​hoặc lý do bổ sung.",
+    "formation": "Câu A + それに + Câu B",
+    "examples": [
+      {
+        "jp": "彼は頭がいい。それに、スポーツも得意だ。",
+        "romaji": "Kare wa atama ga ii. Soreni, supo-tsu mo tokui da.",
+        "vn": "Anh ấy thông minh. Ngoài ra, anh còn giỏi thể thao."
+      },
+      {
+        "jp": "このケーキはおいしい。それに、値段も安い。",
+        "romaji": "Kono keeki wa oishii. Soreni, nedan mo yasui.",
+        "vn": "Bánh này ngon lắm. Bên cạnh đó giá cả cũng rẻ."
+      },
+      {
+        "jp": "私は日本語が話せます。それに、韓国語も話せます。",
+        "romaji": "Watashi wa nihongo ga hanasemasu. Soreni, kankokugo mo hanasemasu.",
+        "vn": "Tôi có thể nói tiếng Nhật. Ngoài ra, tôi còn có thể nói được tiếng Hàn."
+      },
+      {
+        "jp": "彼女は美人だ。それに、性格もいい。",
+        "romaji": "Kanojo wa bijin da. Soreni, seikaku mo ii.",
+        "vn": "Cô ấy thật đẹp. Ngoài ra, cô ấy còn có nhân cách tốt."
+      }
+    ]
+  },
+  {
+    "title": "文A。だから 文B (Bun A. Dakara Bun B)",
+    "short_explanation": "Thể hiện lý do hoặc nguyên nhân; 'bởi vì', 'vì vậy', 'vì vậy'.",
+    "long_explanation": "Điểm ngữ pháp 文A。だから 文B được dùng để chỉ lý do hoặc nguyên nhân của một hành động hoặc sự kiện diễn đạt trong câu thứ hai (文B) là kết quả hoặc hậu quả của tình huống được mô tả trong câu đầu tiên (文A). Nó có thể được dịch là 'bởi vì', 'vì vậy' hoặc 'vì vậy' bằng tiếng Anh.",
+    "formation": "Câu A + だから + Câu B",
+    "examples": [
+      {
+        "jp": "明日は試験だ。だから今日勉強しなければならない。",
+        "romaji": "Ashita wa shiken da. Dakara kyou benkyou shinakereba naranai.",
+        "vn": "Ngày mai thi rồi nên hôm nay tôi phải học."
+      },
+      {
+        "jp": "この料理は簡単だ。だから初心者でも作れる。",
+        "romaji": "Kono ryouri wa kantan da. Dakara shoshinsha demo tsukureru.",
+        "vn": "Món ăn này rất đơn giản nên ngay cả những người mới bắt đầu cũng có thể làm được."
+      },
+      {
+        "jp": "彼は病気だ。だから今日学校を休む。",
+        "romaji": "Kare wa byouki da. Dakara kyou gakkou wo yasumu.",
+        "vn": "Anh ấy bị ốm nên hôm nay anh ấy sẽ nghỉ học một ngày."
+      },
+      {
+        "jp": "駅まで遠い。だからタクシーで行ったほうがいい。",
+        "romaji": "Eki made tooi. Dakara takushii de itta hou ga ii.",
+        "vn": "Nhà ga thì xa nên đi taxi sẽ tốt hơn."
+      }
+    ]
+  }
+]

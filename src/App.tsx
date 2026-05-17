@@ -16,6 +16,7 @@ import CMSITVocab from './pages/admin/CMSITVocab';
 import QuizPlay from './pages/QuizPlay';
 import MultipleChoiceQuiz from './pages/MultipleChoiceQuiz';
 import ITVocabQuiz from './pages/ITVocabQuiz';
+import GrammarPractice from './pages/GrammarPractice';
 import ReviewToday from './pages/ReviewToday';
 import BattleLobby from './pages/BattleLobby';
 import BattlePlay from './pages/BattlePlay';
@@ -53,6 +54,9 @@ const Navigation = () => {
                 </Link>
                 <Link to="/quiz/it-vocab" className="px-4 py-2 text-gray-600 hover:text-indigo-500 font-semibold transition-colors rounded-lg hover:bg-indigo-50 text-sm">
                   💻 IT Vocab
+                </Link>
+                <Link to="/quiz/grammar" className="px-4 py-2 text-gray-600 hover:text-amber-500 font-semibold transition-colors rounded-lg hover:bg-amber-50 text-sm">
+                  Ngữ pháp
                 </Link>
                 <Link to="/review" className="px-4 py-2 text-gray-600 hover:text-emerald-500 font-semibold transition-colors rounded-lg hover:bg-emerald-50 text-sm">
                   Ôn tập
@@ -116,6 +120,7 @@ const Navigation = () => {
               <>
                 <Link to="/quiz/mcq" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">📝 Trắc nghiệm Kanji</Link>
                 <Link to="/quiz/it-vocab" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-indigo-50">💻 IT Vocab</Link>
+                <Link to="/quiz/grammar" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-amber-50">Ngữ pháp</Link>
                 <Link to="/review" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-emerald-50">Ôn tập</Link>
                 <Link to="/battle" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-sakura-50">⚔️ Đấu Solo</Link>
                 <Link to="/leaderboard" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-xl text-gray-700 font-semibold hover:bg-amber-50">🏆 Xếp hạng</Link>
@@ -196,6 +201,11 @@ export default function App() {
                 <Route path="/quiz/it-vocab" element={
                   <PrivateRoute>
                     <ITVocabQuiz />
+                  </PrivateRoute>
+                } />
+                <Route path="/quiz/grammar" element={
+                  <PrivateRoute>
+                    <GrammarPractice />
                   </PrivateRoute>
                 } />
                 <Route path="/review" element={

@@ -6,7 +6,7 @@ import { AuthContext } from '../context/AuthContext';
 
 interface ReviewItem {
   _id: string;
-  itemType: 'kanji' | 'it_vocab';
+  itemType: 'kanji' | 'it_vocab' | 'grammar';
   itemKey: string;
   label: string;
   level?: string;
@@ -30,6 +30,11 @@ export default function ReviewToday() {
   const [remembered, setRemembered] = useState(0);
 
   const currentItem = items[currentIndex];
+  const itemTypeLabel = (itemType: ReviewItem['itemType']) => {
+    if (itemType === 'kanji') return 'Kanji';
+    if (itemType === 'grammar') return 'Ngữ pháp';
+    return 'IT Vocab';
+  };
 
   useEffect(() => {
     const fetchDueItems = async () => {
@@ -131,6 +136,12 @@ export default function ReviewToday() {
             Lam quiz Kanji
           </button>
           <button
+            onClick={() => navigate('/quiz/grammar')}
+            className="px-6 py-3 rounded-xl bg-amber-500 text-white font-bold hover:bg-amber-600 transition-colors"
+          >
+            Ôn ngữ pháp
+          </button>
+          <button
             onClick={() => navigate('/profile')}
             className="px-6 py-3 rounded-xl bg-white text-gray-700 font-bold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
@@ -207,7 +218,7 @@ export default function ReviewToday() {
       <div className="bg-white/85 backdrop-blur-xl border border-white rounded-[2rem] shadow-xl p-8 sm:p-10 text-center">
         <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
           <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-500 text-xs font-black uppercase tracking-widest">
-            {currentItem.itemType === 'kanji' ? 'Kanji' : 'IT Vocab'}
+            {itemTypeLabel(currentItem.itemType)}
           </span>
           {(currentItem.level || currentItem.category) && (
             <span className="px-3 py-1 rounded-full bg-sakura-50 text-sakura-600 text-xs font-black uppercase tracking-widest">
