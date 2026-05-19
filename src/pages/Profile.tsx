@@ -12,7 +12,7 @@ interface QuizRecord {
 }
 
 interface ProgressSummary {
-  itemType: 'kanji' | 'it_vocab';
+  itemType: 'kanji' | 'it_vocab' | 'grammar' | 'jlpt_vocab';
   learnedItems: number;
   attempts: number;
   correct: number;
@@ -23,7 +23,7 @@ interface ProgressSummary {
 
 interface HardItem {
   _id: string;
-  itemType: 'kanji' | 'it_vocab';
+  itemType: 'kanji' | 'it_vocab' | 'grammar' | 'jlpt_vocab';
   label: string;
   level?: string;
   category?: string;
@@ -98,6 +98,14 @@ export default function Profile() {
 
   const kanjiSummary = progress?.summary.find((item) => item.itemType === 'kanji');
   const itSummary = progress?.summary.find((item) => item.itemType === 'it_vocab');
+  const grammarSummary = progress?.summary.find((item) => item.itemType === 'grammar');
+  const jlptVocabSummary = progress?.summary.find((item) => item.itemType === 'jlpt_vocab');
+  const itemTypeLabel = (itemType: HardItem['itemType']) => {
+    if (itemType === 'kanji') return 'Kanji';
+    if (itemType === 'it_vocab') return 'IT Vocab';
+    if (itemType === 'grammar') return 'Ngữ pháp';
+    return 'Từ vựng JLPT';
+  };
 
   return (
     <div className="max-w-4xl mx-auto py-8">
@@ -122,7 +130,7 @@ export default function Profile() {
         <div className="bg-white/75 backdrop-blur-xl rounded-2xl p-5 border border-white/60 shadow-sm">
           <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Đã học</p>
           <p className="text-3xl font-black text-gray-800">{totals.learnedItems}</p>
-          <p className="text-xs text-gray-400 mt-1">Kanji + IT vocab</p>
+          <p className="text-xs text-gray-400 mt-1">Tất cả nội dung</p>
         </div>
         <div className="bg-white/75 backdrop-blur-xl rounded-2xl p-5 border border-white/60 shadow-sm">
           <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Độ chính xác</p>
@@ -191,7 +199,9 @@ export default function Profile() {
           <div className="space-y-4">
             {[
               { label: 'Kanji', data: kanjiSummary, color: 'bg-sakura-500' },
-              { label: 'IT Vocab', data: itSummary, color: 'bg-indigo-500' }
+              { label: 'IT Vocab', data: itSummary, color: 'bg-indigo-500' },
+              { label: 'Ngữ pháp', data: grammarSummary, color: 'bg-amber-500' },
+              { label: 'Từ vựng JLPT', data: jlptVocabSummary, color: 'bg-emerald-500' }
             ].map((row) => (
               <div key={row.label}>
                 <div className="flex justify-between items-center mb-2">
@@ -226,7 +236,7 @@ export default function Profile() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-bold text-gray-800 truncate">
-                        {item.itemType === 'kanji' ? 'Kanji' : 'IT Vocab'} {item.level || item.category ? `• ${item.level || item.category}` : ''}
+                        {itemTypeLabel(item.itemType)} {item.level || item.category ? `• ${item.level || item.category}` : ''}
                       </p>
                       <p className="text-xs text-gray-400">
                         Mastery {item.mastery}/5 • Sai {item.incorrect}/{item.attempts}

@@ -70,6 +70,16 @@ const gameModes = [
     requireAuth: true,
   },
   {
+    id: 'jlpt-vocab',
+    title: 'Từ vựng JLPT',
+    emoji: '🈶',
+    description: 'Học từ vựng JLPT N5 đến N1 bằng flashcard và quiz trắc nghiệm từ CSV mới.',
+    color: 'from-indigo-400 to-sakura-500',
+    shadow: 'shadow-indigo-200',
+    path: '/quiz/jlpt-vocab',
+    requireAuth: true,
+  },
+  {
     id: 'leaderboard',
     title: 'Bảng xếp hạng',
     emoji: '🏆',
@@ -156,7 +166,7 @@ export default function Home() {
           <div className="flex-1 h-px bg-gray-200" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gameModes.map((mode) => (
             <button
               key={mode.id}

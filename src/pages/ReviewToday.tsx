@@ -6,7 +6,7 @@ import { AuthContext } from '../context/AuthContext';
 
 interface ReviewItem {
   _id: string;
-  itemType: 'kanji' | 'it_vocab' | 'grammar';
+  itemType: 'kanji' | 'it_vocab' | 'grammar' | 'jlpt_vocab';
   itemKey: string;
   label: string;
   level?: string;
@@ -33,6 +33,7 @@ export default function ReviewToday() {
   const itemTypeLabel = (itemType: ReviewItem['itemType']) => {
     if (itemType === 'kanji') return 'Kanji';
     if (itemType === 'grammar') return 'Ngữ pháp';
+    if (itemType === 'jlpt_vocab') return 'Từ vựng JLPT';
     return 'IT Vocab';
   };
 

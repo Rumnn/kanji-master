@@ -9,7 +9,7 @@ const userProgressSchema = new mongoose.Schema({
   },
   itemType: {
     type: String,
-    enum: ['kanji', 'it_vocab', 'grammar'],
+    enum: ['kanji', 'it_vocab', 'grammar', 'jlpt_vocab'],
     required: true,
     index: true
   },
